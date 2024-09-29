@@ -12,7 +12,7 @@ export function tdesignMobileVue1() {
 export function tdesignMobileVue1Components() {
   return {
     map: getComponentsMap(),
-    isSeperatorByHyphen: false,
+    isSeperatorByHyphen: true,
     prefix: 't',
     isReact: false,
     lib: 'tdesign-mobile-vue',
