@@ -1,0 +1,161 @@
+{
+  "name": "TSlider",
+  "props": {
+    "disabled": {
+      "description": "是否禁用组件",
+      "description_zh": "是否禁用组件",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "inputNumberProps": {
+      "description": "用于控制数字输入框组件，值为 false 表示不显示数字输入框；值为 true 表示呈现默认数字输入框；值类型为 Object 表示透传属性到数字输入框组件。TS 类型：boolean | InputNumberProps，InputNumber API Documents。详细类型定义",
+      "description_zh": "用于控制数字输入框组件，值为 false 表示不显示数字输入框；值为 true 表示呈现默认数字输入框；值类型为 Object 表示透传属性到数字输入框组件。TS 类型：boolean | InputNumberProps，InputNumber API Documents。详细类型定义",
+      "default": "false",
+      "value": "",
+      "type": "Boolean / Object",
+      "required": false,
+      "version": ""
+    },
+    "label": {
+      "description": "滑块当前值文本。值为 true 显示默认文案；值为 false 不显示滑块当前值文本；值为 ${value}% 则表示组件会根据占位符渲染文案；值类型为函数时，参数 value 标识滑块值，参数 position=start 表示范围滑块的起始值，参数 position=end 表示范围滑块的终点值。TS 类型：string | boolean | TNode<{ value: SliderValue; position?: 'start' | 'end' }>。通用类型定义",
+      "description_zh": "滑块当前值文本。值为 true 显示默认文案；值为 false 不显示滑块当前值文本；值为 ${value}% 则表示组件会根据占位符渲染文案；值类型为函数时，参数 value 标识滑块值，参数 position=start 表示范围滑块的起始值，参数 position=end 表示范围滑块的终点值。TS 类型：string | boolean | TNode<{ value: SliderValue; position?: 'start' | 'end' }>。通用类型定义",
+      "default": "true",
+      "value": "",
+      "type": "String / Boolean / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "layout": {
+      "description": "滑块布局方向。可选项：vertical/horizontal",
+      "description_zh": "滑块布局方向。可选项：vertical/horizontal",
+      "default": "horizontal",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "marks": {
+      "description": "刻度标记，示例：[0, 10, 40, 200] 或者 { 10: (val) => val + '%', 50: (h) => <button>50</button> }。TS 类型：Array<number> | SliderMarks interface SliderMarks { [mark: number]: string | TNode<{ value: number }> }。通用类型定义。详细类型定义",
+      "description_zh": "刻度标记，示例：[0, 10, 40, 200] 或者 { 10: (val) => val + '%', 50: (h) => <button>50</button> }。TS 类型：Array<number> | SliderMarks interface SliderMarks { [mark: number]: string | TNode<{ value: number }> }。通用类型定义。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object / Array",
+      "required": false,
+      "version": ""
+    },
+    "max": {
+      "description": "滑块范围最大值",
+      "description_zh": "滑块范围最大值",
+      "default": "100",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "min": {
+      "description": "滑块范围最小值",
+      "description_zh": "滑块范围最小值",
+      "default": "0",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "range": {
+      "description": "双游标滑块",
+      "description_zh": "双游标滑块",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "showStep": {
+      "description": "控制步长刻度值显示",
+      "description_zh": "控制步长刻度值显示",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "step": {
+      "description": "步长",
+      "description_zh": "步长",
+      "default": "1",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "tooltipProps": {
+      "description": "透传提示组件属性。TS 类型：TooltipProps，Tooltip API Documents。详细类型定义",
+      "description_zh": "透传提示组件属性。TS 类型：TooltipProps，Tooltip API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "滑块值。支持语法糖 v-model。TS 类型：SliderValue type SliderValue = number | Array<number>。详细类型定义",
+      "description_zh": "滑块值。支持语法糖 v-model。TS 类型：SliderValue type SliderValue = number | Array<number>。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Number / Array",
+      "required": false,
+      "version": ""
+    },
+    "defaultValue": {
+      "description": "滑块值。非受控属性。TS 类型：SliderValue type SliderValue = number | Array<number>。详细类型定义",
+      "description_zh": "滑块值。非受控属性。TS 类型：SliderValue type SliderValue = number | Array<number>。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Number / Array",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(value: SliderValue) => void滑块值变化时触发",
+      "description_zh": "TS 类型：(value: SliderValue) => void滑块值变化时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onChangeEnd": {
+      "description": "TS 类型：(value: SliderValue) => void松开拖动mouseup 或点击滑块条时触发，适合不希望在拖动滑块过程频繁触发回调的场景实用",
+      "description_zh": "TS 类型：(value: SliderValue) => void松开拖动mouseup 或点击滑块条时触发，适合不希望在拖动滑块过程频繁触发回调的场景实用",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/slider",
+  "link_zh": "https://tdesign.tencent.com/vue/components/slider",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "change",
+      "description": "滑块值变化时触发",
+      "params": "(value: SliderValue)",
+      "description_zh": "滑块值变化时触发"
+    },
+    {
+      "name": "change-end",
+      "description": "松开拖动 mouseup 或点击滑块条时触发，适合不希望在拖动滑块过程频繁触发回调的场景实用",
+      "params": "(value: SliderValue)",
+      "description_zh": "松开拖动 mouseup 或点击滑块条时触发，适合不希望在拖动滑块过程频繁触发回调的场景实用"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Slider"
+}

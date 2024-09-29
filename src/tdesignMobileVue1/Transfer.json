@@ -1,0 +1,269 @@
+{
+  "name": "TTransfer",
+  "props": {
+    "checkboxProps": {
+      "description": "用于控制复选框属性。TS 类型：CheckboxProps，Checkbox API Documents。详细类型定义",
+      "description_zh": "用于控制复选框属性。TS 类型：CheckboxProps，Checkbox API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "checked": {
+      "description": "数据列表选中项。支持语法糖 .sync。TS 类型：Array<TransferValue>",
+      "description_zh": "数据列表选中项。支持语法糖 .sync。TS 类型：Array<TransferValue>",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "defaultChecked": {
+      "description": "数据列表选中项。非受控属性。TS 类型：Array<TransferValue>",
+      "description_zh": "数据列表选中项。非受控属性。TS 类型：Array<TransferValue>",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "data": {
+      "description": "全量数据。TS 类型：Array<T>",
+      "description_zh": "全量数据。TS 类型：Array<T>",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "direction": {
+      "description": "穿梭框可操作方向。可选项：left/right/both",
+      "description_zh": "穿梭框可操作方向。可选项：left/right/both",
+      "default": "both",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "禁用全部操作：搜索、选中、移动、分页等。[源列表, 目标列表]，示例：[true, false] 或者 true。TS 类型：boolean | Array<boolean>",
+      "description_zh": "禁用全部操作：搜索、选中、移动、分页等。[源列表, 目标列表]，示例：[true, false] 或者 true。TS 类型：boolean | Array<boolean>",
+      "default": "-",
+      "value": "",
+      "type": "Boolean / Array",
+      "required": false,
+      "version": ""
+    },
+    "empty": {
+      "description": "列表为空时呈现的内容。值类型为数组，则表示分别控制源列表和目标列表数据为空的呈现内容。TS 类型：EmptyType | Array<EmptyType> | TNode type EmptyType = string | TNode 。通用类型定义。详细类型定义",
+      "description_zh": "列表为空时呈现的内容。值类型为数组，则表示分别控制源列表和目标列表数据为空的呈现内容。TS 类型：EmptyType | Array<EmptyType> | TNode type EmptyType = string | TNode 。通用类型定义。详细类型定义",
+      "default": "''",
+      "value": "",
+      "type": "String / Array / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "footer": {
+      "description": "穿梭框底部内容。TS 类型：Array<string | TNode> | TNode<{ type: TransferListType }>。通用类型定义",
+      "description_zh": "穿梭框底部内容。TS 类型：Array<string | TNode> | TNode<{ type: TransferListType }>。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Array / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "keys": {
+      "description": "用来定义 value / label / disabled 在 data 中对应的字段别名，示例：{ label: 'text', value: 'id' }，表示选项文本取 text 字段，选项值取 id 字段。TS 类型：KeysType。通用类型定义",
+      "description_zh": "用来定义 value / label / disabled 在 data 中对应的字段别名，示例：{ label: 'text', value: 'id' }，表示选项文本取 text 字段，选项值取 id 字段。TS 类型：KeysType。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "operation": {
+      "description": "方向操作按钮。默认显示组件内置操作图标。自定义操作图标示例：['向左', '向右'] 或者 [() => <i class='left' />, () => <i class='left' />] 或者 (h, direction) => direction === 'left' ? '《' : '》'。TS 类型：Array<string | TNode> | TNode<{ direction: 'left' | 'right' }>。通用类型定义",
+      "description_zh": "方向操作按钮。默认显示组件内置操作图标。自定义操作图标示例：['向左', '向右'] 或者 [() => <i class='left' />, () => <i class='left' />] 或者 (h, direction) => direction === 'left' ? '《' : '》'。TS 类型：Array<string | TNode> | TNode<{ direction: 'left' | 'right' }>。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Array / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "pagination": {
+      "description": "分页配置，值为空则不显示。具体 API 参考分页组件。值类型为数组，表示可分别控制源列表和目标列表分页组件。TS 类型：PaginationProps | Array<PaginationProps>，Pagination API Documents。详细类型定义",
+      "description_zh": "分页配置，值为空则不显示。具体 API 参考分页组件。值类型为数组，表示可分别控制源列表和目标列表分页组件。TS 类型：PaginationProps | Array<PaginationProps>，Pagination API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object / Array",
+      "required": false,
+      "version": ""
+    },
+    "search": {
+      "description": "搜索框配置，值为 false 表示不显示搜索框；值为 true 表示显示默认搜索框；值类型为对象，用于透传 Props 到 Input 组件；值类型为数组，则分别表示控制两侧搜索框。TS 类型：SearchOption | Array<SearchOption> type SearchOption = boolean | InputProps，Input API Documents。详细类型定义",
+      "description_zh": "搜索框配置，值为 false 表示不显示搜索框；值为 true 表示显示默认搜索框；值类型为对象，用于透传 Props 到 Input 组件；值类型为数组，则分别表示控制两侧搜索框。TS 类型：SearchOption | Array<SearchOption> type SearchOption = boolean | InputProps，Input API Documents。详细类型定义",
+      "default": "false",
+      "value": "",
+      "type": "Boolean / Object / Array",
+      "required": false,
+      "version": ""
+    },
+    "showCheckAll": {
+      "description": "是否显示全选，值类型为数组则表示分别控制源列表和目标列表。TS 类型：boolean | Array<boolean>",
+      "description_zh": "是否显示全选，值类型为数组则表示分别控制源列表和目标列表。TS 类型：boolean | Array<boolean>",
+      "default": "true",
+      "value": "",
+      "type": "Boolean / Array",
+      "required": false,
+      "version": ""
+    },
+    "targetDraggable": {
+      "description": "是否允许通过拖拽对目标列表进行排序",
+      "description_zh": "是否允许通过拖拽对目标列表进行排序",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "targetSort": {
+      "description": "目标数据列表排列顺序。可选项：original/push/unshift",
+      "description_zh": "目标数据列表排列顺序。可选项：original/push/unshift",
+      "default": "original",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "title": {
+      "description": "穿梭框标题，示例：['源列表', '目标列表'] 或者 [() => 'A', () => 'B'] 或者 ({ type }) => type === 'source' ? '源' : '目标'。TS 类型：Array<TitleType> | TNode<{ type: TransferListType }> type TitleType = string | TNode type TransferListType = 'source' | 'target'。通用类型定义。详细类型定义",
+      "description_zh": "穿梭框标题，示例：['源列表', '目标列表'] 或者 [() => 'A', () => 'B'] 或者 ({ type }) => type === 'source' ? '源' : '目标'。TS 类型：Array<TitleType> | TNode<{ type: TransferListType }> type TitleType = string | TNode type TransferListType = 'source' | 'target'。通用类型定义。详细类型定义",
+      "default": "[]",
+      "value": "",
+      "type": "Array / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "transferItem": {
+      "description": "自定义渲染节点。TS 类型：TNode<TransferItem<T>> interface TransferItem<T extends DataOption = DataOption> { data: T; index: number; type: TransferListType}。通用类型定义。详细类型定义",
+      "description_zh": "自定义渲染节点。TS 类型：TNode<TransferItem<T>> interface TransferItem<T extends DataOption = DataOption> { data: T; index: number; type: TransferListType}。通用类型定义。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "tree": {
+      "description": "TS 类型：(tree: TreeProps) => TNode，Tree API Documents。通用类型定义。详细类型定义",
+      "description_zh": "TS 类型：(tree: TreeProps) => TNode，Tree API Documents。通用类型定义。详细类型定义",
+      "default": "传入 Tree 组件定义树形结构",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "目标数据列表数据。支持语法糖 v-model。TS 类型：Array<TransferValue>",
+      "description_zh": "目标数据列表数据。支持语法糖 v-model。TS 类型：Array<TransferValue>",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "defaultValue": {
+      "description": "目标数据列表数据。非受控属性。TS 类型：Array<TransferValue>",
+      "description_zh": "目标数据列表数据。非受控属性。TS 类型：Array<TransferValue>",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(targetValue: Array<TransferValue>, context: TargetParams) => void数据列表发生变化时触发，type 值为 source，表示源列表移动到目标列表，值为 target 表示目标列表移动到源列表，movedValue 则表示被移动的选项。TS 类型：TNode。通用类型定义。详细类型定义。interface TargetParams { type: TransferListType; movedValue: Array<TransferValue> }",
+      "description_zh": "TS 类型：(targetValue: Array<TransferValue>, context: TargetParams) => void数据列表发生变化时触发，type 值为 source，表示源列表移动到目标列表，值为 target 表示目标列表移动到源列表，movedValue 则表示被移动的选项。TS 类型：TNode。通用类型定义。详细类型定义。interface TargetParams { type: TransferListType; movedValue: Array<TransferValue> }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onCheckedChange": {
+      "description": "TS 类型：(options: CheckedOptions) => void源数据列表或目标数据列表的选中项发生变化时触发，context.type 可以区分触发来源是目标列表，还是源列表。TS 类型：TNode。通用类型定义。详细类型定义。interface CheckedOptions { checked: Array<TransferValue>; sourceChecked: Array<TransferValue>; targetChecked: Array<TransferValue>; type: TransferListType }",
+      "description_zh": "TS 类型：(options: CheckedOptions) => void源数据列表或目标数据列表的选中项发生变化时触发，context.type 可以区分触发来源是目标列表，还是源列表。TS 类型：TNode。通用类型定义。详细类型定义。interface CheckedOptions { checked: Array<TransferValue>; sourceChecked: Array<TransferValue>; targetChecked: Array<TransferValue>; type: TransferListType }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onPageChange": {
+      "description": "TS 类型：(page: PageInfo, context: { type: TransferListType }) => void分页发生变化时触发",
+      "description_zh": "TS 类型：(page: PageInfo, context: { type: TransferListType }) => void分页发生变化时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onScroll": {
+      "description": "TS 类型：(options: { e: Event; bottomDistance: number; type: TransferListType }) => void列表滚动时触发，bottomDistance 表示元素滚动到底部的距离。TS 类型：TNode。通用类型定义",
+      "description_zh": "TS 类型：(options: { e: Event; bottomDistance: number; type: TransferListType }) => void列表滚动时触发，bottomDistance 表示元素滚动到底部的距离。TS 类型：TNode。通用类型定义",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onSearch": {
+      "description": "TS 类型：(options: SearchContext) => void搜索时触发，options.query 表示用户输入的内容。TS 类型：TNode。通用类型定义。详细类型定义。interface SearchContext { query: string; type: TransferListType; trigger: 'input' | 'enter'; e: InputEvent | KeyboardEvent }",
+      "description_zh": "TS 类型：(options: SearchContext) => void搜索时触发，options.query 表示用户输入的内容。TS 类型：TNode。通用类型定义。详细类型定义。interface SearchContext { query: string; type: TransferListType; trigger: 'input' | 'enter'; e: InputEvent | KeyboardEvent }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/transfer",
+  "link_zh": "https://tdesign.tencent.com/vue/components/transfer",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "change",
+      "description": "数据列表发生变化时触发，type 值为 source，表示源列表移动到目标列表，值为 target 表示目标列表移动到源列表，movedValue 则表示被移动的选项。TS 类型：TNode。通用类型定义。详细类型定义。interface TargetParams { type: TransferListType; movedValue: Array<TransferValue> }",
+      "params": "(targetValue: Array<TransferValue>, context: TargetParams)",
+      "description_zh": "数据列表发生变化时触发，type 值为 source，表示源列表移动到目标列表，值为 target 表示目标列表移动到源列表，movedValue 则表示被移动的选项。TS 类型：TNode。通用类型定义。详细类型定义。interface TargetParams { type: TransferListType; movedValue: Array<TransferValue> }"
+    },
+    {
+      "name": "checked-change",
+      "description": "源数据列表或目标数据列表的选中项发生变化时触发，context.type 可以区分触发来源是目标列表，还是源列表。TS 类型：TNode。通用类型定义。详细类型定义。interface CheckedOptions { checked: Array<TransferValue>; sourceChecked: Array<TransferValue>; targetChecked: Array<TransferValue>; type: TransferListType }",
+      "params": "(options: CheckedOptions)",
+      "description_zh": "源数据列表或目标数据列表的选中项发生变化时触发，context.type 可以区分触发来源是目标列表，还是源列表。TS 类型：TNode。通用类型定义。详细类型定义。interface CheckedOptions { checked: Array<TransferValue>; sourceChecked: Array<TransferValue>; targetChecked: Array<TransferValue>; type: TransferListType }"
+    },
+    {
+      "name": "page-change",
+      "description": "分页发生变化时触发",
+      "params": "(page: PageInfo, context: { type: TransferListType })",
+      "description_zh": "分页发生变化时触发"
+    },
+    {
+      "name": "scroll",
+      "description": "列表滚动时触发，bottomDistance 表示元素滚动到底部的距离。TS 类型：TNode。通用类型定义",
+      "params": "(options: { e: Event; bottomDistance: number; type: TransferListType })",
+      "description_zh": "列表滚动时触发，bottomDistance 表示元素滚动到底部的距离。TS 类型：TNode。通用类型定义"
+    },
+    {
+      "name": "search",
+      "description": "搜索时触发，options.query 表示用户输入的内容。TS 类型：TNode。通用类型定义。详细类型定义。interface SearchContext { query: string; type: TransferListType; trigger: 'input' | 'enter'; e: InputEvent | KeyboardEvent }",
+      "params": "(options: SearchContext)",
+      "description_zh": "搜索时触发，options.query 表示用户输入的内容。TS 类型：TNode。通用类型定义。详细类型定义。interface SearchContext { query: string; type: TransferListType; trigger: 'input' | 'enter'; e: InputEvent | KeyboardEvent }"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Transfer"
+}

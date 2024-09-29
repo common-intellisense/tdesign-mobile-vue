@@ -1,0 +1,40 @@
+{
+  "name": "TAnchorItem",
+  "props": {
+    "href": {
+      "description": "必需。锚点链接, 如果是 hash 模式需要加上当前 path",
+      "description_zh": "必需。锚点链接, 如果是 hash 模式需要加上当前 path",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": true,
+      "version": ""
+    },
+    "target": {
+      "description": "锚点文本。可选项：_self/_blank/_parent/_top",
+      "description_zh": "锚点文本。可选项：_self/_blank/_parent/_top",
+      "default": "_self",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "title": {
+      "description": "锚点文本。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "锚点文本。TS 类型：string | TNode。通用类型定义",
+      "default": "''",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/anchor",
+  "link_zh": "https://tdesign.tencent.com/vue/components/anchor",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "AnchorItem"
+}

@@ -1,0 +1,119 @@
+{
+  "name": "TBackTop",
+  "props": {
+    "container": {
+      "description": "监听滚动的容器。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body。TS 类型：AttachNode。通用类型定义",
+      "description_zh": "监听滚动的容器。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body。TS 类型：AttachNode。通用类型定义",
+      "default": "'body'",
+      "value": "",
+      "type": "String / Function",
+      "required": false,
+      "version": ""
+    },
+    "content": {
+      "description": "回到顶部内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "回到顶部内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "default": {
+      "description": "回到顶部内容，同 content。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "回到顶部内容，同 content。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "duration": {
+      "description": "回到顶部的耗时单位：毫秒",
+      "description_zh": "回到顶部的耗时单位：毫秒",
+      "default": "200",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "offset": {
+      "description": "回到顶部相对右下角的位置偏移，示例：[10, 20] 或 ['10em', '8rem']。TS 类型：Array<string | number>",
+      "description_zh": "回到顶部相对右下角的位置偏移，示例：[10, 20] 或 ['10em', '8rem']。TS 类型：Array<string | number>",
+      "default": "[\"24px\", \"80px\"]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "shape": {
+      "description": "回到顶部的形状。可选项：circle/square。TS 类型：BackTopShapeEnum  type BackTopShapeEnum = 'circle' | 'square'。详细类型定义",
+      "description_zh": "回到顶部的形状。可选项：circle/square。TS 类型：BackTopShapeEnum  type BackTopShapeEnum = 'circle' | 'square'。详细类型定义",
+      "default": "square",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "size": {
+      "description": "组件尺寸。可选项：medium/small",
+      "description_zh": "组件尺寸。可选项：medium/small",
+      "default": "medium",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "target": {
+      "description": "指定回到该对象。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body。TS 类型：AttachNode。通用类型定义",
+      "description_zh": "指定回到该对象。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body。TS 类型：AttachNode。通用类型定义",
+      "default": "'body'",
+      "value": "",
+      "type": "String / Function",
+      "required": false,
+      "version": ""
+    },
+    "theme": {
+      "description": "组件主题风格，浅色、主色、深色。可选项：light/primary/dark",
+      "description_zh": "组件主题风格，浅色、主色、深色。可选项：light/primary/dark",
+      "default": "light",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "visibleHeight": {
+      "description": "滚动高度达到此参数值才出现",
+      "description_zh": "滚动高度达到此参数值才出现",
+      "default": "'200px'",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "onClick": {
+      "description": "TS 类型：(context: { e: MouseEvent }) => void点击回到顶部时触发",
+      "description_zh": "TS 类型：(context: { e: MouseEvent }) => void点击回到顶部时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/back-top",
+  "link_zh": "https://tdesign.tencent.com/vue/components/back-top",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "click",
+      "description": "点击回到顶部时触发",
+      "params": "(context: { e: MouseEvent })",
+      "description_zh": "点击回到顶部时触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "BackTop"
+}

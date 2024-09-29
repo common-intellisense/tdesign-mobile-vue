@@ -1,0 +1,31 @@
+{
+  "name": "TAnchorTarget",
+  "props": {
+    "id": {
+      "description": "必需。目标内容 id",
+      "description_zh": "必需。目标内容 id",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": true,
+      "version": ""
+    },
+    "tag": {
+      "description": "渲染的标签",
+      "description_zh": "渲染的标签",
+      "default": "div",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/anchor",
+  "link_zh": "https://tdesign.tencent.com/vue/components/anchor",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "AnchorTarget"
+}

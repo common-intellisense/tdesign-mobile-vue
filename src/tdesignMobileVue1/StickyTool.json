@@ -1,0 +1,109 @@
+{
+  "name": "TStickyTool",
+  "props": {
+    "list": {
+      "description": "列表。TS 类型：Array<TdStickyItemProps>",
+      "description_zh": "列表。TS 类型：Array<TdStickyItemProps>",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "offset": {
+      "description": "相对于 placement 的偏移量，示例：[-10, 20] 或 ['10em', '8rem']。TS 类型：Array<string | number>",
+      "description_zh": "相对于 placement 的偏移量，示例：[-10, 20] 或 ['10em', '8rem']。TS 类型：Array<string | number>",
+      "default": "-",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "placement": {
+      "description": "固定位置。可选项：right-top/right-center/right-bottom/left-top/left-center/left-bottom",
+      "description_zh": "固定位置。可选项：right-top/right-center/right-bottom/left-top/left-center/left-bottom",
+      "default": "right-bottom",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "popupProps": {
+      "description": "透传 Popup 组件全部特性，优先级低于 StickyItem.popupProps。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "description_zh": "透传 Popup 组件全部特性，优先级低于 StickyItem.popupProps。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "shape": {
+      "description": "侧边栏菜单形状，有 2 种：方形、圆形。可选项：square/round",
+      "description_zh": "侧边栏菜单形状，有 2 种：方形、圆形。可选项：square/round",
+      "default": "square",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "type": {
+      "description": "侧边栏菜单类型，有 2 种：常规型和紧凑型。可选项：normal/compact",
+      "description_zh": "侧边栏菜单类型，有 2 种：常规型和紧凑型。可选项：normal/compact",
+      "default": "normal",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "width": {
+      "description": "宽度",
+      "description_zh": "宽度",
+      "default": "-",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "onClick": {
+      "description": "TS 类型：(context: { e: MouseEvent; item: TdStickyItemProps }) => void点击某一项时触发",
+      "description_zh": "TS 类型：(context: { e: MouseEvent; item: TdStickyItemProps }) => void点击某一项时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onHover": {
+      "description": "TS 类型：(context: { e: MouseEvent; item: TdStickyItemProps }) => void悬浮到某一项时触发",
+      "description_zh": "TS 类型：(context: { e: MouseEvent; item: TdStickyItemProps }) => void悬浮到某一项时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/sticky-tool",
+  "link_zh": "https://tdesign.tencent.com/vue/components/sticky-tool",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "click",
+      "description": "点击某一项时触发",
+      "params": "(context: { e: MouseEvent; item: TdStickyItemProps })",
+      "description_zh": "点击某一项时触发"
+    },
+    {
+      "name": "hover",
+      "description": "悬浮到某一项时触发",
+      "params": "(context: { e: MouseEvent; item: TdStickyItemProps })",
+      "description_zh": "悬浮到某一项时触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [
+    "t-sticky-tool"
+  ],
+  "filename": "StickyTool"
+}

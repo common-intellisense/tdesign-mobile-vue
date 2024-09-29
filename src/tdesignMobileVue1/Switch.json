@@ -1,0 +1,92 @@
+{
+  "name": "TSwitch",
+  "props": {
+    "customValue": {
+      "description": "用于自定义开关的值，[打开时的值，关闭时的值]。默认为 [true, false]。示例：[1, 0]、['open', 'close']。TS 类型：Array<SwitchValue>",
+      "description_zh": "用于自定义开关的值，[打开时的值，关闭时的值]。默认为 [true, false]。示例：[1, 0]、['open', 'close']。TS 类型：Array<SwitchValue>",
+      "default": "-",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "是否禁用组件",
+      "description_zh": "是否禁用组件",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "label": {
+      "description": "开关内容，[开启时内容，关闭时内容]。示例：['开', '关'] 或 (value) => value ? '开' : '关'。TS 类型：Array<string | TNode> | TNode<{ value: SwitchValue }>。通用类型定义",
+      "description_zh": "开关内容，[开启时内容，关闭时内容]。示例：['开', '关'] 或 (value) => value ? '开' : '关'。TS 类型：Array<string | TNode> | TNode<{ value: SwitchValue }>。通用类型定义",
+      "default": "[]",
+      "value": "",
+      "type": "Array / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "loading": {
+      "description": "是否处于加载中状态",
+      "description_zh": "是否处于加载中状态",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "size": {
+      "description": "开关尺寸。可选项：small/medium/large",
+      "description_zh": "开关尺寸。可选项：small/medium/large",
+      "default": "medium",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "开关值。支持语法糖 v-model。TS 类型：SwitchValue type SwitchValue = string | number | boolean。详细类型定义",
+      "description_zh": "开关值。支持语法糖 v-model。TS 类型：SwitchValue type SwitchValue = string | number | boolean。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Number / Boolean",
+      "required": false,
+      "version": ""
+    },
+    "defaultValue": {
+      "description": "开关值。非受控属性。TS 类型：SwitchValue type SwitchValue = string | number | boolean。详细类型定义",
+      "description_zh": "开关值。非受控属性。TS 类型：SwitchValue type SwitchValue = string | number | boolean。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Number / Boolean",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(value: SwitchValue) => void数据发生变化时触发",
+      "description_zh": "TS 类型：(value: SwitchValue) => void数据发生变化时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/switch",
+  "link_zh": "https://tdesign.tencent.com/vue/components/switch",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "change",
+      "description": "数据发生变化时触发",
+      "params": "(value: SwitchValue)",
+      "description_zh": "数据发生变化时触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Switch"
+}

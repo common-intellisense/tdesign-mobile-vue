@@ -1,0 +1,78 @@
+{
+  "name": "TSubmenu",
+  "props": {
+    "content": {
+      "description": "菜单项内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "菜单项内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "default": {
+      "description": "菜单项内容，同 content。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "菜单项内容，同 content。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "是否禁用菜单项展开/收起/跳转等功能",
+      "description_zh": "是否禁用菜单项展开/收起/跳转等功能",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "icon": {
+      "description": "菜单项图标。TS 类型：TNode。通用类型定义",
+      "description_zh": "菜单项图标。TS 类型：TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "popupProps": {
+      "description": "透传 Popup 组件全部特性。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "description_zh": "透传 Popup 组件全部特性。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "title": {
+      "description": "二级菜单内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "二级菜单内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "菜单项唯一标识。TS 类型：MenuValue",
+      "description_zh": "菜单项唯一标识。TS 类型：MenuValue",
+      "default": "-",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/menu",
+  "link_zh": "https://tdesign.tencent.com/vue/components/menu",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [
+    "t-menu-item"
+  ],
+  "filename": "Submenu"
+}

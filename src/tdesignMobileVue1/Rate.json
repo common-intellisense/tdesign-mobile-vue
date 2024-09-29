@@ -1,0 +1,137 @@
+{
+  "name": "TRate",
+  "props": {
+    "allowHalf": {
+      "description": "是否允许半选",
+      "description_zh": "是否允许半选",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "clearable": {
+      "description": "是否允许清除",
+      "description_zh": "是否允许清除",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "color": {
+      "description": "评分图标的颜色，样式中默认为 #ED7B2F。一个值表示设置选中高亮的五角星颜色，示例：[选中颜色]。数组则表示分别设置 选中高亮的五角星颜色 和 未选中暗灰的五角星颜色，[选中颜色，未选中颜色]。示例：['#ED7B2F', '#E3E6EB']。TS 类型：string | Array<string>",
+      "description_zh": "评分图标的颜色，样式中默认为 #ED7B2F。一个值表示设置选中高亮的五角星颜色，示例：[选中颜色]。数组则表示分别设置 选中高亮的五角星颜色 和 未选中暗灰的五角星颜色，[选中颜色，未选中颜色]。示例：['#ED7B2F', '#E3E6EB']。TS 类型：string | Array<string>",
+      "default": "'#ED7B2F'",
+      "value": "",
+      "type": "String / Array",
+      "required": false,
+      "version": ""
+    },
+    "count": {
+      "description": "评分的数量",
+      "description_zh": "评分的数量",
+      "default": "5",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "是否禁用评分",
+      "description_zh": "是否禁用评分",
+      "default": "undefined",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "gap": {
+      "description": "评分图标的间距",
+      "description_zh": "评分图标的间距",
+      "default": "4",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "icon": {
+      "description": "自定义评分图标。TS 类型：TNode。通用类型定义",
+      "description_zh": "自定义评分图标。TS 类型：TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "showText": {
+      "description": "是否显示对应的辅助文字",
+      "description_zh": "是否显示对应的辅助文字",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "size": {
+      "description": "评分图标的大小",
+      "description_zh": "评分图标的大小",
+      "default": "24px",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "texts": {
+      "description": "评分等级对应的辅助文字。组件内置默认值为：['极差', '失望', '一般', '满意', '惊喜']。自定义值示例：['1分', '2分', '3分', '4分', '5分']。TS 类型：Array<string>",
+      "description_zh": "评分等级对应的辅助文字。组件内置默认值为：['极差', '失望', '一般', '满意', '惊喜']。自定义值示例：['1分', '2分', '3分', '4分', '5分']。TS 类型：Array<string>",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "选择评分的值。支持语法糖 v-model",
+      "description_zh": "选择评分的值。支持语法糖 v-model",
+      "default": "0",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "defaultValue": {
+      "description": "选择评分的值。非受控属性",
+      "description_zh": "选择评分的值。非受控属性",
+      "default": "0",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(value: number) => void评分数改变时触发",
+      "description_zh": "TS 类型：(value: number) => void评分数改变时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/rate",
+  "link_zh": "https://tdesign.tencent.com/vue/components/rate",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "change",
+      "description": "评分数改变时触发",
+      "params": "(value: number)",
+      "description_zh": "评分数改变时触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Rate"
+}

@@ -1,0 +1,242 @@
+{
+  "name": "TCalendar",
+  "props": {
+    "cell": {
+      "description": "单元格插槽。TS 类型：string | TNode<CalendarCell>。通用类型定义",
+      "description_zh": "单元格插槽。TS 类型：string | TNode<CalendarCell>。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "cellAppend": {
+      "description": "单元格插槽，在原来的内容之后追加。TS 类型：string | TNode<CalendarCell>。通用类型定义",
+      "description_zh": "单元格插槽，在原来的内容之后追加。TS 类型：string | TNode<CalendarCell>。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "controllerConfig": {
+      "description": "右上角控制器配置。支持全局配置。值为 false 则表示不显示控制器，值为 true 则显示控制器默认配置，值类型为 CalendarController 则显示为自定义控制器配置。TS 类型：boolean | CalendarController",
+      "description_zh": "右上角控制器配置。支持全局配置。值为 false 则表示不显示控制器，值为 true 则显示控制器默认配置，值类型为 CalendarController 则显示为自定义控制器配置。TS 类型：boolean | CalendarController",
+      "default": "undefined",
+      "value": "",
+      "type": "Boolean / Object",
+      "required": false,
+      "version": ""
+    },
+    "fillWithZero": {
+      "description": "小于 10 的日期，是否使用 '0' 填充。支持全局配置。默认表现为 01 02，值为 false 表现为 1 2 9",
+      "description_zh": "小于 10 的日期，是否使用 '0' 填充。支持全局配置。默认表现为 01 02，值为 false 表现为 1 2 9",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "firstDayOfWeek": {
+      "description": "第一天从星期几开始，仅在日历展示维度为月份时（mode = month）有效。默认为 1。可选项：1/2/3/4/5/6/7",
+      "description_zh": "第一天从星期几开始，仅在日历展示维度为月份时（mode = month）有效。默认为 1。可选项：1/2/3/4/5/6/7",
+      "default": "1",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "format": {
+      "description": "用于格式化日期，决定事件参数 formattedFilterDate 的输出值。详细文档",
+      "description_zh": "用于格式化日期，决定事件参数 formattedFilterDate 的输出值。详细文档",
+      "default": "'YYYY-MM-DD'",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "head": {
+      "description": "头部插槽（左上角处，默认不显示任何内容）。TS 类型：string | TNode<ControllerOptions>。通用类型定义",
+      "description_zh": "头部插槽（左上角处，默认不显示任何内容）。TS 类型：string | TNode<ControllerOptions>。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "isShowWeekendDefault": {
+      "description": "默认是否显示周末",
+      "description_zh": "默认是否显示周末",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "mode": {
+      "description": "日历展示维度。可选项：month/year",
+      "description_zh": "日历展示维度。可选项：month/year",
+      "default": "month",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "month": {
+      "description": "控制当前面板展示月份，优先级高于 controllerConfig.month",
+      "description_zh": "控制当前面板展示月份，优先级高于 controllerConfig.month",
+      "default": "-",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "multiple": {
+      "description": "是否高亮多个日期单元格",
+      "description_zh": "是否高亮多个日期单元格",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "preventCellContextmenu": {
+      "description": "是否禁用单元格右键默认系统菜单",
+      "description_zh": "是否禁用单元格右键默认系统菜单",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "range": {
+      "description": "用于设置日历的年月份显示范围，[范围开始，范围结束]。TS 类型：Array<CalendarValue>",
+      "description_zh": "用于设置日历的年月份显示范围，[范围开始，范围结束]。TS 类型：Array<CalendarValue>",
+      "default": "-",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "theme": {
+      "description": "日历风格。可选项：full/card",
+      "description_zh": "日历风格。可选项：full/card",
+      "default": "full",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "当前高亮的日期。TS 类型：CalendarValue | CalendarValue[] type CalendarValue = string | Date。详细类型定义",
+      "description_zh": "当前高亮的日期。TS 类型：CalendarValue | CalendarValue[] type CalendarValue = string | Date。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Array / Date",
+      "required": false,
+      "version": ""
+    },
+    "week": {
+      "description": "用于自定义日历星期呈现方式。CalendarWeek.day 表示当前是星期几。示例一：['周一', '周二', '周三', '周四', '周五', '星期六', '星期天']。示例二：({ day }) => '周' + day。TS 类型：Array<string> | TNode<CalendarWeek> interface CalendarWeek { day: WeekDay } type WeekDay = 1 | 2 | 3 | 4 | 5 | 6 | 7。通用类型定义。详细类型定义",
+      "description_zh": "用于自定义日历星期呈现方式。CalendarWeek.day 表示当前是星期几。示例一：['周一', '周二', '周三', '周四', '周五', '星期六', '星期天']。示例二：({ day }) => '周' + day。TS 类型：Array<string> | TNode<CalendarWeek> interface CalendarWeek { day: WeekDay } type WeekDay = 1 | 2 | 3 | 4 | 5 | 6 | 7。通用类型定义。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Array / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "year": {
+      "description": "控制当前面板展示年份，优先级高于 controllerConfig.year",
+      "description_zh": "控制当前面板展示年份，优先级高于 controllerConfig.year",
+      "default": "-",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "onCellClick": {
+      "description": "TS 类型：(options: { cell: CalendarCell; e: MouseEvent }) => void日历单元格点击时触发",
+      "description_zh": "TS 类型：(options: { cell: CalendarCell; e: MouseEvent }) => void日历单元格点击时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onCellDoubleClick": {
+      "description": "TS 类型：(options: { cell: CalendarCell; e: MouseEvent }) => void日历单元格双击时触发",
+      "description_zh": "TS 类型：(options: { cell: CalendarCell; e: MouseEvent }) => void日历单元格双击时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onCellRightClick": {
+      "description": "TS 类型：(options: { cell: CalendarCell; e: MouseEvent }) => void日历单元格右击时触发",
+      "description_zh": "TS 类型：(options: { cell: CalendarCell; e: MouseEvent }) => void日历单元格右击时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onControllerChange": {
+      "description": "TS 类型：(options: ControllerOptions) => void右上角控件组选中值有变化的时候触发。详细类型定义。interface ControllerOptions { filterDate: Date; formattedFilterDate: string; mode: string; isShowWeekend: boolean }",
+      "description_zh": "TS 类型：(options: ControllerOptions) => void右上角控件组选中值有变化的时候触发。详细类型定义。interface ControllerOptions { filterDate: Date; formattedFilterDate: string; mode: string; isShowWeekend: boolean }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onMonthChange": {
+      "description": "TS 类型：(options: { month: string; year: string }) => void月份切换时触发",
+      "description_zh": "TS 类型：(options: { month: string; year: string }) => void月份切换时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/calendar",
+  "link_zh": "https://tdesign.tencent.com/vue/components/calendar",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "cell-click",
+      "description": "日历单元格点击时触发",
+      "params": "(options: { cell: CalendarCell; e: MouseEvent })",
+      "description_zh": "日历单元格点击时触发"
+    },
+    {
+      "name": "cell-double-click",
+      "description": "日历单元格双击时触发",
+      "params": "(options: { cell: CalendarCell; e: MouseEvent })",
+      "description_zh": "日历单元格双击时触发"
+    },
+    {
+      "name": "cell-right-click",
+      "description": "日历单元格右击时触发",
+      "params": "(options: { cell: CalendarCell; e: MouseEvent })",
+      "description_zh": "日历单元格右击时触发"
+    },
+    {
+      "name": "controller-change",
+      "description": "右上角控件组选中值有变化的时候触发。详细类型定义。interface ControllerOptions { filterDate: Date; formattedFilterDate: string; mode: string; isShowWeekend: boolean }",
+      "params": "(options: ControllerOptions)",
+      "description_zh": "右上角控件组选中值有变化的时候触发。详细类型定义。interface ControllerOptions { filterDate: Date; formattedFilterDate: string; mode: string; isShowWeekend: boolean }"
+    },
+    {
+      "name": "month-change",
+      "description": "月份切换时触发",
+      "params": "(options: { month: string; year: string })",
+      "description_zh": "月份切换时触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Calendar"
+}

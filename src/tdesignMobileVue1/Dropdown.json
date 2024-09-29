@@ -1,0 +1,119 @@
+{
+  "name": "TDropdown",
+  "props": {
+    "direction": {
+      "description": "多层级操作时，子层级展开方向。可选项：left/right",
+      "description_zh": "多层级操作时，子层级展开方向。可选项：left/right",
+      "default": "right",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "是否禁用组件",
+      "description_zh": "是否禁用组件",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "hideAfterItemClick": {
+      "description": "点击选项后是否自动隐藏弹窗",
+      "description_zh": "点击选项后是否自动隐藏弹窗",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "maxColumnWidth": {
+      "description": "选项最大宽度，内容超出时，显示为省略号。值为字符串时，值就是最大宽度；值为数字时，单位：px",
+      "description_zh": "选项最大宽度，内容超出时，显示为省略号。值为字符串时，值就是最大宽度；值为数字时，单位：px",
+      "default": "100",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "maxHeight": {
+      "description": "弹窗最大高度，单位：px 。统一控制每一列的高度",
+      "description_zh": "弹窗最大高度，单位：px 。统一控制每一列的高度",
+      "default": "300",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "minColumnWidth": {
+      "description": "选项最小宽度。值为字符串时，值就是最小宽度；值为数字时，单位：px",
+      "description_zh": "选项最小宽度。值为字符串时，值就是最小宽度；值为数字时，单位：px",
+      "default": "10",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "options": {
+      "description": "下拉操作项。TS 类型：Array<DropdownOption> type DropdownOption = { children?: Array<TdDropdownItemProps> } & TdDropdownItemProps & Record<string, any>。详细类型定义",
+      "description_zh": "下拉操作项。TS 类型：Array<DropdownOption> type DropdownOption = { children?: Array<TdDropdownItemProps> } & TdDropdownItemProps & Record<string, any>。详细类型定义",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "placement": {
+      "description": "弹窗定位方式，可选值同 Popup 组件。可选项：top/left/right/bottom/top-left/top-right/bottom-left/bottom-right/left-top/left-bottom/right-top/right-bottom",
+      "description_zh": "弹窗定位方式，可选值同 Popup 组件。可选项：top/left/right/bottom/top-left/top-right/bottom-left/bottom-right/left-top/left-bottom/right-top/right-bottom",
+      "default": "bottom-left",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "popupProps": {
+      "description": "透传 Popup 组件属性，方便更加自由地控制。比如使用 popupProps.overlayStyle 设置浮层样式。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "description_zh": "透传 Popup 组件属性，方便更加自由地控制。比如使用 popupProps.overlayStyle 设置浮层样式。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "trigger": {
+      "description": "触发下拉显示的方式。可选项：hover/click/focus/context-menu",
+      "description_zh": "触发下拉显示的方式。可选项：hover/click/focus/context-menu",
+      "default": "hover",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "onClick": {
+      "description": "TS 类型：(dropdownItem: DropdownOption, context: { e: MouseEvent }) => void下拉操作项点击时触发",
+      "description_zh": "TS 类型：(dropdownItem: DropdownOption, context: { e: MouseEvent }) => void下拉操作项点击时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/dropdown",
+  "link_zh": "https://tdesign.tencent.com/vue/components/dropdown",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "click",
+      "description": "下拉操作项点击时触发",
+      "params": "(dropdownItem: DropdownOption, context: { e: MouseEvent })",
+      "description_zh": "下拉操作项点击时触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Dropdown"
+}

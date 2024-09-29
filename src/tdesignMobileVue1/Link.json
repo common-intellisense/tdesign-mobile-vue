@@ -1,0 +1,137 @@
+{
+  "name": "TLink",
+  "props": {
+    "content": {
+      "description": "链接内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "链接内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "default": {
+      "description": "链接内容，同 content。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "链接内容，同 content。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "禁用链接",
+      "description_zh": "禁用链接",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "download": {
+      "description": "使得浏览器将链接的 URL 视为可下载资源",
+      "description_zh": "使得浏览器将链接的 URL 视为可下载资源",
+      "default": "-",
+      "value": "",
+      "type": "String / Boolean",
+      "required": false,
+      "version": ""
+    },
+    "hover": {
+      "description": "链接悬浮态样式，有 文本颜色变化、添加下划线等 2 种方法。可选项：color/underline",
+      "description_zh": "链接悬浮态样式，有 文本颜色变化、添加下划线等 2 种方法。可选项：color/underline",
+      "default": "underline",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "href": {
+      "description": "跳转链接",
+      "description_zh": "跳转链接",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "prefixIcon": {
+      "description": "前置图标。TS 类型：TNode。通用类型定义",
+      "description_zh": "前置图标。TS 类型：TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "size": {
+      "description": "尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "description_zh": "尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "default": "medium",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "suffixIcon": {
+      "description": "后置图标。TS 类型：TNode。通用类型定义",
+      "description_zh": "后置图标。TS 类型：TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "target": {
+      "description": "跳转方式，如：当前页面打开、新页面打开等，同 HTML 属性 target 含义相同",
+      "description_zh": "跳转方式，如：当前页面打开、新页面打开等，同 HTML 属性 target 含义相同",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "theme": {
+      "description": "组件风格，依次为默认色、品牌色、危险色、警告色、成功色。可选项：default/primary/danger/warning/success",
+      "description_zh": "组件风格，依次为默认色、品牌色、危险色、警告色、成功色。可选项：default/primary/danger/warning/success",
+      "default": "default",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "underline": {
+      "description": "普通状态是否显示链接下划线",
+      "description_zh": "普通状态是否显示链接下划线",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "onClick": {
+      "description": "TS 类型：(e: MouseEvent) => void点击事件，禁用状态不会触发点击事件",
+      "description_zh": "TS 类型：(e: MouseEvent) => void点击事件，禁用状态不会触发点击事件",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/link?tab=api",
+  "link_zh": "https://tdesign.tencent.com/vue/components/link?tab=api",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "click",
+      "description": "点击事件，禁用状态不会触发点击事件",
+      "params": "(e: MouseEvent)",
+      "description_zh": "点击事件，禁用状态不会触发点击事件"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Link"
+}

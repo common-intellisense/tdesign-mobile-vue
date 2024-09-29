@@ -1,0 +1,76 @@
+{
+  "name": "TComment",
+  "props": {
+    "actions": {
+      "description": "操作。TS 类型：Array<TNode>。通用类型定义",
+      "description_zh": "操作。TS 类型：Array<TNode>。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "author": {
+      "description": "作者。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "作者。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "avatar": {
+      "description": "头像。TS 类型：string | AvatarProps | TNode，Avatar API Documents。通用类型定义。详细类型定义",
+      "description_zh": "头像。TS 类型：string | AvatarProps | TNode，Avatar API Documents。通用类型定义。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Object / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "content": {
+      "description": "内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "datetime": {
+      "description": "时间。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "时间。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "quote": {
+      "description": "引用。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "引用。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "reply": {
+      "description": "回复。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "回复。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/comment",
+  "link_zh": "https://tdesign.tencent.com/vue/components/comment",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Comment"
+}

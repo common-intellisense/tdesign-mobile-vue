@@ -1,0 +1,105 @@
+{
+  "name": "TDescriptions",
+  "props": {
+    "bordered": {
+      "description": "是否带边框",
+      "description_zh": "是否带边框",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "colon": {
+      "description": "字段名右侧是否携带冒号“：”",
+      "description_zh": "字段名右侧是否携带冒号“：”",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "column": {
+      "description": "一行 DescriptionItem 的数量",
+      "description_zh": "一行 DescriptionItem 的数量",
+      "default": "2",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "contentStyle": {
+      "description": "自定义描述项内容的样式。TS 类型：Styles。通用类型定义",
+      "description_zh": "自定义描述项内容的样式。TS 类型：Styles。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "itemLayout": {
+      "description": "描述项的排列方向。可选项：horizontal/vertical",
+      "description_zh": "描述项的排列方向。可选项：horizontal/vertical",
+      "default": "horizontal",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "items": {
+      "description": "描述项的列表。TS 类型：Array<TdDescriptionItemProps>",
+      "description_zh": "描述项的列表。TS 类型：Array<TdDescriptionItemProps>",
+      "default": "-",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "labelStyle": {
+      "description": "自定义描述项标签的样式。TS 类型：Styles。通用类型定义",
+      "description_zh": "自定义描述项标签的样式。TS 类型：Styles。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "layout": {
+      "description": "排列方向。可选项：horizontal/vertical",
+      "description_zh": "排列方向。可选项：horizontal/vertical",
+      "default": "horizontal",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "size": {
+      "description": "组件尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "description_zh": "组件尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "default": "medium",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "title": {
+      "description": "描述列表的标题。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "描述列表的标题。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/descriptions",
+  "link_zh": "https://tdesign.tencent.com/vue/components/descriptions",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [
+    "t-description-item"
+  ],
+  "filename": "Descriptions"
+}

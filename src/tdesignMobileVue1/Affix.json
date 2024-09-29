@@ -1,0 +1,83 @@
+{
+  "name": "TAffix",
+  "props": {
+    "container": {
+      "description": "指定滚动的容器。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body。TS 类型：ScrollContainer。通用类型定义",
+      "description_zh": "指定滚动的容器。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body。TS 类型：ScrollContainer。通用类型定义",
+      "default": "() => (() => window)",
+      "value": "",
+      "type": "String / Function",
+      "required": false,
+      "version": ""
+    },
+    "content": {
+      "description": "内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "default": {
+      "description": "内容，同 content。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "内容，同 content。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "offsetBottom": {
+      "description": "距离容器底部达到指定距离后触发固定",
+      "description_zh": "距离容器底部达到指定距离后触发固定",
+      "default": "0",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "offsetTop": {
+      "description": "距离容器顶部达到指定距离后触发固定",
+      "description_zh": "距离容器顶部达到指定距离后触发固定",
+      "default": "0",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "zIndex": {
+      "description": "固钉定位层级，样式默认为 500",
+      "description_zh": "固钉定位层级，样式默认为 500",
+      "default": "-",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "onFixedChange": {
+      "description": "TS 类型：(affixed: boolean, context: { top: number }) => void固定状态发生变化时触发",
+      "description_zh": "TS 类型：(affixed: boolean, context: { top: number }) => void固定状态发生变化时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/affix",
+  "link_zh": "https://tdesign.tencent.com/vue/components/affix",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "fixed-change",
+      "description": "固定状态发生变化时触发",
+      "params": "(affixed: boolean, context: { top: number })",
+      "description_zh": "固定状态发生变化时触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Affix"
+}

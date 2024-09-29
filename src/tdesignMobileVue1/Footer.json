@@ -1,0 +1,22 @@
+{
+  "name": "TFooter",
+  "props": {
+    "height": {
+      "description": "底栏高度。样式表（class）中定义的默认高度为：24px",
+      "description_zh": "底栏高度。样式表（class）中定义的默认高度为：24px",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/layout?tab=api",
+  "link_zh": "https://tdesign.tencent.com/vue/components/layout?tab=api",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Footer"
+}

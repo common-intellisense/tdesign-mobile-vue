@@ -1,0 +1,563 @@
+{
+  "name": "TSelect",
+  "props": {
+    "autoWidth": {
+      "description": "宽度随内容自适应",
+      "description_zh": "宽度随内容自适应",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "autofocus": {
+      "description": "自动聚焦",
+      "description_zh": "自动聚焦",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "borderless": {
+      "description": "无边框模式",
+      "description_zh": "无边框模式",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "clearable": {
+      "description": "是否可以清空选项",
+      "description_zh": "是否可以清空选项",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "collapsedItems": {
+      "description": "多选情况下，用于设置折叠项内容，默认为 +N。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。value 表示当前存在的所有标签，collapsedSelectedItems 表示折叠的标签，泛型 T 继承 SelectOption，表示选项数据；count 表示折叠的数量, onClose 表示移除标签。TS 类型：TNode<{ value: T[]; collapsedSelectedItems: T[]; count: number; onClose: (context: { index: number, e?: MouseEvent }) => void }>。通用类型定义",
+      "description_zh": "多选情况下，用于设置折叠项内容，默认为 +N。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。value 表示当前存在的所有标签，collapsedSelectedItems 表示折叠的标签，泛型 T 继承 SelectOption，表示选项数据；count 表示折叠的数量, onClose 表示移除标签。TS 类型：TNode<{ value: T[]; collapsedSelectedItems: T[]; count: number; onClose: (context: { index: number, e?: MouseEvent }) => void }>。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "creatable": {
+      "description": "是否允许用户创建新条目，需配合 filterable 使用",
+      "description_zh": "是否允许用户创建新条目，需配合 filterable 使用",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "是否禁用组件",
+      "description_zh": "是否禁用组件",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "empty": {
+      "description": "当下拉列表为空时显示的内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "当下拉列表为空时显示的内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "filter": {
+      "description": "自定义搜索规则，用于对现有数据进行搜索，判断是否过滤某一项数据。参数 filterWords 表示搜索词，option表示单个选项内容，返回值为 true 保留该选项，返回值为 false 则隐藏该选项。使用该方法时无需设置 filterable。TS 类型：(filterWords: string, option: T) => boolean | Promise<boolean>",
+      "description_zh": "自定义搜索规则，用于对现有数据进行搜索，判断是否过滤某一项数据。参数 filterWords 表示搜索词，option表示单个选项内容，返回值为 true 保留该选项，返回值为 false 则隐藏该选项。使用该方法时无需设置 filterable。TS 类型：(filterWords: string, option: T) => boolean | Promise<boolean>",
+      "default": "-",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "filterable": {
+      "description": "是否可搜索，默认搜索规则不区分大小写，全文本任意位置匹配。如果默认搜索规则不符合业务需求，可以更为使用 filter 自定义过滤规则",
+      "description_zh": "是否可搜索，默认搜索规则不区分大小写，全文本任意位置匹配。如果默认搜索规则不符合业务需求，可以更为使用 filter 自定义过滤规则",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "inputProps": {
+      "description": "透传 Input 输入框组件的全部属性。TS 类型：InputProps，Input API Documents。详细类型定义",
+      "description_zh": "透传 Input 输入框组件的全部属性。TS 类型：InputProps，Input API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "inputValue": {
+      "description": "输入框的值。支持语法糖 .sync。TS 类型：InputValue，Input API Documents。详细类型定义",
+      "description_zh": "输入框的值。支持语法糖 .sync。TS 类型：InputValue，Input API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "defaultInputValue": {
+      "description": "输入框的值。非受控属性。TS 类型：InputValue，Input API Documents。详细类型定义",
+      "description_zh": "输入框的值。非受控属性。TS 类型：InputValue，Input API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "keys": {
+      "description": "用来定义 value / label / disabled 在 options 中对应的字段别名。TS 类型：KeysType。通用类型定义",
+      "description_zh": "用来定义 value / label / disabled 在 options 中对应的字段别名。TS 类型：KeysType。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "label": {
+      "description": "左侧文本。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "左侧文本。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "loading": {
+      "description": "是否为加载状态",
+      "description_zh": "是否为加载状态",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "loadingText": {
+      "description": "远程加载时显示的文字，支持自定义。如加上超链接。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "远程加载时显示的文字，支持自定义。如加上超链接。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "max": {
+      "description": "用于控制多选数量，值为 0 则不限制",
+      "description_zh": "用于控制多选数量，值为 0 则不限制",
+      "default": "0",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "minCollapsedNum": {
+      "description": "最小折叠数量，用于多选情况下折叠选中项，超出该数值的选中项折叠。值为 0 则表示不折叠",
+      "description_zh": "最小折叠数量，用于多选情况下折叠选中项，超出该数值的选中项折叠。值为 0 则表示不折叠",
+      "default": "0",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "multiple": {
+      "description": "是否允许多选",
+      "description_zh": "是否允许多选",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "options": {
+      "description": "数据化配置选项内容。TS 类型：Array<T>",
+      "description_zh": "数据化配置选项内容。TS 类型：Array<T>",
+      "default": "-",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "panelBottomContent": {
+      "description": "面板内的底部内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "面板内的底部内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "panelTopContent": {
+      "description": "面板内的顶部内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "面板内的顶部内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "placeholder": {
+      "description": "占位符",
+      "description_zh": "占位符",
+      "default": "undefined",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "popupProps": {
+      "description": "透传给 popup 组件的全部属性。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "description_zh": "透传给 popup 组件的全部属性。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "popupVisible": {
+      "description": "是否显示下拉框。支持语法糖 .sync",
+      "description_zh": "是否显示下拉框。支持语法糖 .sync",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "defaultPopupVisible": {
+      "description": "是否显示下拉框。非受控属性",
+      "description_zh": "是否显示下拉框。非受控属性",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "prefixIcon": {
+      "description": "组件前置图标。TS 类型：TNode。通用类型定义",
+      "description_zh": "组件前置图标。TS 类型：TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "readonly": {
+      "description": "只读状态，值为真会隐藏输入框，且无法打开下拉框",
+      "description_zh": "只读状态，值为真会隐藏输入框，且无法打开下拉框",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "reserveKeyword": {
+      "description": "多选且可搜索时，是否在选中一个选项后保留当前的搜索关键词",
+      "description_zh": "多选且可搜索时，是否在选中一个选项后保留当前的搜索关键词",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "scroll": {
+      "description": "懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 scroll.threshold 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，scroll.threshold 默认为 100。TS 类型：InfinityScroll。通用类型定义",
+      "description_zh": "懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 scroll.threshold 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，scroll.threshold 默认为 100。TS 类型：InfinityScroll。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "selectInputProps": {
+      "description": "透传 SelectInput 筛选器输入框组件的全部属性。TS 类型：SelectInputProps，SelectInput API Documents。详细类型定义",
+      "description_zh": "透传 SelectInput 筛选器输入框组件的全部属性。TS 类型：SelectInputProps，SelectInput API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "showArrow": {
+      "description": "是否显示右侧箭头，默认显示",
+      "description_zh": "是否显示右侧箭头，默认显示",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "size": {
+      "description": "组件尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "description_zh": "组件尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "default": "medium",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "status": {
+      "description": "输入框状态。可选项：default/success/warning/error",
+      "description_zh": "输入框状态。可选项：default/success/warning/error",
+      "default": "default",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "suffix": {
+      "description": "后置图标前的后置内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "后置图标前的后置内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "suffixIcon": {
+      "description": "组件后置图标。TS 类型：TNode。通用类型定义",
+      "description_zh": "组件后置图标。TS 类型：TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "tagInputProps": {
+      "description": "透传 TagInput 标签输入框组件的全部属性。TS 类型：TagInputProps，TagInput API Documents。详细类型定义",
+      "description_zh": "透传 TagInput 标签输入框组件的全部属性。TS 类型：TagInputProps，TagInput API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "tagProps": {
+      "description": "透传 Tag 标签组件全部属性。TS 类型：TagProps，Tag API Documents。详细类型定义",
+      "description_zh": "透传 Tag 标签组件全部属性。TS 类型：TagProps，Tag API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "tips": {
+      "description": "输入框下方提示文本，会根据不同的 status 呈现不同的样式。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "输入框下方提示文本，会根据不同的 status 呈现不同的样式。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "选中值。支持语法糖 v-model。TS 类型：SelectValue type SelectValue<T extends SelectOption = SelectOption> = string | number | boolean | T | Array<SelectValue<T>>。详细类型定义",
+      "description_zh": "选中值。支持语法糖 v-model。TS 类型：SelectValue type SelectValue<T extends SelectOption = SelectOption> = string | number | boolean | T | Array<SelectValue<T>>。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Number / Boolean / Object / Array",
+      "required": false,
+      "version": ""
+    },
+    "defaultValue": {
+      "description": "选中值。非受控属性。TS 类型：SelectValue type SelectValue<T extends SelectOption = SelectOption> = string | number | boolean | T | Array<SelectValue<T>>。详细类型定义",
+      "description_zh": "选中值。非受控属性。TS 类型：SelectValue type SelectValue<T extends SelectOption = SelectOption> = string | number | boolean | T | Array<SelectValue<T>>。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Number / Boolean / Object / Array",
+      "required": false,
+      "version": ""
+    },
+    "valueDisplay": {
+      "description": "自定义选中项呈现的内容。TS 类型：string | TNode<{ value: SelectValue; onClose: (index: number) => void; displayValue?: SelectValue }>。通用类型定义",
+      "description_zh": "自定义选中项呈现的内容。TS 类型：string | TNode<{ value: SelectValue; onClose: (index: number) => void; displayValue?: SelectValue }>。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "valueType": {
+      "description": "用于控制选中值的类型。假设数据选项为：[{ label: '姓名', value: 'name' }]，value 表示值仅返回数据选项中的 value， object 表示值返回全部数据。可选项：value/object",
+      "description_zh": "用于控制选中值的类型。假设数据选项为：[{ label: '姓名', value: 'name' }]，value 表示值仅返回数据选项中的 value， object 表示值返回全部数据。可选项：value/object",
+      "default": "value",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "onBlur": {
+      "description": "TS 类型：(context: { value: SelectValue; e: FocusEvent | KeyboardEvent }) => void输入框失去焦点时触发",
+      "description_zh": "TS 类型：(context: { value: SelectValue; e: FocusEvent | KeyboardEvent }) => void输入框失去焦点时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(value: SelectValue, context: { option?: T, selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent | KeyboardEvent }) => void选中值变化时触发。context.trigger 表示触发变化的来源；context.selectedOptions 表示选中值的完整对象，数组长度一定和 value 相同；context.option 表示当前操作的选项，不一定存在。详细类型定义。type SelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck' | 'default'",
+      "description_zh": "TS 类型：(value: SelectValue, context: { option?: T, selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent | KeyboardEvent }) => void选中值变化时触发。context.trigger 表示触发变化的来源；context.selectedOptions 表示选中值的完整对象，数组长度一定和 value 相同；context.option 表示当前操作的选项，不一定存在。详细类型定义。type SelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck' | 'default'",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onClear": {
+      "description": "TS 类型：(context: { e: MouseEvent }) => void点击清除按钮时触发",
+      "description_zh": "TS 类型：(context: { e: MouseEvent }) => void点击清除按钮时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onCreate": {
+      "description": "TS 类型：(value: string | number) => void当选择新创建的条目时触发",
+      "description_zh": "TS 类型：(value: string | number) => void当选择新创建的条目时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onEnter": {
+      "description": "TS 类型：(context: { inputValue: string; e: KeyboardEvent; value: SelectValue }) => void回车键按下时触发。inputValue 表示输入框的值，value 表示选中值",
+      "description_zh": "TS 类型：(context: { inputValue: string; e: KeyboardEvent; value: SelectValue }) => void回车键按下时触发。inputValue 表示输入框的值，value 表示选中值",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onFocus": {
+      "description": "TS 类型：(context: { value: SelectValue; e: FocusEvent | KeyboardEvent }) => void输入框获得焦点时触发",
+      "description_zh": "TS 类型：(context: { value: SelectValue; e: FocusEvent | KeyboardEvent }) => void输入框获得焦点时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onInputChange": {
+      "description": "TS 类型：(value: InputValue, context?: SelectInputValueChangeContext) => void输入框值发生变化时触发，context.trigger 表示触发输入框值变化的来源：文本输入触发、清除按钮触发、失去焦点等。详细类型定义。import { SelectInputValueChangeContext } from '@SelectInput'",
+      "description_zh": "TS 类型：(value: InputValue, context?: SelectInputValueChangeContext) => void输入框值发生变化时触发，context.trigger 表示触发输入框值变化的来源：文本输入触发、清除按钮触发、失去焦点等。详细类型定义。import { SelectInputValueChangeContext } from '@SelectInput'",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onPopupVisibleChange": {
+      "description": "TS 类型：(visible: boolean, context: PopupVisibleChangeContext) => void下拉框显示或隐藏时触发。详细类型定义。import { PopupVisibleChangeContext } from '@Popup'",
+      "description_zh": "TS 类型：(visible: boolean, context: PopupVisibleChangeContext) => void下拉框显示或隐藏时触发。详细类型定义。import { PopupVisibleChangeContext } from '@Popup'",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onRemove": {
+      "description": "TS 类型：(options: SelectRemoveContext<T>) => void多选模式下，选中数据被移除时触发。详细类型定义。interface SelectRemoveContext<T> { value: string | number; data: T; e: MouseEvent | KeyboardEvent }",
+      "description_zh": "TS 类型：(options: SelectRemoveContext<T>) => void多选模式下，选中数据被移除时触发。详细类型定义。interface SelectRemoveContext<T> { value: string | number; data: T; e: MouseEvent | KeyboardEvent }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onSearch": {
+      "description": "TS 类型：(filterWords: string, context: { e: KeyboardEvent }) => void输入值变化时，触发搜索事件。主要用于远程搜索新数据",
+      "description_zh": "TS 类型：(filterWords: string, context: { e: KeyboardEvent }) => void输入值变化时，触发搜索事件。主要用于远程搜索新数据",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/select",
+  "link_zh": "https://tdesign.tencent.com/vue/components/select",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "blur",
+      "description": "输入框失去焦点时触发",
+      "params": "(context: { value: SelectValue; e: FocusEvent | KeyboardEvent })",
+      "description_zh": "输入框失去焦点时触发"
+    },
+    {
+      "name": "change",
+      "description": "选中值变化时触发。context.trigger 表示触发变化的来源；context.selectedOptions 表示选中值的完整对象，数组长度一定和 value 相同；context.option 表示当前操作的选项，不一定存在。详细类型定义。type SelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck' | 'default'",
+      "params": "(value: SelectValue, context: { option?: T, selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent | KeyboardEvent })",
+      "description_zh": "选中值变化时触发。context.trigger 表示触发变化的来源；context.selectedOptions 表示选中值的完整对象，数组长度一定和 value 相同；context.option 表示当前操作的选项，不一定存在。详细类型定义。type SelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck' | 'default'"
+    },
+    {
+      "name": "clear",
+      "description": "点击清除按钮时触发",
+      "params": "(context: { e: MouseEvent })",
+      "description_zh": "点击清除按钮时触发"
+    },
+    {
+      "name": "create",
+      "description": "当选择新创建的条目时触发",
+      "params": "(value: string | number)",
+      "description_zh": "当选择新创建的条目时触发"
+    },
+    {
+      "name": "enter",
+      "description": "回车键按下时触发。inputValue 表示输入框的值，value 表示选中值",
+      "params": "(context: { inputValue: string; e: KeyboardEvent; value: SelectValue })",
+      "description_zh": "回车键按下时触发。inputValue 表示输入框的值，value 表示选中值"
+    },
+    {
+      "name": "focus",
+      "description": "输入框获得焦点时触发",
+      "params": "(context: { value: SelectValue; e: FocusEvent | KeyboardEvent })",
+      "description_zh": "输入框获得焦点时触发"
+    },
+    {
+      "name": "input-change",
+      "description": "输入框值发生变化时触发，context.trigger 表示触发输入框值变化的来源：文本输入触发、清除按钮触发、失去焦点等。详细类型定义。import { SelectInputValueChangeContext } from '@SelectInput'",
+      "params": "(value: InputValue, context?: SelectInputValueChangeContext)",
+      "description_zh": "输入框值发生变化时触发，context.trigger 表示触发输入框值变化的来源：文本输入触发、清除按钮触发、失去焦点等。详细类型定义。import { SelectInputValueChangeContext } from '@SelectInput'"
+    },
+    {
+      "name": "popup-visible-change",
+      "description": "下拉框显示或隐藏时触发。详细类型定义。import { PopupVisibleChangeContext } from '@Popup'",
+      "params": "(visible: boolean, context: PopupVisibleChangeContext)",
+      "description_zh": "下拉框显示或隐藏时触发。详细类型定义。import { PopupVisibleChangeContext } from '@Popup'"
+    },
+    {
+      "name": "remove",
+      "description": "多选模式下，选中数据被移除时触发。详细类型定义。interface SelectRemoveContext<T> { value: string | number; data: T; e: MouseEvent | KeyboardEvent }",
+      "params": "(options: SelectRemoveContext<T>)",
+      "description_zh": "多选模式下，选中数据被移除时触发。详细类型定义。interface SelectRemoveContext<T> { value: string | number; data: T; e: MouseEvent | KeyboardEvent }"
+    },
+    {
+      "name": "search",
+      "description": "输入值变化时，触发搜索事件。主要用于远程搜索新数据",
+      "params": "(filterWords: string, context: { e: KeyboardEvent })",
+      "description_zh": "输入值变化时，触发搜索事件。主要用于远程搜索新数据"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [
+    "t-option",
+    "t-option-group"
+  ],
+  "filename": "Select"
+}

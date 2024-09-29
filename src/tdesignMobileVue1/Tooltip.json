@@ -1,0 +1,76 @@
+{
+  "name": "TTooltip",
+  "props": {
+    "delay": {
+      "description": "【议案讨论中】延迟出现提示，用于异步加载提示信息需要延迟显示的业务场景下",
+      "description_zh": "【议案讨论中】延迟出现提示，用于异步加载提示信息需要延迟显示的业务场景下",
+      "default": "-",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "destroyOnClose": {
+      "description": "是否在关闭浮层时销毁浮层",
+      "description_zh": "是否在关闭浮层时销毁浮层",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "duration": {
+      "description": "用于设置提示默认显示多长时间之后消失，初始第一次有效，单位：毫秒",
+      "description_zh": "用于设置提示默认显示多长时间之后消失，初始第一次有效，单位：毫秒",
+      "default": "-",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "placement": {
+      "description": "浮层出现位置。TS 类型：'mouse' | PopupPlacement，Popup API Documents。详细类型定义",
+      "description_zh": "浮层出现位置。TS 类型：'mouse' | PopupPlacement，Popup API Documents。详细类型定义",
+      "default": "top",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "showArrow": {
+      "description": "是否显示浮层箭头",
+      "description_zh": "是否显示浮层箭头",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "theme": {
+      "description": "文字提示风格。可选项：default/primary/success/danger/warning/light",
+      "description_zh": "文字提示风格。可选项：default/primary/success/danger/warning/light",
+      "default": "default",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "Omit<PopupProps,": {
+      "description": "继承 Omit<PopupProps, 'placement'> 中的全部 API",
+      "description_zh": "继承 Omit<PopupProps, 'placement'> 中的全部 API",
+      "default": "-",
+      "value": "",
+      "type": "-",
+      "required": false,
+      "version": "'placement'>"
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/tooltip",
+  "link_zh": "https://tdesign.tencent.com/vue/components/tooltip",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Tooltip"
+}

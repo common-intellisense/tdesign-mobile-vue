@@ -1,0 +1,49 @@
+{
+  "name": "TListItemMeta",
+  "props": {
+    "avatar": {
+      "description": "已废弃。列表项图片。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "已废弃。列表项图片。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "description": {
+      "description": "列表项内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "列表项内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "image": {
+      "description": "列表项图片。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "列表项图片。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "title": {
+      "description": "列表项标题。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "列表项标题。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/list",
+  "link_zh": "https://tdesign.tencent.com/vue/components/list",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "ListItemMeta"
+}

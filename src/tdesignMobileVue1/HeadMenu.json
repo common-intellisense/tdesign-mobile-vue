@@ -1,0 +1,120 @@
+{
+  "name": "THeadMenu",
+  "props": {
+    "expandType": {
+      "description": "二级菜单展开方式，平铺展开和浮层展开。可选项：normal/popup",
+      "description_zh": "二级菜单展开方式，平铺展开和浮层展开。可选项：normal/popup",
+      "default": "normal",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "expanded": {
+      "description": "展开的子菜单集合。支持语法糖 .sync。TS 类型：Array<MenuValue>",
+      "description_zh": "展开的子菜单集合。支持语法糖 .sync。TS 类型：Array<MenuValue>",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "defaultExpanded": {
+      "description": "展开的子菜单集合。非受控属性。TS 类型：Array<MenuValue>",
+      "description_zh": "展开的子菜单集合。非受控属性。TS 类型：Array<MenuValue>",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "logo": {
+      "description": "站点 LOGO。TS 类型：TNode。通用类型定义",
+      "description_zh": "站点 LOGO。TS 类型：TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "operations": {
+      "description": "导航操作区域。TS 类型：TNode。通用类型定义",
+      "description_zh": "导航操作区域。TS 类型：TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "theme": {
+      "description": "可选项：light/dark",
+      "description_zh": "可选项：light/dark",
+      "default": "light",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "激活菜单项。支持语法糖 v-model。TS 类型：MenuValue type MenuValue = string | number。详细类型定义",
+      "description_zh": "激活菜单项。支持语法糖 v-model。TS 类型：MenuValue type MenuValue = string | number。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "defaultValue": {
+      "description": "激活菜单项。非受控属性。TS 类型：MenuValue type MenuValue = string | number。详细类型定义",
+      "description_zh": "激活菜单项。非受控属性。TS 类型：MenuValue type MenuValue = string | number。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(value: MenuValue) => void激活菜单项发生变化时触发",
+      "description_zh": "TS 类型：(value: MenuValue) => void激活菜单项发生变化时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onExpand": {
+      "description": "TS 类型：(value: Array<MenuValue>) => void展开的菜单项发生变化时触发",
+      "description_zh": "TS 类型：(value: Array<MenuValue>) => void展开的菜单项发生变化时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/menu",
+  "link_zh": "https://tdesign.tencent.com/vue/components/menu",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "change",
+      "description": "激活菜单项发生变化时触发",
+      "params": "(value: MenuValue)",
+      "description_zh": "激活菜单项发生变化时触发"
+    },
+    {
+      "name": "expand",
+      "description": "展开的菜单项发生变化时触发",
+      "params": "(value: Array<MenuValue>)",
+      "description_zh": "展开的菜单项发生变化时触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [
+    "t-menu-item",
+    "t-submenu",
+    "t-menu-group"
+  ],
+  "filename": "HeadMenu"
+}

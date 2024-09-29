@@ -1,0 +1,49 @@
+{
+  "name": "TDescriptionItem",
+  "props": {
+    "content": {
+      "description": "描述项内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "描述项内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "default": {
+      "description": "描述项内容，同 content。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "描述项内容，同 content。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "label": {
+      "description": "描述项标签。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "描述项标签。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "span": {
+      "description": "占用的宽度数量",
+      "description_zh": "占用的宽度数量",
+      "default": "1",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/descriptions",
+  "link_zh": "https://tdesign.tencent.com/vue/components/descriptions",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "DescriptionItem"
+}

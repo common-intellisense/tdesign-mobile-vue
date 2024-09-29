@@ -1,0 +1,109 @@
+{
+  "name": "TAnchor",
+  "props": {
+    "affixProps": {
+      "description": "透传 Affix 组件属性，即让 Anchor 组件支持所有 Affix 组件特性。TS 类型：AffixProps，Affix API Documents。详细类型定义",
+      "description_zh": "透传 Affix 组件属性，即让 Anchor 组件支持所有 Affix 组件特性。TS 类型：AffixProps，Affix API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "bounds": {
+      "description": "锚点区域边界",
+      "description_zh": "锚点区域边界",
+      "default": "5",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "container": {
+      "description": "指定滚动的容器。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body。TS 类型：ScrollContainer。通用类型定义",
+      "description_zh": "指定滚动的容器。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body。TS 类型：ScrollContainer。通用类型定义",
+      "default": "() => (() => window)",
+      "value": "",
+      "type": "String / Function",
+      "required": false,
+      "version": ""
+    },
+    "cursor": {
+      "description": "用于自定义选中项左侧游标。TS 类型：TNode。通用类型定义",
+      "description_zh": "用于自定义选中项左侧游标。TS 类型：TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "getCurrentAnchor": {
+      "description": "自定义高亮的锚点 。TS 类型：(activeLink: string) => string",
+      "description_zh": "自定义高亮的锚点 。TS 类型：(activeLink: string) => string",
+      "default": "-",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "size": {
+      "description": "组件尺寸，small(120px)，medium(200px)，large(320px)。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "description_zh": "组件尺寸，small(120px)，medium(200px)，large(320px)。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "default": "medium",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "targetOffset": {
+      "description": "锚点滚动偏移量",
+      "description_zh": "锚点滚动偏移量",
+      "default": "0",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(currentLink: string, prevLink: string) => void锚点改变时触发",
+      "description_zh": "TS 类型：(currentLink: string, prevLink: string) => void锚点改变时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onClick": {
+      "description": "TS 类型：(link: { href: string; title: string; e: MouseEvent }) => void锚点被点击时触发",
+      "description_zh": "TS 类型：(link: { href: string; title: string; e: MouseEvent }) => void锚点被点击时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/anchor",
+  "link_zh": "https://tdesign.tencent.com/vue/components/anchor",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "change",
+      "description": "锚点改变时触发",
+      "params": "(currentLink: string, prevLink: string)",
+      "description_zh": "锚点改变时触发"
+    },
+    {
+      "name": "click",
+      "description": "锚点被点击时触发",
+      "params": "(link: { href: string; title: string; e: MouseEvent })",
+      "description_zh": "锚点被点击时触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [
+    "t-anchor-item"
+  ],
+  "filename": "Anchor"
+}

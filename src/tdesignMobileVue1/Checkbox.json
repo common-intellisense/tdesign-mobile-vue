@@ -1,0 +1,128 @@
+{
+  "name": "TCheckbox",
+  "props": {
+    "checkAll": {
+      "description": "用于标识是否为「全选选项」。单独使用无效，需在 CheckboxGroup 中使用",
+      "description_zh": "用于标识是否为「全选选项」。单独使用无效，需在 CheckboxGroup 中使用",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "checked": {
+      "description": "是否选中。支持语法糖 v-model",
+      "description_zh": "是否选中。支持语法糖 v-model",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "defaultChecked": {
+      "description": "是否选中。非受控属性",
+      "description_zh": "是否选中。非受控属性",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "default": {
+      "description": "多选框内容，同 label。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "多选框内容，同 label。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "是否禁用组件。如果父组件存在 CheckboxGroup，默认值由 CheckboxGroup.disabled 控制。优先级：Checkbox.disabled > CheckboxGroup.disabled > Form.disabled",
+      "description_zh": "是否禁用组件。如果父组件存在 CheckboxGroup，默认值由 CheckboxGroup.disabled 控制。优先级：Checkbox.disabled > CheckboxGroup.disabled > Form.disabled",
+      "default": "undefined",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "indeterminate": {
+      "description": "是否为半选",
+      "description_zh": "是否为半选",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "label": {
+      "description": "主文案。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "主文案。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "lazyLoad": {
+      "description": "是否启用懒加载。数据量加大时建议开启；加载复杂内容或大量图片时建议开启",
+      "description_zh": "是否启用懒加载。数据量加大时建议开启；加载复杂内容或大量图片时建议开启",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "name": {
+      "description": "HTML 元素原生属性",
+      "description_zh": "HTML 元素原生属性",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "readonly": {
+      "description": "只读状态",
+      "description_zh": "只读状态",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "多选框的值。TS 类型：string | number | boolean",
+      "description_zh": "多选框的值。TS 类型：string | number | boolean",
+      "default": "-",
+      "value": "",
+      "type": "String / Number / Boolean",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(checked: boolean, context: { e: Event }) => void值变化时触发",
+      "description_zh": "TS 类型：(checked: boolean, context: { e: Event }) => void值变化时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/checkbox",
+  "link_zh": "https://tdesign.tencent.com/vue/components/checkbox",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "change",
+      "description": "值变化时触发",
+      "params": "(checked: boolean, context: { e: Event })",
+      "description_zh": "值变化时触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Checkbox"
+}

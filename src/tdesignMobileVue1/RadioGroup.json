@@ -1,0 +1,103 @@
+{
+  "name": "TRadioGroup",
+  "props": {
+    "allowUncheck": {
+      "description": "是否允许取消选中",
+      "description_zh": "是否允许取消选中",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "是否禁用全部子单选框",
+      "description_zh": "是否禁用全部子单选框",
+      "default": "undefined",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "name": {
+      "description": "HTML 元素原生属性",
+      "description_zh": "HTML 元素原生属性",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "options": {
+      "description": "单选组件按钮形式。RadioOption 数据类型为 string 或 number 时，表示 label 和 value 值相同。TS 类型：Array<RadioOption> type RadioOption = string | number | RadioOptionObj interface RadioOptionObj { label?: string | TNode; value?: string | number; disabled?: boolean }。通用类型定义。详细类型定义",
+      "description_zh": "单选组件按钮形式。RadioOption 数据类型为 string 或 number 时，表示 label 和 value 值相同。TS 类型：Array<RadioOption> type RadioOption = string | number | RadioOptionObj interface RadioOptionObj { label?: string | TNode; value?: string | number; disabled?: boolean }。通用类型定义。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "size": {
+      "description": "组件尺寸【讨论中】。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "description_zh": "组件尺寸【讨论中】。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "default": "medium",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "选中的值。支持语法糖 v-model。TS 类型：T",
+      "description_zh": "选中的值。支持语法糖 v-model。TS 类型：T",
+      "default": "-",
+      "value": "",
+      "type": "String / Number / Boolean",
+      "required": false,
+      "version": ""
+    },
+    "defaultValue": {
+      "description": "选中的值。非受控属性。TS 类型：T",
+      "description_zh": "选中的值。非受控属性。TS 类型：T",
+      "default": "-",
+      "value": "",
+      "type": "String / Number / Boolean",
+      "required": false,
+      "version": ""
+    },
+    "variant": {
+      "description": "单选组件按钮形式。可选项：outline/primary-filled/default-filled",
+      "description_zh": "单选组件按钮形式。可选项：outline/primary-filled/default-filled",
+      "default": "outline",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(value: T, context: { e: Event }) => void选中值发生变化时触发",
+      "description_zh": "TS 类型：(value: T, context: { e: Event }) => void选中值发生变化时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/radio",
+  "link_zh": "https://tdesign.tencent.com/vue/components/radio",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "change",
+      "description": "选中值发生变化时触发",
+      "params": "(value: T, context: { e: Event })",
+      "description_zh": "选中值发生变化时触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [
+    "t-radio"
+  ],
+  "filename": "RadioGroup"
+}

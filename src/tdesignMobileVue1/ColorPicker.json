@@ -1,0 +1,230 @@
+{
+  "name": "TColorPicker",
+  "props": {
+    "borderless": {
+      "description": "无边框模式",
+      "description_zh": "无边框模式",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "clearable": {
+      "description": "是否可清空",
+      "description_zh": "是否可清空",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "closeBtn": {
+      "description": "关闭按钮，值为 true 显示默认关闭按钮；值为 false 或 undefined 则不显示关闭按钮；值类型为函数，则表示自定义关闭按钮。TS 类型：string | boolean | TNode。通用类型定义",
+      "description_zh": "关闭按钮，值为 true 显示默认关闭按钮；值为 false 或 undefined 则不显示关闭按钮；值类型为函数，则表示自定义关闭按钮。TS 类型：string | boolean | TNode。通用类型定义",
+      "default": "true",
+      "value": "",
+      "type": "String / Boolean / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "colorModes": {
+      "description": "颜色模式选择。同时支持单色和渐变两种模式，可仅使用单色或者渐变其中一种模式，也可以同时使用。monochrome 表示单色，linear-gradient 表示渐变色。TS 类型：Array<'monochrome' | 'linear-gradient'>",
+      "description_zh": "颜色模式选择。同时支持单色和渐变两种模式，可仅使用单色或者渐变其中一种模式，也可以同时使用。monochrome 表示单色，linear-gradient 表示渐变色。TS 类型：Array<'monochrome' | 'linear-gradient'>",
+      "default": "[\"monochrome\", \"linear-gradient\"]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "是否禁用组件",
+      "description_zh": "是否禁用组件",
+      "default": "undefined",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "enableAlpha": {
+      "description": "是否开启透明通道",
+      "description_zh": "是否开启透明通道",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "enableMultipleGradient": {
+      "description": "是否允许开启通过点击渐变轴增加渐变梯度，默认开启，关闭时只会存在起始和结束两个颜色",
+      "description_zh": "是否允许开启通过点击渐变轴增加渐变梯度，默认开启，关闭时只会存在起始和结束两个颜色",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "format": {
+      "description": "格式化色值。enableAlpha 为真时，RGBA/HSLA/HSVA 等值有效。可选项：RGB/RGBA/HSL/HSLA/HSB/HSV/HSVA/HEX/CMYK/CSS",
+      "description_zh": "格式化色值。enableAlpha 为真时，RGBA/HSLA/HSVA 等值有效。可选项：RGB/RGBA/HSL/HSLA/HSB/HSV/HSVA/HEX/CMYK/CSS",
+      "default": "RGB",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "inputProps": {
+      "description": "透传 Input 输入框组件全部属性。TS 类型：InputProps，Input API Documents。详细类型定义",
+      "description_zh": "透传 Input 输入框组件全部属性。TS 类型：InputProps，Input API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "multiple": {
+      "description": "【开发中】是否允许选中多个颜色",
+      "description_zh": "【开发中】是否允许选中多个颜色",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "popupProps": {
+      "description": "透传 Popup 组件全部属性，如 placement overlayStyle overlayClassName trigger等。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "description_zh": "透传 Popup 组件全部属性，如 placement overlayStyle overlayClassName trigger等。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "recentColors": {
+      "description": "最近使用的颜色。值为 [] 表示以组件内部的“最近使用颜色”为准，值长度大于 0 则以该值为准显示“最近使用颜色”。值为 null 则完全不显示“最近使用颜色”。支持语法糖 .sync。TS 类型：boolean | Array<string> | null",
+      "description_zh": "最近使用的颜色。值为 [] 表示以组件内部的“最近使用颜色”为准，值长度大于 0 则以该值为准显示“最近使用颜色”。值为 null 则完全不显示“最近使用颜色”。支持语法糖 .sync。TS 类型：boolean | Array<string> | null",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "defaultRecentColors": {
+      "description": "最近使用的颜色。值为 [] 表示以组件内部的“最近使用颜色”为准，值长度大于 0 则以该值为准显示“最近使用颜色”。值为 null 则完全不显示“最近使用颜色”。非受控属性。TS 类型：boolean | Array<string> | null",
+      "description_zh": "最近使用的颜色。值为 [] 表示以组件内部的“最近使用颜色”为准，值长度大于 0 则以该值为准显示“最近使用颜色”。值为 null 则完全不显示“最近使用颜色”。非受控属性。TS 类型：boolean | Array<string> | null",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "selectInputProps": {
+      "description": "透传 SelectInputProps 筛选器输入框组件全部属性。TS 类型：SelectInputProps，SelectInput API Documents。详细类型定义",
+      "description_zh": "透传 SelectInputProps 筛选器输入框组件全部属性。TS 类型：SelectInputProps，SelectInput API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "showPrimaryColorPreview": {
+      "description": "是否展示颜色选择条右侧的颜色预览区域",
+      "description_zh": "是否展示颜色选择条右侧的颜色预览区域",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "size": {
+      "description": "组件尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "description_zh": "组件尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "default": "medium",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "swatchColors": {
+      "description": "系统预设的颜色样例，值为 null 或 [] 则不显示系统色，值为 undefined 会显示组件内置的系统默认色。TS 类型：Array<string> | null",
+      "description_zh": "系统预设的颜色样例，值为 null 或 [] 则不显示系统色，值为 undefined 会显示组件内置的系统默认色。TS 类型：Array<string> | null",
+      "default": "-",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "色值。支持语法糖 v-model",
+      "description_zh": "色值。支持语法糖 v-model",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "defaultValue": {
+      "description": "色值。非受控属性",
+      "description_zh": "色值。非受控属性",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(value: string, context: { color: ColorObject; trigger: ColorPickerChangeTrigger }) => void选中的色值发生变化时触发，第一个参数 value 表示新色值，context.color 表示当前调色板控制器的色值，context.trigger 表示触发颜色变化的来源。详细类型定义。type ColorPickerChangeTrigger = 'palette-saturation-brightness' | 'palette-saturation' | 'palette-brightness' | 'palette-hue-bar' | 'palette-alpha-bar' | 'input' | 'preset' | 'recent' ",
+      "description_zh": "TS 类型：(value: string, context: { color: ColorObject; trigger: ColorPickerChangeTrigger }) => void选中的色值发生变化时触发，第一个参数 value 表示新色值，context.color 表示当前调色板控制器的色值，context.trigger 表示触发颜色变化的来源。详细类型定义。type ColorPickerChangeTrigger = 'palette-saturation-brightness' | 'palette-saturation' | 'palette-brightness' | 'palette-hue-bar' | 'palette-alpha-bar' | 'input' | 'preset' | 'recent' ",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onPaletteBarChange": {
+      "description": "TS 类型：(context: { color: ColorObject }) => void调色板控制器的值变化时触发，context.color 指调色板控制器的值。详细类型定义。interface ColorObject { alpha: number; css: string; hex: string; hex8: string; hsl: string; hsla: string; hsv: string; hsva: string; rgb: string; rgba: string; saturation: number; value: number; isGradient: boolean; linearGradient?: string; }",
+      "description_zh": "TS 类型：(context: { color: ColorObject }) => void调色板控制器的值变化时触发，context.color 指调色板控制器的值。详细类型定义。interface ColorObject { alpha: number; css: string; hex: string; hex8: string; hsl: string; hsla: string; hsv: string; hsva: string; rgb: string; rgba: string; saturation: number; value: number; isGradient: boolean; linearGradient?: string; }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onRecentColorsChange": {
+      "description": "TS 类型：(value: Array<string>) => void最近使用颜色发生变化时触发",
+      "description_zh": "TS 类型：(value: Array<string>) => void最近使用颜色发生变化时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/color-picker",
+  "link_zh": "https://tdesign.tencent.com/vue/components/color-picker",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "change",
+      "description": "选中的色值发生变化时触发，第一个参数 value 表示新色值，context.color 表示当前调色板控制器的色值，context.trigger 表示触发颜色变化的来源。详细类型定义。type ColorPickerChangeTrigger = 'palette-saturation-brightness' | 'palette-saturation' | 'palette-brightness' | 'palette-hue-bar' | 'palette-alpha-bar' | 'input' | 'preset' | 'recent' ",
+      "params": "(value: string, context: { color: ColorObject; trigger: ColorPickerChangeTrigger })",
+      "description_zh": "选中的色值发生变化时触发，第一个参数 value 表示新色值，context.color 表示当前调色板控制器的色值，context.trigger 表示触发颜色变化的来源。详细类型定义。type ColorPickerChangeTrigger = 'palette-saturation-brightness' | 'palette-saturation' | 'palette-brightness' | 'palette-hue-bar' | 'palette-alpha-bar' | 'input' | 'preset' | 'recent' "
+    },
+    {
+      "name": "palette-bar-change",
+      "description": "调色板控制器的值变化时触发，context.color 指调色板控制器的值。详细类型定义。interface ColorObject { alpha: number; css: string; hex: string; hex8: string; hsl: string; hsla: string; hsv: string; hsva: string; rgb: string; rgba: string; saturation: number; value: number; isGradient: boolean; linearGradient?: string; }",
+      "params": "(context: { color: ColorObject })",
+      "description_zh": "调色板控制器的值变化时触发，context.color 指调色板控制器的值。详细类型定义。interface ColorObject { alpha: number; css: string; hex: string; hex8: string; hsl: string; hsla: string; hsv: string; hsva: string; rgb: string; rgba: string; saturation: number; value: number; isGradient: boolean; linearGradient?: string; }"
+    },
+    {
+      "name": "recent-colors-change",
+      "description": "最近使用颜色发生变化时触发",
+      "params": "(value: Array<string>)",
+      "description_zh": "最近使用颜色发生变化时触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "ColorPicker"
+}

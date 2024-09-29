@@ -1,0 +1,85 @@
+{
+  "name": "TCollapsePanel",
+  "props": {
+    "content": {
+      "description": "折叠面板内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "折叠面板内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "default": {
+      "description": "折叠面板内容，同 content。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "折叠面板内容，同 content。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "destroyOnCollapse": {
+      "description": "当前面板处理折叠状态时，是否销毁面板内容",
+      "description_zh": "当前面板处理折叠状态时，是否销毁面板内容",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "禁止当前面板展开，优先级大于 Collapse 的同名属性",
+      "description_zh": "禁止当前面板展开，优先级大于 Collapse 的同名属性",
+      "default": "undefined",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "expandIcon": {
+      "description": "当前折叠面板展开图标，优先级大于 Collapse 的同名属性。TS 类型：boolean | TNode。通用类型定义",
+      "description_zh": "当前折叠面板展开图标，优先级大于 Collapse 的同名属性。TS 类型：boolean | TNode。通用类型定义",
+      "default": "undefined",
+      "value": "",
+      "type": "Boolean / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "header": {
+      "description": "面板头内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "面板头内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "headerRightContent": {
+      "description": "面板头的右侧区域，一般用于呈现面板操作。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "面板头的右侧区域，一般用于呈现面板操作。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "必需。当前面板唯一标识，如果值为空则取当前面下标兜底作为唯一标识",
+      "description_zh": "必需。当前面板唯一标识，如果值为空则取当前面下标兜底作为唯一标识",
+      "default": "-",
+      "value": "",
+      "type": "String / Number",
+      "required": true,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/collapse",
+  "link_zh": "https://tdesign.tencent.com/vue/components/collapse",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "CollapsePanel"
+}

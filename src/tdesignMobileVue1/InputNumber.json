@@ -1,0 +1,323 @@
+{
+  "name": "TInputNumber",
+  "props": {
+    "align": {
+      "description": "文本内容位置，居左/居中/居右。可选项：left/center/right",
+      "description_zh": "文本内容位置，居左/居中/居右。可选项：left/center/right",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "allowInputOverLimit": {
+      "description": "是否允许输入超过 max min 范围外的数字。为保障用户体验，仅在失去焦点时进行数字范围矫正。默认允许超出，数字超出范围时，输入框变红提醒",
+      "description_zh": "是否允许输入超过 max min 范围外的数字。为保障用户体验，仅在失去焦点时进行数字范围矫正。默认允许超出，数字超出范围时，输入框变红提醒",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "autoWidth": {
+      "description": "宽度随内容自适应",
+      "description_zh": "宽度随内容自适应",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "decimalPlaces": {
+      "description": "小数位数",
+      "description_zh": "小数位数",
+      "default": "undefined",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "禁用组件",
+      "description_zh": "禁用组件",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "format": {
+      "description": "格式化输入框展示值。第二个事件参数 context.fixedNumber 表示处理过小数位数 decimalPlaces 的数字。TS 类型：(value: InputNumberValue, context?: { fixedNumber?: InputNumberValue }) => InputNumberValue",
+      "description_zh": "格式化输入框展示值。第二个事件参数 context.fixedNumber 表示处理过小数位数 decimalPlaces 的数字。TS 类型：(value: InputNumberValue, context?: { fixedNumber?: InputNumberValue }) => InputNumberValue",
+      "default": "-",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "inputProps": {
+      "description": "透传 Input 输入框组件全部属性。TS 类型：InputProps，Input API Documents。详细类型定义",
+      "description_zh": "透传 Input 输入框组件全部属性。TS 类型：InputProps，Input API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "label": {
+      "description": "左侧文本。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "左侧文本。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "largeNumber": {
+      "description": "是否作为大数使用。JS 支持的最大数字位数是 16 位，超过 16 位的数字需作为字符串大数处理。此时，数据类型必须保持为字符串，否则会丢失数据",
+      "description_zh": "是否作为大数使用。JS 支持的最大数字位数是 16 位，超过 16 位的数字需作为字符串大数处理。此时，数据类型必须保持为字符串，否则会丢失数据",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "max": {
+      "description": "最大值。如果是大数，请传入字符串。TS 类型：InputNumberValue",
+      "description_zh": "最大值。如果是大数，请传入字符串。TS 类型：InputNumberValue",
+      "default": "Infinity",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "min": {
+      "description": "最小值。如果是大数，请传入字符串。TS 类型：InputNumberValue",
+      "description_zh": "最小值。如果是大数，请传入字符串。TS 类型：InputNumberValue",
+      "default": "-Infinity",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "placeholder": {
+      "description": "占位符",
+      "description_zh": "占位符",
+      "default": "undefined",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "readonly": {
+      "description": "只读状态",
+      "description_zh": "只读状态",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "size": {
+      "description": "组件尺寸。可选项：small/medium/large",
+      "description_zh": "组件尺寸。可选项：small/medium/large",
+      "default": "medium",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "status": {
+      "description": "文本框状态。可选项：default/success/warning/error",
+      "description_zh": "文本框状态。可选项：default/success/warning/error",
+      "default": "default",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "step": {
+      "description": "数值改变步数，可以是小数。如果是大数，请保证数据类型为字符串。TS 类型：InputNumberValue",
+      "description_zh": "数值改变步数，可以是小数。如果是大数，请保证数据类型为字符串。TS 类型：InputNumberValue",
+      "default": "1",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "suffix": {
+      "description": "后置内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "后置内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "theme": {
+      "description": "按钮布局。可选项：column/row/normal",
+      "description_zh": "按钮布局。可选项：column/row/normal",
+      "default": "row",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "tips": {
+      "description": "输入框下方提示文本，会根据不同的 status 呈现不同的样式。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "输入框下方提示文本，会根据不同的 status 呈现不同的样式。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "数字输入框的值。当值为 '' 时，输入框显示为空。支持语法糖 v-model。TS 类型：T type InputNumberValue = number | string。详细类型定义",
+      "description_zh": "数字输入框的值。当值为 '' 时，输入框显示为空。支持语法糖 v-model。TS 类型：T type InputNumberValue = number | string。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "defaultValue": {
+      "description": "数字输入框的值。当值为 '' 时，输入框显示为空。非受控属性。TS 类型：T type InputNumberValue = number | string。详细类型定义",
+      "description_zh": "数字输入框的值。当值为 '' 时，输入框显示为空。非受控属性。TS 类型：T type InputNumberValue = number | string。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "onBlur": {
+      "description": "TS 类型：(value: InputNumberValue, context: { e: FocusEvent }) => void失去焦点时触发",
+      "description_zh": "TS 类型：(value: InputNumberValue, context: { e: FocusEvent }) => void失去焦点时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(value: T, context: ChangeContext) => void值变化时触发，type 表示触发本次变化的来源。详细类型定义。interface ChangeContext { type: ChangeSource; e: InputEvent | MouseEvent | FocusEvent | KeyboardEvent | CompositionEvent }type ChangeSource = 'add' | 'reduce' | 'input' | 'blur' | 'enter' | 'clear' | 'props'",
+      "description_zh": "TS 类型：(value: T, context: ChangeContext) => void值变化时触发，type 表示触发本次变化的来源。详细类型定义。interface ChangeContext { type: ChangeSource; e: InputEvent | MouseEvent | FocusEvent | KeyboardEvent | CompositionEvent }type ChangeSource = 'add' | 'reduce' | 'input' | 'blur' | 'enter' | 'clear' | 'props'",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onEnter": {
+      "description": "TS 类型：(value: InputNumberValue, context: { e: KeyboardEvent }) => void回车键按下时触发",
+      "description_zh": "TS 类型：(value: InputNumberValue, context: { e: KeyboardEvent }) => void回车键按下时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onFocus": {
+      "description": "TS 类型：(value: InputNumberValue, context: { e: FocusEvent }) => void获取焦点时触发",
+      "description_zh": "TS 类型：(value: InputNumberValue, context: { e: FocusEvent }) => void获取焦点时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onKeydown": {
+      "description": "TS 类型：(value: InputNumberValue, context: { e: KeyboardEvent }) => void键盘按下时触发",
+      "description_zh": "TS 类型：(value: InputNumberValue, context: { e: KeyboardEvent }) => void键盘按下时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onKeypress": {
+      "description": "TS 类型：(value: InputNumberValue, context: { e: KeyboardEvent }) => void按下字符键时触发（keydown -> keypress -> keyup）",
+      "description_zh": "TS 类型：(value: InputNumberValue, context: { e: KeyboardEvent }) => void按下字符键时触发（keydown -> keypress -> keyup）",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onKeyup": {
+      "description": "TS 类型：(value: InputNumberValue, context: { e: KeyboardEvent }) => void释放键盘时触发",
+      "description_zh": "TS 类型：(value: InputNumberValue, context: { e: KeyboardEvent }) => void释放键盘时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onValidate": {
+      "description": "TS 类型：(context: { error?: 'exceed-maximum' | 'below-minimum' }) => void最大值或最小值校验结束后触发，exceed-maximum 表示超出最大值，below-minimum 表示小于最小值",
+      "description_zh": "TS 类型：(context: { error?: 'exceed-maximum' | 'below-minimum' }) => void最大值或最小值校验结束后触发，exceed-maximum 表示超出最大值，below-minimum 表示小于最小值",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/input-number",
+  "link_zh": "https://tdesign.tencent.com/vue/components/input-number",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "blur",
+      "description": "失去焦点时触发",
+      "params": "(value: InputNumberValue, context: { e: FocusEvent })",
+      "description_zh": "失去焦点时触发"
+    },
+    {
+      "name": "change",
+      "description": "值变化时触发，type 表示触发本次变化的来源。详细类型定义。interface ChangeContext { type: ChangeSource; e: InputEvent | MouseEvent | FocusEvent | KeyboardEvent | CompositionEvent }type ChangeSource = 'add' | 'reduce' | 'input' | 'blur' | 'enter' | 'clear' | 'props'",
+      "params": "(value: T, context: ChangeContext)",
+      "description_zh": "值变化时触发，type 表示触发本次变化的来源。详细类型定义。interface ChangeContext { type: ChangeSource; e: InputEvent | MouseEvent | FocusEvent | KeyboardEvent | CompositionEvent }type ChangeSource = 'add' | 'reduce' | 'input' | 'blur' | 'enter' | 'clear' | 'props'"
+    },
+    {
+      "name": "enter",
+      "description": "回车键按下时触发",
+      "params": "(value: InputNumberValue, context: { e: KeyboardEvent })",
+      "description_zh": "回车键按下时触发"
+    },
+    {
+      "name": "focus",
+      "description": "获取焦点时触发",
+      "params": "(value: InputNumberValue, context: { e: FocusEvent })",
+      "description_zh": "获取焦点时触发"
+    },
+    {
+      "name": "keydown",
+      "description": "键盘按下时触发",
+      "params": "(value: InputNumberValue, context: { e: KeyboardEvent })",
+      "description_zh": "键盘按下时触发"
+    },
+    {
+      "name": "keypress",
+      "description": "按下字符键时触发（keydown -> keypress -> keyup）",
+      "params": "(value: InputNumberValue, context: { e: KeyboardEvent })",
+      "description_zh": "按下字符键时触发（keydown -> keypress -> keyup）"
+    },
+    {
+      "name": "keyup",
+      "description": "释放键盘时触发",
+      "params": "(value: InputNumberValue, context: { e: KeyboardEvent })",
+      "description_zh": "释放键盘时触发"
+    },
+    {
+      "name": "validate",
+      "description": "最大值或最小值校验结束后触发，exceed-maximum 表示超出最大值，below-minimum 表示小于最小值",
+      "params": "(context: { error?: 'exceed-maximum' | 'below-minimum' })",
+      "description_zh": "最大值或最小值校验结束后触发，exceed-maximum 表示超出最大值，below-minimum 表示小于最小值"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "InputNumber"
+}

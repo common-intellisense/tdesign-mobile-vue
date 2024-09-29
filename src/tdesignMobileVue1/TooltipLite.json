@@ -1,0 +1,67 @@
+{
+  "name": "TTooltipLite",
+  "props": {
+    "content": {
+      "description": "文字提示内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "文字提示内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "placement": {
+      "description": "提示浮层出现的位置。可选项：top/bottom",
+      "description_zh": "提示浮层出现的位置。可选项：top/bottom",
+      "default": "top",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "showArrow": {
+      "description": "是否显示箭头",
+      "description_zh": "是否显示箭头",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "showShadow": {
+      "description": "文字提示浮层是否需要阴影",
+      "description_zh": "文字提示浮层是否需要阴影",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "theme": {
+      "description": "组件风格，有亮色模式和暗色模式两种。可选项：light/default",
+      "description_zh": "组件风格，有亮色模式和暗色模式两种。可选项：light/default",
+      "default": "default",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "triggerElement": {
+      "description": "触发元素。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "触发元素。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/tooltip",
+  "link_zh": "https://tdesign.tencent.com/vue/components/tooltip",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "TooltipLite"
+}

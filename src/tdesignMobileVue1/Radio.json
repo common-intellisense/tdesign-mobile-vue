@@ -1,0 +1,116 @@
+{
+  "name": "TRadio",
+  "props": {
+    "allowUncheck": {
+      "description": "是否允许取消选中",
+      "description_zh": "是否允许取消选中",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "checked": {
+      "description": "是否选中。支持语法糖 v-model",
+      "description_zh": "是否选中。支持语法糖 v-model",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "defaultChecked": {
+      "description": "是否选中。非受控属性",
+      "description_zh": "是否选中。非受控属性",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "default": {
+      "description": "单选按钮内容，同 label。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "单选按钮内容，同 label。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "是否为禁用态",
+      "description_zh": "是否为禁用态",
+      "default": "undefined",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "label": {
+      "description": "主文案。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "主文案。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "name": {
+      "description": "HTML 元素原生属性",
+      "description_zh": "HTML 元素原生属性",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "单选按钮的值。TS 类型：T",
+      "description_zh": "单选按钮的值。TS 类型：T",
+      "default": "undefined",
+      "value": "",
+      "type": "String / Number / Boolean",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(checked: boolean, context: { e: Event }) => void选中状态变化时触发",
+      "description_zh": "TS 类型：(checked: boolean, context: { e: Event }) => void选中状态变化时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onClick": {
+      "description": "TS 类型：(context: { e: MouseEvent }) => void点击时触发，一般用于外层阻止冒泡场景",
+      "description_zh": "TS 类型：(context: { e: MouseEvent }) => void点击时触发，一般用于外层阻止冒泡场景",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/radio",
+  "link_zh": "https://tdesign.tencent.com/vue/components/radio",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "change",
+      "description": "选中状态变化时触发",
+      "params": "(checked: boolean, context: { e: Event })",
+      "description_zh": "选中状态变化时触发"
+    },
+    {
+      "name": "click",
+      "description": "点击时触发，一般用于外层阻止冒泡场景",
+      "params": "(context: { e: MouseEvent })",
+      "description_zh": "点击时触发，一般用于外层阻止冒泡场景"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Radio"
+}

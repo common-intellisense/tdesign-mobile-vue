@@ -1,0 +1,152 @@
+{
+  "name": "TDatePickerPanel",
+  "props": {
+    "defaultTime": {
+      "description": "时间选择器默认值，当 value/defaultValue 未设置值时有效",
+      "description_zh": "时间选择器默认值，当 value/defaultValue 未设置值时有效",
+      "default": "'00:00:00'",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "Pick<DatePickerProps,": {
+      "description": "继承 Pick<DatePickerProps, 'value' | 'defaultValue' | 'disableDate' | 'enableTimePicker' | 'firstDayOfWeek' | 'format' | 'mode' | 'presets' | 'presetsPlacement' | 'timePickerProps'> 中的全部属性",
+      "description_zh": "继承 Pick<DatePickerProps, 'value' | 'defaultValue' | 'disableDate' | 'enableTimePicker' | 'firstDayOfWeek' | 'format' | 'mode' | 'presets' | 'presetsPlacement' | 'timePickerProps'> 中的全部属性",
+      "default": "-",
+      "value": "",
+      "type": "-",
+      "required": false,
+      "version": "'value' | 'defaultValue' | 'disableDate' | 'enableTimePicker' | 'firstDayOfWeek' | 'format' | 'mode' | 'presets' | 'presetsPlacement' | 'timePickerProps'>"
+    },
+    "onCellClick": {
+      "description": "TS 类型：(context: { date: Date, e: MouseEvent }) => void点击日期单元格时触发",
+      "description_zh": "TS 类型：(context: { date: Date, e: MouseEvent }) => void点击日期单元格时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(value: DateValue, context: { dayjsValue?: Dayjs, e?: MouseEvent, trigger?: DatePickerTriggerSource }) => void选中值发生变化时触发。参数 context.trigger 表示触发当前事件的来源，不同的模式触发来源也会不同",
+      "description_zh": "TS 类型：(value: DateValue, context: { dayjsValue?: Dayjs, e?: MouseEvent, trigger?: DatePickerTriggerSource }) => void选中值发生变化时触发。参数 context.trigger 表示触发当前事件的来源，不同的模式触发来源也会不同",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onConfirm": {
+      "description": "TS 类型：(context: { date: Date, e: MouseEvent }) => void如果存在“确定”按钮，则点击“确定”按钮时触发",
+      "description_zh": "TS 类型：(context: { date: Date, e: MouseEvent }) => void如果存在“确定”按钮，则点击“确定”按钮时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onMonthChange": {
+      "description": "TS 类型：(context: { month: number, date: Date, e?: MouseEvent, trigger: DatePickerMonthChangeTrigger }) => void月份切换发生变化时触发。详细类型定义。type DatePickerMonthChangeTrigger = 'month-select' | 'month-arrow-next' | 'month-arrow-previous' | 'today'",
+      "description_zh": "TS 类型：(context: { month: number, date: Date, e?: MouseEvent, trigger: DatePickerMonthChangeTrigger }) => void月份切换发生变化时触发。详细类型定义。type DatePickerMonthChangeTrigger = 'month-select' | 'month-arrow-next' | 'month-arrow-previous' | 'today'",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onPanelClick": {
+      "description": "TS 类型：(context: { e: MouseEvent }) => void点击面板时触发",
+      "description_zh": "TS 类型：(context: { e: MouseEvent }) => void点击面板时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onPresetClick": {
+      "description": "TS 类型：(context: { preset: PresetDate, e: MouseEvent }) => void点击预设按钮后触发",
+      "description_zh": "TS 类型：(context: { preset: PresetDate, e: MouseEvent }) => void点击预设按钮后触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onTimeChange": {
+      "description": "TS 类型：(context: { time: string, date: Date, trigger: DatePickerTimeChangeTrigger, e?: MouseEvent }) => void时间切换发生变化时触发。详细类型定义。type DatePickerTimeChangeTrigger = 'time-hour' | 'time-minute' | 'time-second'",
+      "description_zh": "TS 类型：(context: { time: string, date: Date, trigger: DatePickerTimeChangeTrigger, e?: MouseEvent }) => void时间切换发生变化时触发。详细类型定义。type DatePickerTimeChangeTrigger = 'time-hour' | 'time-minute' | 'time-second'",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onYearChange": {
+      "description": "TS 类型：(context: { year: number, date: Date, trigger: DatePickerYearChangeTrigger, e?: MouseEvent }) => void年份切换发生变化时触发。详细类型定义。type DatePickerYearChangeTrigger = 'year-select' | 'year-arrow-next' | 'year-arrow-previous' | 'today'",
+      "description_zh": "TS 类型：(context: { year: number, date: Date, trigger: DatePickerYearChangeTrigger, e?: MouseEvent }) => void年份切换发生变化时触发。详细类型定义。type DatePickerYearChangeTrigger = 'year-select' | 'year-arrow-next' | 'year-arrow-previous' | 'today'",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/date-picker",
+  "link_zh": "https://tdesign.tencent.com/vue/components/date-picker",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "cell-click",
+      "description": "点击日期单元格时触发",
+      "params": "(context: { date: Date, e: MouseEvent })",
+      "description_zh": "点击日期单元格时触发"
+    },
+    {
+      "name": "change",
+      "description": "选中值发生变化时触发。参数 context.trigger 表示触发当前事件的来源，不同的模式触发来源也会不同",
+      "params": "(value: DateValue, context: { dayjsValue?: Dayjs, e?: MouseEvent, trigger?: DatePickerTriggerSource })",
+      "description_zh": "选中值发生变化时触发。参数 context.trigger 表示触发当前事件的来源，不同的模式触发来源也会不同"
+    },
+    {
+      "name": "confirm",
+      "description": "如果存在“确定”按钮，则点击“确定”按钮时触发",
+      "params": "(context: { date: Date, e: MouseEvent })",
+      "description_zh": "如果存在“确定”按钮，则点击“确定”按钮时触发"
+    },
+    {
+      "name": "month-change",
+      "description": "月份切换发生变化时触发。详细类型定义。type DatePickerMonthChangeTrigger = 'month-select' | 'month-arrow-next' | 'month-arrow-previous' | 'today'",
+      "params": "(context: { month: number, date: Date, e?: MouseEvent, trigger: DatePickerMonthChangeTrigger })",
+      "description_zh": "月份切换发生变化时触发。详细类型定义。type DatePickerMonthChangeTrigger = 'month-select' | 'month-arrow-next' | 'month-arrow-previous' | 'today'"
+    },
+    {
+      "name": "panel-click",
+      "description": "点击面板时触发",
+      "params": "(context: { e: MouseEvent })",
+      "description_zh": "点击面板时触发"
+    },
+    {
+      "name": "preset-click",
+      "description": "点击预设按钮后触发",
+      "params": "(context: { preset: PresetDate, e: MouseEvent })",
+      "description_zh": "点击预设按钮后触发"
+    },
+    {
+      "name": "time-change",
+      "description": "时间切换发生变化时触发。详细类型定义。type DatePickerTimeChangeTrigger = 'time-hour' | 'time-minute' | 'time-second'",
+      "params": "(context: { time: string, date: Date, trigger: DatePickerTimeChangeTrigger, e?: MouseEvent })",
+      "description_zh": "时间切换发生变化时触发。详细类型定义。type DatePickerTimeChangeTrigger = 'time-hour' | 'time-minute' | 'time-second'"
+    },
+    {
+      "name": "year-change",
+      "description": "年份切换发生变化时触发。详细类型定义。type DatePickerYearChangeTrigger = 'year-select' | 'year-arrow-next' | 'year-arrow-previous' | 'today'",
+      "params": "(context: { year: number, date: Date, trigger: DatePickerYearChangeTrigger, e?: MouseEvent })",
+      "description_zh": "年份切换发生变化时触发。详细类型定义。type DatePickerYearChangeTrigger = 'year-select' | 'year-arrow-next' | 'year-arrow-previous' | 'today'"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "DatePickerPanel"
+}

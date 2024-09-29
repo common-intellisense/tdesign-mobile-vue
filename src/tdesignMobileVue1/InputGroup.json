@@ -1,0 +1,24 @@
+{
+  "name": "TInputGroup",
+  "props": {
+    "separate": {
+      "description": "多个输入框之间是否需要间隔",
+      "description_zh": "多个输入框之间是否需要间隔",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/input",
+  "link_zh": "https://tdesign.tencent.com/vue/components/input",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [
+    "t-input"
+  ],
+  "filename": "InputGroup"
+}

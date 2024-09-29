@@ -1,0 +1,130 @@
+{
+  "name": "TCol",
+  "props": {
+    "flex": {
+      "description": "flex 布局填充。CSS 属性 flex 值。示例：2 / 3 / '100px' / 'auto' / '1 1 200px'",
+      "description_zh": "flex 布局填充。CSS 属性 flex 值。示例：2 / 3 / '100px' / 'auto' / '1 1 200px'",
+      "default": "-",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "lg": {
+      "description": "≥1200px 响应式栅格，可为栅格数或一个包含其他属性的对象（小尺寸电脑）。TS 类型：number | BaseColProps",
+      "description_zh": "≥1200px 响应式栅格，可为栅格数或一个包含其他属性的对象（小尺寸电脑）。TS 类型：number | BaseColProps",
+      "default": "-",
+      "value": "",
+      "type": "Number / Object",
+      "required": false,
+      "version": ""
+    },
+    "md": {
+      "description": "≥992px 响应式栅格，可为栅格数或一个包含其他属性的对象（超小尺寸电脑）。TS 类型：number | BaseColProps",
+      "description_zh": "≥992px 响应式栅格，可为栅格数或一个包含其他属性的对象（超小尺寸电脑）。TS 类型：number | BaseColProps",
+      "default": "-",
+      "value": "",
+      "type": "Number / Object",
+      "required": false,
+      "version": ""
+    },
+    "offset": {
+      "description": "栅格左侧的间隔格数，间隔内不可以有栅格",
+      "description_zh": "栅格左侧的间隔格数，间隔内不可以有栅格",
+      "default": "0",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "order": {
+      "description": "栅格顺序，flex 布局模式下有效",
+      "description_zh": "栅格顺序，flex 布局模式下有效",
+      "default": "0",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "pull": {
+      "description": "栅格向左移动格数",
+      "description_zh": "栅格向左移动格数",
+      "default": "0",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "push": {
+      "description": "栅格向右移动格数",
+      "description_zh": "栅格向右移动格数",
+      "default": "0",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "sm": {
+      "description": "≥768px 响应式栅格，可为栅格数或一个包含其他属性的对象（平板）。TS 类型：number | BaseColProps",
+      "description_zh": "≥768px 响应式栅格，可为栅格数或一个包含其他属性的对象（平板）。TS 类型：number | BaseColProps",
+      "default": "-",
+      "value": "",
+      "type": "Number / Object",
+      "required": false,
+      "version": ""
+    },
+    "span": {
+      "description": "栅格占位格数，为 0 时相当于 display: none",
+      "description_zh": "栅格占位格数，为 0 时相当于 display: none",
+      "default": "-",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "tag": {
+      "description": "自定义元素标签",
+      "description_zh": "自定义元素标签",
+      "default": "div",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "xl": {
+      "description": "≥1400px 响应式栅格，可为栅格数或一个包含其他属性的对象（中尺寸电脑）。TS 类型：number | BaseColProps",
+      "description_zh": "≥1400px 响应式栅格，可为栅格数或一个包含其他属性的对象（中尺寸电脑）。TS 类型：number | BaseColProps",
+      "default": "-",
+      "value": "",
+      "type": "Number / Object",
+      "required": false,
+      "version": ""
+    },
+    "xs": {
+      "description": "<768px 响应式栅格，可为栅格数或一个包含其他属性的对象（手机）。TS 类型：number | BaseColProps interface BaseColProps { offset: number; order: number; pull: number; push: number; span: number }。详细类型定义",
+      "description_zh": "<768px 响应式栅格，可为栅格数或一个包含其他属性的对象（手机）。TS 类型：number | BaseColProps interface BaseColProps { offset: number; order: number; pull: number; push: number; span: number }。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Number / Object",
+      "required": false,
+      "version": ""
+    },
+    "xxl": {
+      "description": "≥1880px 响应式栅格，可为栅格数或一个包含其他属性的对象（大尺寸电脑）。TS 类型：number | BaseColProps",
+      "description_zh": "≥1880px 响应式栅格，可为栅格数或一个包含其他属性的对象（大尺寸电脑）。TS 类型：number | BaseColProps",
+      "default": "-",
+      "value": "",
+      "type": "Number / Object",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/grid",
+  "link_zh": "https://tdesign.tencent.com/vue/components/grid",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Col"
+}

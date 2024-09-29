@@ -1,0 +1,22 @@
+{
+  "name": "TAside",
+  "props": {
+    "width": {
+      "description": "侧边栏宽度。样式表（class）中定义的默认宽度为：232px",
+      "description_zh": "侧边栏宽度。样式表（class）中定义的默认宽度为：232px",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/layout?tab=api",
+  "link_zh": "https://tdesign.tencent.com/vue/components/layout?tab=api",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Aside"
+}

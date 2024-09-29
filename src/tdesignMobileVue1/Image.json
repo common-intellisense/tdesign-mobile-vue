@@ -1,0 +1,179 @@
+{
+  "name": "TImage",
+  "props": {
+    "alt": {
+      "description": "图片描述",
+      "description_zh": "图片描述",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "error": {
+      "description": "自定义图片加载失败状态下的显示内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "自定义图片加载失败状态下的显示内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "fallback": {
+      "description": "图片加载失败时，显示当前链接设置的图片地址。如果要使用组件图标或完全自定义加载失败时显示的内容，请更为使用 error",
+      "description_zh": "图片加载失败时，显示当前链接设置的图片地址。如果要使用组件图标或完全自定义加载失败时显示的内容，请更为使用 error",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "fit": {
+      "description": "图片填充模式。可选项：contain/cover/fill/none/scale-down",
+      "description_zh": "图片填充模式。可选项：contain/cover/fill/none/scale-down",
+      "default": "fill",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "gallery": {
+      "description": "是否展示为图集样式",
+      "description_zh": "是否展示为图集样式",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "lazy": {
+      "description": "是否开启图片懒加载",
+      "description_zh": "是否开启图片懒加载",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "loading": {
+      "description": "自定义加载中状态的图片内容，如：“加载中”。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "自定义加载中状态的图片内容，如：“加载中”。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "overlayContent": {
+      "description": "图片上方的浮层内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "图片上方的浮层内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "overlayTrigger": {
+      "description": "浮层 overlayContent 出现的时机。可选项：always/hover",
+      "description_zh": "浮层 overlayContent 出现的时机。可选项：always/hover",
+      "default": "always",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "placeholder": {
+      "description": "占位元素，展示层级低于 loading error 和图片本身，值类型为字符串时表示占位图片地址。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "占位元素，展示层级低于 loading error 和图片本身，值类型为字符串时表示占位图片地址。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "position": {
+      "description": "等同于原生的 object-position 属性，可选值为 top right bottom left 或 string，可以自定义任何单位，px 或者 百分比",
+      "description_zh": "等同于原生的 object-position 属性，可选值为 top right bottom left 或 string，可以自定义任何单位，px 或者 百分比",
+      "default": "center",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "referrerpolicy": {
+      "description": "<img> 标签的原生属性，MDN 定义。可选项：no-referrer/no-referrer-when-downgrade/origin/origin-when-cross-origin/same-origin/strict-origin/strict-origin-when-cross-origin/unsafe-url",
+      "description_zh": "<img> 标签的原生属性，MDN 定义。可选项：no-referrer/no-referrer-when-downgrade/origin/origin-when-cross-origin/same-origin/strict-origin/strict-origin-when-cross-origin/unsafe-url",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "shape": {
+      "description": "图片圆角类型。可选项：circle/round/square",
+      "description_zh": "图片圆角类型。可选项：circle/round/square",
+      "default": "square",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "src": {
+      "description": "用于显示图片的链接或原始图片文件对象。TS 类型：string | File",
+      "description_zh": "用于显示图片的链接或原始图片文件对象。TS 类型：string | File",
+      "default": "-",
+      "value": "",
+      "type": "String / File",
+      "required": false,
+      "version": ""
+    },
+    "srcset": {
+      "description": "图片链接集合，用于支持特殊格式的图片，如 .avif 和 .webp。会优先加载 srcset 中的图片格式，浏览器不支持的情况下，加载 src 设置的图片地址。TS 类型：ImageSrcset interface ImageSrcset { 'image/avif': string; 'image/webp': string; }。详细类型定义",
+      "description_zh": "图片链接集合，用于支持特殊格式的图片，如 .avif 和 .webp。会优先加载 srcset 中的图片格式，浏览器不支持的情况下，加载 src 设置的图片地址。TS 类型：ImageSrcset interface ImageSrcset { 'image/avif': string; 'image/webp': string; }。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "onError": {
+      "description": "TS 类型：(context: { e: ImageEvent }) => void图片加载失败时触发",
+      "description_zh": "TS 类型：(context: { e: ImageEvent }) => void图片加载失败时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onLoad": {
+      "description": "TS 类型：(context: { e: ImageEvent }) => void图片加载完成时触发",
+      "description_zh": "TS 类型：(context: { e: ImageEvent }) => void图片加载完成时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/image",
+  "link_zh": "https://tdesign.tencent.com/vue/components/image",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "error",
+      "description": "图片加载失败时触发",
+      "params": "(context: { e: ImageEvent })",
+      "description_zh": "图片加载失败时触发"
+    },
+    {
+      "name": "load",
+      "description": "图片加载完成时触发",
+      "params": "(context: { e: ImageEvent })",
+      "description_zh": "图片加载完成时触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Image"
+}

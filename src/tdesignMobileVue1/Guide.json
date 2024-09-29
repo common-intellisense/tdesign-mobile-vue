@@ -1,0 +1,224 @@
+{
+  "name": "TGuide",
+  "props": {
+    "counter": {
+      "description": "用于自定义渲染计数部分。TS 类型：TNode<{ current: number; total: number }>。通用类型定义",
+      "description_zh": "用于自定义渲染计数部分。TS 类型：TNode<{ current: number; total: number }>。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "current": {
+      "description": "当前步骤，即整个引导的进度。-1 则不展示，用于需要中断展示的场景。支持语法糖 v-model",
+      "description_zh": "当前步骤，即整个引导的进度。-1 则不展示，用于需要中断展示的场景。支持语法糖 v-model",
+      "default": "-",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "defaultCurrent": {
+      "description": "当前步骤，即整个引导的进度。-1 则不展示，用于需要中断展示的场景。非受控属性",
+      "description_zh": "当前步骤，即整个引导的进度。-1 则不展示，用于需要中断展示的场景。非受控属性",
+      "default": "-",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "finishButtonProps": {
+      "description": "透传 完成 的全部属性，示例：{ content: '完成', theme: 'primary' }。TS 类型：ButtonProps",
+      "description_zh": "透传 完成 的全部属性，示例：{ content: '完成', theme: 'primary' }。TS 类型：ButtonProps",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "hideCounter": {
+      "description": "是否隐藏计数",
+      "description_zh": "是否隐藏计数",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "hidePrev": {
+      "description": "是否隐藏上一步按钮",
+      "description_zh": "是否隐藏上一步按钮",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "hideSkip": {
+      "description": "是否隐藏跳过按钮",
+      "description_zh": "是否隐藏跳过按钮",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "highlightPadding": {
+      "description": "高亮框的内边距",
+      "description_zh": "高亮框的内边距",
+      "default": "8",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "mode": {
+      "description": "引导框的类型。可选项：popup/dialog",
+      "description_zh": "引导框的类型。可选项：popup/dialog",
+      "default": "popup",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "nextButtonProps": {
+      "description": "透传 下一步按钮 的全部属性，示例：{ content: '下一步', theme: 'primary' }。TS 类型：ButtonProps，Button API Documents。详细类型定义",
+      "description_zh": "透传 下一步按钮 的全部属性，示例：{ content: '下一步', theme: 'primary' }。TS 类型：ButtonProps，Button API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "prevButtonProps": {
+      "description": "透传 上一步按钮 的全部属性，示例：{ content: '上一步', theme: 'default' }。TS 类型：ButtonProps",
+      "description_zh": "透传 上一步按钮 的全部属性，示例：{ content: '上一步', theme: 'default' }。TS 类型：ButtonProps",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "showOverlay": {
+      "description": "是否出现遮罩层",
+      "description_zh": "是否出现遮罩层",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "skipButtonProps": {
+      "description": "透传 跳过按钮 的全部属性，{ content: '跳过', theme: 'default' }。TS 类型：ButtonProps",
+      "description_zh": "透传 跳过按钮 的全部属性，{ content: '跳过', theme: 'default' }。TS 类型：ButtonProps",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "steps": {
+      "description": "用于定义每个步骤的内容，包括高亮的节点、相对位置和具体的文案内容等。。TS 类型：Array<GuideStep>",
+      "description_zh": "用于定义每个步骤的内容，包括高亮的节点、相对位置和具体的文案内容等。。TS 类型：Array<GuideStep>",
+      "default": "-",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "zIndex": {
+      "description": "提示框的层级",
+      "description_zh": "提示框的层级",
+      "default": "999999",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(current: number, context?: { e: MouseEvent, total: number }) => void当前步骤发生变化时触发",
+      "description_zh": "TS 类型：(current: number, context?: { e: MouseEvent, total: number }) => void当前步骤发生变化时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onFinish": {
+      "description": "TS 类型：(context: { e: MouseEvent, current: number, total: number }) => void点击完成按钮时触发",
+      "description_zh": "TS 类型：(context: { e: MouseEvent, current: number, total: number }) => void点击完成按钮时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onNextStepClick": {
+      "description": "TS 类型：(context: { e: MouseEvent, next: number, current: number, total: number }) => void点击下一步时触发",
+      "description_zh": "TS 类型：(context: { e: MouseEvent, next: number, current: number, total: number }) => void点击下一步时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onPrevStepClick": {
+      "description": "TS 类型：(context: { e: MouseEvent, prev: number, current: number, total: number }) => void点击上一步时触发",
+      "description_zh": "TS 类型：(context: { e: MouseEvent, prev: number, current: number, total: number }) => void点击上一步时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onSkip": {
+      "description": "TS 类型：(context: { e: MouseEvent, current: number, total: number }) => void点击跳过按钮时触发",
+      "description_zh": "TS 类型：(context: { e: MouseEvent, current: number, total: number }) => void点击跳过按钮时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/guide",
+  "link_zh": "https://tdesign.tencent.com/vue/components/guide",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "change",
+      "description": "当前步骤发生变化时触发",
+      "params": "(current: number, context?: { e: MouseEvent, total: number })",
+      "description_zh": "当前步骤发生变化时触发"
+    },
+    {
+      "name": "finish",
+      "description": "点击完成按钮时触发",
+      "params": "(context: { e: MouseEvent, current: number, total: number })",
+      "description_zh": "点击完成按钮时触发"
+    },
+    {
+      "name": "next-step-click",
+      "description": "点击下一步时触发",
+      "params": "(context: { e: MouseEvent, next: number, current: number, total: number })",
+      "description_zh": "点击下一步时触发"
+    },
+    {
+      "name": "prev-step-click",
+      "description": "点击上一步时触发",
+      "params": "(context: { e: MouseEvent, prev: number, current: number, total: number })",
+      "description_zh": "点击上一步时触发"
+    },
+    {
+      "name": "skip",
+      "description": "点击跳过按钮时触发",
+      "params": "(context: { e: MouseEvent, current: number, total: number })",
+      "description_zh": "点击跳过按钮时触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Guide"
+}

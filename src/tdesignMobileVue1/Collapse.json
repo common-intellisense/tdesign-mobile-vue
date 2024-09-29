@@ -1,0 +1,112 @@
+{
+  "name": "TCollapse",
+  "props": {
+    "borderless": {
+      "description": "是否为无边框模式",
+      "description_zh": "是否为无边框模式",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "defaultExpandAll": {
+      "description": "默认是否展开全部",
+      "description_zh": "默认是否展开全部",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "是否禁用面板展开/收起操作",
+      "description_zh": "是否禁用面板展开/收起操作",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "expandIcon": {
+      "description": "展开图标。值为 undefined 或 false 则不显示展开图标；值为 true 显示默认图标；值类型为函数，则表示完全自定义展开图标。TS 类型：boolean | TNode。通用类型定义",
+      "description_zh": "展开图标。值为 undefined 或 false 则不显示展开图标；值为 true 显示默认图标；值类型为函数，则表示完全自定义展开图标。TS 类型：boolean | TNode。通用类型定义",
+      "default": "true",
+      "value": "",
+      "type": "Boolean / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "expandIconPlacement": {
+      "description": "展开图标的位置，左侧或右侧。可选项：left/right",
+      "description_zh": "展开图标的位置，左侧或右侧。可选项：left/right",
+      "default": "left",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "expandMutex": {
+      "description": "每个面板互斥展开，每次只展开一个面板",
+      "description_zh": "每个面板互斥展开，每次只展开一个面板",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "expandOnRowClick": {
+      "description": "是否允许点击整行标题展开面板",
+      "description_zh": "是否允许点击整行标题展开面板",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "展开的面板集合。支持语法糖 v-model。TS 类型：CollapseValue type CollapseValue = Array<string | number>。详细类型定义",
+      "description_zh": "展开的面板集合。支持语法糖 v-model。TS 类型：CollapseValue type CollapseValue = Array<string | number>。详细类型定义",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "defaultValue": {
+      "description": "展开的面板集合。非受控属性。TS 类型：CollapseValue type CollapseValue = Array<string | number>。详细类型定义",
+      "description_zh": "展开的面板集合。非受控属性。TS 类型：CollapseValue type CollapseValue = Array<string | number>。详细类型定义",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(value: CollapseValue) => void切换面板时触发，返回变化的值",
+      "description_zh": "TS 类型：(value: CollapseValue) => void切换面板时触发，返回变化的值",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/collapse",
+  "link_zh": "https://tdesign.tencent.com/vue/components/collapse",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "change",
+      "description": "切换面板时触发，返回变化的值",
+      "params": "(value: CollapseValue)",
+      "description_zh": "切换面板时触发，返回变化的值"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [
+    "t-collapse-panel"
+  ],
+  "filename": "Collapse"
+}

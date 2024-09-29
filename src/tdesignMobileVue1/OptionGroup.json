@@ -1,0 +1,33 @@
+{
+  "name": "TOptionGroup",
+  "props": {
+    "divider": {
+      "description": "是否显示分隔线",
+      "description_zh": "是否显示分隔线",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "label": {
+      "description": "分组别名",
+      "description_zh": "分组别名",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/select",
+  "link_zh": "https://tdesign.tencent.com/vue/components/select",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [
+    "t-option"
+  ],
+  "filename": "OptionGroup"
+}

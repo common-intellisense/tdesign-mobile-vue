@@ -1,0 +1,230 @@
+{
+  "name": "TPagination",
+  "props": {
+    "current": {
+      "description": "当前页。支持语法糖 v-model",
+      "description_zh": "当前页。支持语法糖 v-model",
+      "default": "1",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "defaultCurrent": {
+      "description": "当前页。非受控属性",
+      "description_zh": "当前页。非受控属性",
+      "default": "1",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "是否禁用分页组件",
+      "description_zh": "是否禁用分页组件",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "foldedMaxPageBtn": {
+      "description": "折叠时最多显示页码按钮数",
+      "description_zh": "折叠时最多显示页码按钮数",
+      "default": "5",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "maxPageBtn": {
+      "description": "最多显示页码按钮数",
+      "description_zh": "最多显示页码按钮数",
+      "default": "10",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "pageEllipsisMode": {
+      "description": "页码数量超出时，前后省略模式, mid表示中间省略, both-ends 表示两端省略。可选项：mid/both-ends",
+      "description_zh": "页码数量超出时，前后省略模式, mid表示中间省略, both-ends 表示两端省略。可选项：mid/both-ends",
+      "default": "mid",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "pageSize": {
+      "description": "每一页的数据量。支持语法糖 .sync",
+      "description_zh": "每一页的数据量。支持语法糖 .sync",
+      "default": "10",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "defaultPageSize": {
+      "description": "每一页的数据量。非受控属性",
+      "description_zh": "每一页的数据量。非受控属性",
+      "default": "10",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "pageSizeOptions": {
+      "description": "分页大小控制器，值为 [] 则不显示。TS 类型：Array<number | { label: string; value: number }>",
+      "description_zh": "分页大小控制器，值为 [] 则不显示。TS 类型：Array<number | { label: string; value: number }>",
+      "default": "[5, 10, 20, 50]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "selectProps": {
+      "description": "透传全部属性到 Select 组件，也可使用 selectProps.popupProps 透传全部 Popup 组件。TS 类型：SelectProps，Select API Documents。详细类型定义",
+      "description_zh": "透传全部属性到 Select 组件，也可使用 selectProps.popupProps 透传全部 Popup 组件。TS 类型：SelectProps，Select API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "showFirstAndLastPageBtn": {
+      "description": "是否显示跳转首页尾页页码控制器",
+      "description_zh": "是否显示跳转首页尾页页码控制器",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "showJumper": {
+      "description": "是否显示跳转页码控制器",
+      "description_zh": "是否显示跳转页码控制器",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "showPageNumber": {
+      "description": "是否显示页码控制器",
+      "description_zh": "是否显示页码控制器",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "showPageSize": {
+      "description": "是否显示分页数量控制器",
+      "description_zh": "是否显示分页数量控制器",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "showPreviousAndNextBtn": {
+      "description": "是否显示跳转前后页页码控制器",
+      "description_zh": "是否显示跳转前后页页码控制器",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "size": {
+      "description": "分页组件尺寸。可选项：small/medium",
+      "description_zh": "分页组件尺寸。可选项：small/medium",
+      "default": "medium",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "theme": {
+      "description": "分页组件风格。可选项：default/simple",
+      "description_zh": "分页组件风格。可选项：default/simple",
+      "default": "default",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "total": {
+      "description": "数据总条数",
+      "description_zh": "数据总条数",
+      "default": "0",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "totalContent": {
+      "description": "用于自定义总条数呈现内容。默认显示总条数，值为 false 则不显示。TS 类型：boolean | TNode。通用类型定义",
+      "description_zh": "用于自定义总条数呈现内容。默认显示总条数，值为 false 则不显示。TS 类型：boolean | TNode。通用类型定义",
+      "default": "true",
+      "value": "",
+      "type": "Boolean / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(pageInfo: PageInfo) => void当前页或分页大小发生变化时触发。详细类型定义。interface PageInfo { current: number; previous: number; pageSize: number }",
+      "description_zh": "TS 类型：(pageInfo: PageInfo) => void当前页或分页大小发生变化时触发。详细类型定义。interface PageInfo { current: number; previous: number; pageSize: number }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onCurrentChange": {
+      "description": "TS 类型：(current: number, pageInfo: PageInfo) => void当前页发生变化时触发",
+      "description_zh": "TS 类型：(current: number, pageInfo: PageInfo) => void当前页发生变化时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onPageSizeChange": {
+      "description": "TS 类型：(pageSize: number, pageInfo: PageInfo) => void分页大小发生变化时触发",
+      "description_zh": "TS 类型：(pageSize: number, pageInfo: PageInfo) => void分页大小发生变化时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/pagination",
+  "link_zh": "https://tdesign.tencent.com/vue/components/pagination",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "change",
+      "description": "当前页或分页大小发生变化时触发。详细类型定义。interface PageInfo { current: number; previous: number; pageSize: number }",
+      "params": "(pageInfo: PageInfo)",
+      "description_zh": "当前页或分页大小发生变化时触发。详细类型定义。interface PageInfo { current: number; previous: number; pageSize: number }"
+    },
+    {
+      "name": "current-change",
+      "description": "当前页发生变化时触发",
+      "params": "(current: number, pageInfo: PageInfo)",
+      "description_zh": "当前页发生变化时触发"
+    },
+    {
+      "name": "page-size-change",
+      "description": "分页大小发生变化时触发",
+      "params": "(pageSize: number, pageInfo: PageInfo)",
+      "description_zh": "分页大小发生变化时触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Pagination"
+}

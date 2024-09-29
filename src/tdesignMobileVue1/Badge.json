@@ -1,0 +1,103 @@
+{
+  "name": "TBadge",
+  "props": {
+    "color": {
+      "description": "颜色",
+      "description_zh": "颜色",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "content": {
+      "description": "徽标内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "徽标内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "count": {
+      "description": "徽标右上角内容。可以是数字，也可以是文字。如：'new'/3/99+。TS 类型：string | number | TNode。通用类型定义",
+      "description_zh": "徽标右上角内容。可以是数字，也可以是文字。如：'new'/3/99+。TS 类型：string | number | TNode。通用类型定义",
+      "default": "0",
+      "value": "",
+      "type": "String / Number / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "default": {
+      "description": "徽标内容，默认插槽，同 content。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "徽标内容，默认插槽，同 content。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "dot": {
+      "description": "是否为红点",
+      "description_zh": "是否为红点",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "maxCount": {
+      "description": "封顶的数字值",
+      "description_zh": "封顶的数字值",
+      "default": "99",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "offset": {
+      "description": "设置状态点的位置偏移，示例：[-10, 20] 或 ['10em', '8rem']。TS 类型：Array<string | number>",
+      "description_zh": "设置状态点的位置偏移，示例：[-10, 20] 或 ['10em', '8rem']。TS 类型：Array<string | number>",
+      "default": "-",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "shape": {
+      "description": "形状。可选项：circle/round",
+      "description_zh": "形状。可选项：circle/round",
+      "default": "circle",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "showZero": {
+      "description": "当数值为 0 时，是否展示徽标",
+      "description_zh": "当数值为 0 时，是否展示徽标",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "size": {
+      "description": "尺寸。可选项：small/medium",
+      "description_zh": "尺寸。可选项：small/medium",
+      "default": "medium",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/badge",
+  "link_zh": "https://tdesign.tencent.com/vue/components/badge",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Badge"
+}

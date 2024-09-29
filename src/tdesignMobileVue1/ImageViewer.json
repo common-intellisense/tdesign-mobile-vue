@@ -1,0 +1,197 @@
+{
+  "name": "TImageViewer",
+  "props": {
+    "closeBtn": {
+      "description": "是否展示关闭按钮，值为 true 显示默认关闭按钮；值为 false 则不显示关闭按钮；也可以完全自定义关闭按钮。TS 类型：boolean | TNode。通用类型定义",
+      "description_zh": "是否展示关闭按钮，值为 true 显示默认关闭按钮；值为 false 则不显示关闭按钮；也可以完全自定义关闭按钮。TS 类型：boolean | TNode。通用类型定义",
+      "default": "true",
+      "value": "",
+      "type": "Boolean / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "closeOnEscKeydown": {
+      "description": "按下 ESC 时是否触发图片预览器关闭事件",
+      "description_zh": "按下 ESC 时是否触发图片预览器关闭事件",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "closeOnOverlay": {
+      "description": "是否在点击遮罩层时，触发预览关闭",
+      "description_zh": "是否在点击遮罩层时，触发预览关闭",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "draggable": {
+      "description": "是否允许拖拽调整位置。mode=modal 时，默认不允许拖拽；mode=modeless 时，默认允许拖拽",
+      "description_zh": "是否允许拖拽调整位置。mode=modal 时，默认不允许拖拽；mode=modeless 时，默认允许拖拽",
+      "default": "undefined",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "imageScale": {
+      "description": "图片缩放相关配置。imageScale.max 缩放的最大比例；imageScale.min 缩放的最小比例；imageScale.step 缩放的步长速度; imageScale.defaultScale 默认的缩放比例。TS 类型：ImageScale interface ImageScale { max: number; min: number; step: number; defaultScale?: number; }。详细类型定义",
+      "description_zh": "图片缩放相关配置。imageScale.max 缩放的最大比例；imageScale.min 缩放的最小比例；imageScale.step 缩放的步长速度; imageScale.defaultScale 默认的缩放比例。TS 类型：ImageScale interface ImageScale { max: number; min: number; step: number; defaultScale?: number; }。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "images": {
+      "description": "图片数组。mainImage 表示主图，必传；thumbnail 表示缩略图，如果不存在，则使用主图显示；download 是否允许下载图片，默认允许下载。示例: ['img_url_1', 'img_url_2']，[{ thumbnail: 'small_image_url', mainImage: 'big_image_url', download: false }]。TS 类型：Array<string | File | ImageInfo> interface ImageInfo { mainImage: string | File; thumbnail?: string | File; download?: boolean }。详细类型定义",
+      "description_zh": "图片数组。mainImage 表示主图，必传；thumbnail 表示缩略图，如果不存在，则使用主图显示；download 是否允许下载图片，默认允许下载。示例: ['img_url_1', 'img_url_2']，[{ thumbnail: 'small_image_url', mainImage: 'big_image_url', download: false }]。TS 类型：Array<string | File | ImageInfo> interface ImageInfo { mainImage: string | File; thumbnail?: string | File; download?: boolean }。详细类型定义",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "index": {
+      "description": "当前预览图片所在的下标。支持语法糖 .sync",
+      "description_zh": "当前预览图片所在的下标。支持语法糖 .sync",
+      "default": "0",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "defaultIndex": {
+      "description": "当前预览图片所在的下标。非受控属性",
+      "description_zh": "当前预览图片所在的下标。非受控属性",
+      "default": "0",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "mode": {
+      "description": "模态预览（modal）和非模态预览（modeless)。可选项：modal/modeless",
+      "description_zh": "模态预览（modal）和非模态预览（modeless)。可选项：modal/modeless",
+      "default": "modal",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "navigationArrow": {
+      "description": "切换预览图片的左图标，可自定义。TS 类型：boolean | TNode。通用类型定义",
+      "description_zh": "切换预览图片的左图标，可自定义。TS 类型：boolean | TNode。通用类型定义",
+      "default": "true",
+      "value": "",
+      "type": "Boolean / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "showOverlay": {
+      "description": "是否显示遮罩层。mode=modal 时，默认显示；mode=modeless 时，默认不显示",
+      "description_zh": "是否显示遮罩层。mode=modal 时，默认显示；mode=modeless 时，默认不显示",
+      "default": "undefined",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "title": {
+      "description": "预览标题。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "预览标题。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "trigger": {
+      "description": "触发图片预览的元素，可能是一个预览按钮，可能是一张缩略图，完全自定义。TS 类型：TNode | TNode<{ open: () => void }>。通用类型定义",
+      "description_zh": "触发图片预览的元素，可能是一个预览按钮，可能是一张缩略图，完全自定义。TS 类型：TNode | TNode<{ open: () => void }>。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "viewerScale": {
+      "description": "限制预览器缩放的最小宽度和最小高度，仅 mode=modeless 时有效。TS 类型：ImageViewerScale interface ImageViewerScale { minWidth: number; minHeight: number }。详细类型定义",
+      "description_zh": "限制预览器缩放的最小宽度和最小高度，仅 mode=modeless 时有效。TS 类型：ImageViewerScale interface ImageViewerScale { minWidth: number; minHeight: number }。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "visible": {
+      "description": "隐藏/显示预览。支持语法糖 v-model",
+      "description_zh": "隐藏/显示预览。支持语法糖 v-model",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "defaultVisible": {
+      "description": "隐藏/显示预览。非受控属性",
+      "description_zh": "隐藏/显示预览。非受控属性",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "zIndex": {
+      "description": "层级，默认为 2000",
+      "description_zh": "层级，默认为 2000",
+      "default": "-",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "onClose": {
+      "description": "TS 类型：(context: { trigger: 'close-btn' | 'overlay' | 'esc'; e: MouseEvent | KeyboardEvent }) => void关闭时触发，事件参数包含触发关闭的来源：关闭按钮、遮罩层、ESC 键",
+      "description_zh": "TS 类型：(context: { trigger: 'close-btn' | 'overlay' | 'esc'; e: MouseEvent | KeyboardEvent }) => void关闭时触发，事件参数包含触发关闭的来源：关闭按钮、遮罩层、ESC 键",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onIndexChange": {
+      "description": "TS 类型：(index: number, context: { trigger: 'prev' | 'next' | 'current' }) => void预览图片切换时触发，context.prev 切换到上一张图片，context.next 切换到下一张图片",
+      "description_zh": "TS 类型：(index: number, context: { trigger: 'prev' | 'next' | 'current' }) => void预览图片切换时触发，context.prev 切换到上一张图片，context.next 切换到下一张图片",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/image-viewer",
+  "link_zh": "https://tdesign.tencent.com/vue/components/image-viewer",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "close",
+      "description": "关闭时触发，事件参数包含触发关闭的来源：关闭按钮、遮罩层、ESC 键",
+      "params": "(context: { trigger: 'close-btn' | 'overlay' | 'esc'; e: MouseEvent | KeyboardEvent })",
+      "description_zh": "关闭时触发，事件参数包含触发关闭的来源：关闭按钮、遮罩层、ESC 键"
+    },
+    {
+      "name": "index-change",
+      "description": "预览图片切换时触发，context.prev 切换到上一张图片，context.next 切换到下一张图片",
+      "params": "(index: number, context: { trigger: 'prev' | 'next' | 'current' })",
+      "description_zh": "预览图片切换时触发，context.prev 切换到上一张图片，context.next 切换到下一张图片"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "ImageViewer"
+}

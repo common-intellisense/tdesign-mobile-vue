@@ -1,0 +1,125 @@
+{
+  "name": "TCheckTag",
+  "props": {
+    "checked": {
+      "description": "标签选中的状态，默认风格（theme=default）才有选中态。支持语法糖 v-model",
+      "description_zh": "标签选中的状态，默认风格（theme=default）才有选中态。支持语法糖 v-model",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "defaultChecked": {
+      "description": "标签选中的状态，默认风格（theme=default）才有选中态。非受控属性",
+      "description_zh": "标签选中的状态，默认风格（theme=default）才有选中态。非受控属性",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "checkedProps": {
+      "description": "透传标签选中态属性。TS 类型：TdTagProps",
+      "description_zh": "透传标签选中态属性。TS 类型：TdTagProps",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "content": {
+      "description": "组件子元素；传入数组时：[选中内容，非选中内容]。TS 类型：string | number | string[] | TNode。通用类型定义",
+      "description_zh": "组件子元素；传入数组时：[选中内容，非选中内容]。TS 类型：string | number | string[] | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Number / Array / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "default": {
+      "description": "组件子元素，默认插槽。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "组件子元素，默认插槽。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "标签禁用态，失效标签不能触发事件。默认风格（theme=default）才有禁用态",
+      "description_zh": "标签禁用态，失效标签不能触发事件。默认风格（theme=default）才有禁用态",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "size": {
+      "description": "标签尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "description_zh": "标签尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "default": "medium",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "uncheckedProps": {
+      "description": "透传标签未选态属性。TS 类型：TdTagProps",
+      "description_zh": "透传标签未选态属性。TS 类型：TdTagProps",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "标签唯一标识，一般用于标签组场景，单个可选择标签无需设置",
+      "description_zh": "标签唯一标识，一般用于标签组场景，单个可选择标签无需设置",
+      "default": "-",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(checked: boolean, context: CheckTagChangeContext) => void状态切换时触发。详细类型定义。interface CheckTagChangeContext { e: MouseEvent | KeyboardEvent; value: string | number }",
+      "description_zh": "TS 类型：(checked: boolean, context: CheckTagChangeContext) => void状态切换时触发。详细类型定义。interface CheckTagChangeContext { e: MouseEvent | KeyboardEvent; value: string | number }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onClick": {
+      "description": "TS 类型：(context: { e: MouseEvent }) => void点击标签时触发",
+      "description_zh": "TS 类型：(context: { e: MouseEvent }) => void点击标签时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/tag",
+  "link_zh": "https://tdesign.tencent.com/vue/components/tag",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "change",
+      "description": "状态切换时触发。详细类型定义。interface CheckTagChangeContext { e: MouseEvent | KeyboardEvent; value: string | number }",
+      "params": "(checked: boolean, context: CheckTagChangeContext)",
+      "description_zh": "状态切换时触发。详细类型定义。interface CheckTagChangeContext { e: MouseEvent | KeyboardEvent; value: string | number }"
+    },
+    {
+      "name": "click",
+      "description": "点击标签时触发",
+      "params": "(context: { e: MouseEvent })",
+      "description_zh": "点击标签时触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "CheckTag"
+}

@@ -1,0 +1,67 @@
+{
+  "name": "TTimelineItem",
+  "props": {
+    "content": {
+      "description": "描述内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "描述内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "dot": {
+      "description": "用于自定义时间轴节点元素。TS 类型：TNode。通用类型定义",
+      "description_zh": "用于自定义时间轴节点元素。TS 类型：TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "dotColor": {
+      "description": "时间轴颜色，内置 primary/warning/error/default 四种色值，可传入 16 进制颜色码或 RGB 颜色值.。TS 类型：string",
+      "description_zh": "时间轴颜色，内置 primary/warning/error/default 四种色值，可传入 16 进制颜色码或 RGB 颜色值.。TS 类型：string",
+      "default": "primary",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "label": {
+      "description": "标签文本内容，可完全自定义。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "标签文本内容，可完全自定义。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "labelAlign": {
+      "description": "标签信息相对于时间轴的位置，在 mode='alternate' 时生效，优先级高于 Timeline.labelAlign。可选项：left/right/top/bottom",
+      "description_zh": "标签信息相对于时间轴的位置，在 mode='alternate' 时生效，优先级高于 Timeline.labelAlign。可选项：left/right/top/bottom",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "loading": {
+      "description": "是否处在加载状态",
+      "description_zh": "是否处在加载状态",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/timeline",
+  "link_zh": "https://tdesign.tencent.com/vue/components/timeline",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "TimelineItem"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "TDropdownMenu",
+  "props": {},
+  "link": "https://tdesign.tencent.com/vue/components/dropdown",
+  "link_zh": "https://tdesign.tencent.com/vue/components/dropdown",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [
+    "t-dropdown-item"
+  ],
+  "filename": "DropdownMenu"
+}

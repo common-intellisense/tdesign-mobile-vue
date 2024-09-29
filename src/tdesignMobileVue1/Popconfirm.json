@@ -1,0 +1,176 @@
+{
+  "name": "TPopconfirm",
+  "props": {
+    "cancelBtn": {
+      "description": "取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件。TS 类型：string | ButtonProps | TNode，Button API Documents。通用类型定义。详细类型定义",
+      "description_zh": "取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件。TS 类型：string | ButtonProps | TNode，Button API Documents。通用类型定义。详细类型定义",
+      "default": "''",
+      "value": "",
+      "type": "String / Object / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "confirmBtn": {
+      "description": "确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件。TS 类型：string | ButtonProps | TNode。通用类型定义",
+      "description_zh": "确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件。TS 类型：string | ButtonProps | TNode。通用类型定义",
+      "default": "''",
+      "value": "",
+      "type": "String / Object / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "content": {
+      "description": "确认框内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "确认框内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "default": {
+      "description": "触发元素，同 triggerElement。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "触发元素，同 triggerElement。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "destroyOnClose": {
+      "description": "是否在关闭浮层时销毁浮层",
+      "description_zh": "是否在关闭浮层时销毁浮层",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "icon": {
+      "description": "确认框图标。TS 类型：TNode。通用类型定义",
+      "description_zh": "确认框图标。TS 类型：TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "placement": {
+      "description": "浮层出现位置。可选项：top/left/right/bottom/top-left/top-right/bottom-left/bottom-right/left-top/left-bottom/right-top/right-bottom",
+      "description_zh": "浮层出现位置。可选项：top/left/right/bottom/top-left/top-right/bottom-left/bottom-right/left-top/left-bottom/right-top/right-bottom",
+      "default": "top",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "popupProps": {
+      "description": "透传 Popup 组件属性。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "description_zh": "透传 Popup 组件属性。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "showArrow": {
+      "description": "是否显示浮层箭头",
+      "description_zh": "是否显示浮层箭头",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "theme": {
+      "description": "文字提示风格。可选项：default/warning/danger",
+      "description_zh": "文字提示风格。可选项：default/warning/danger",
+      "default": "default",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "triggerElement": {
+      "description": "触发元素。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "触发元素。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "visible": {
+      "description": "是否显示气泡确认框。支持语法糖 .sync",
+      "description_zh": "是否显示气泡确认框。支持语法糖 .sync",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "defaultVisible": {
+      "description": "是否显示气泡确认框。非受控属性",
+      "description_zh": "是否显示气泡确认框。非受控属性",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "onCancel": {
+      "description": "TS 类型：(options: { e: MouseEvent }) => void点击取消按钮时触发",
+      "description_zh": "TS 类型：(options: { e: MouseEvent }) => void点击取消按钮时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onConfirm": {
+      "description": "TS 类型：(options: { e: MouseEvent }) => void点击确认按钮时触发",
+      "description_zh": "TS 类型：(options: { e: MouseEvent }) => void点击确认按钮时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onVisibleChange": {
+      "description": "TS 类型：(visible: boolean, context?: PopconfirmVisibleChangeContext) => void确认框显示或隐藏时触发。详细类型定义。interface PopconfirmVisibleChangeContext { trigger?: TriggerSource; e?: MouseEvent }type TriggerSource = 'cancel' | 'confirm' | 'document' | 'trigger-element-click'",
+      "description_zh": "TS 类型：(visible: boolean, context?: PopconfirmVisibleChangeContext) => void确认框显示或隐藏时触发。详细类型定义。interface PopconfirmVisibleChangeContext { trigger?: TriggerSource; e?: MouseEvent }type TriggerSource = 'cancel' | 'confirm' | 'document' | 'trigger-element-click'",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/popconfirm",
+  "link_zh": "https://tdesign.tencent.com/vue/components/popconfirm",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "cancel",
+      "description": "点击取消按钮时触发",
+      "params": "(options: { e: MouseEvent })",
+      "description_zh": "点击取消按钮时触发"
+    },
+    {
+      "name": "confirm",
+      "description": "点击确认按钮时触发",
+      "params": "(options: { e: MouseEvent })",
+      "description_zh": "点击确认按钮时触发"
+    },
+    {
+      "name": "visible-change",
+      "description": "确认框显示或隐藏时触发。详细类型定义。interface PopconfirmVisibleChangeContext { trigger?: TriggerSource; e?: MouseEvent }type TriggerSource = 'cancel' | 'confirm' | 'document' | 'trigger-element-click'",
+      "params": "(visible: boolean, context?: PopconfirmVisibleChangeContext)",
+      "description_zh": "确认框显示或隐藏时触发。详细类型定义。interface PopconfirmVisibleChangeContext { trigger?: TriggerSource; e?: MouseEvent }type TriggerSource = 'cancel' | 'confirm' | 'document' | 'trigger-element-click'"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Popconfirm"
+}

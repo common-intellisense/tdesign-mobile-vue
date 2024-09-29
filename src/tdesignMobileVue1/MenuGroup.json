@@ -1,0 +1,22 @@
+{
+  "name": "TMenuGroup",
+  "props": {
+    "title": {
+      "description": "菜单组标题。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "菜单组标题。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/menu",
+  "link_zh": "https://tdesign.tencent.com/vue/components/menu",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "MenuGroup"
+}

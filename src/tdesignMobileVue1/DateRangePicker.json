@@ -1,0 +1,362 @@
+{
+  "name": "TDateRangePicker",
+  "props": {
+    "allowInput": {
+      "description": "是否允许输入日期",
+      "description_zh": "是否允许输入日期",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "borderless": {
+      "description": "无边框模式",
+      "description_zh": "无边框模式",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "clearable": {
+      "description": "是否显示清除按钮",
+      "description_zh": "是否显示清除按钮",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "defaultTime": {
+      "description": "时间选择器默认值，当 value/defaultValue 未设置值时有效。TS 类型：string[]",
+      "description_zh": "时间选择器默认值，当 value/defaultValue 未设置值时有效。TS 类型：string[]",
+      "default": "[\"00:00:00\", \"23:59:59\"]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "disableDate": {
+      "description": "禁用日期，示例：['A', 'B'] 表示日期 A 和日期 B 会被禁用。{ from: 'A', to: 'B' } 表示在 A 到 B 之间的日期会被禁用。{ before: 'A', after: 'B' } 表示在 A 之前和在 B 之后的日期都会被禁用。其中 A = '2021-01-01'，B = '2021-02-01'。值类型为 Function 则表示返回值为 true 的日期会被禁用。TS 类型：DisableRangeDate type DisableRangeDate = Array<DateValue> | DisableDateObj | ((context: { date: DateRangeValue; partial: DateRangePickerPartial }) => boolean) interface DisableDateObj { from?: string; to?: string; before?: string; after?: string } type DateRangePickerPartial = 'start' | 'end'。详细类型定义",
+      "description_zh": "禁用日期，示例：['A', 'B'] 表示日期 A 和日期 B 会被禁用。{ from: 'A', to: 'B' } 表示在 A 到 B 之间的日期会被禁用。{ before: 'A', after: 'B' } 表示在 A 之前和在 B 之后的日期都会被禁用。其中 A = '2021-01-01'，B = '2021-02-01'。值类型为 Function 则表示返回值为 true 的日期会被禁用。TS 类型：DisableRangeDate type DisableRangeDate = Array<DateValue> | DisableDateObj | ((context: { date: DateRangeValue; partial: DateRangePickerPartial }) => boolean) interface DisableDateObj { from?: string; to?: string; before?: string; after?: string } type DateRangePickerPartial = 'start' | 'end'。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object / Array / Function",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "是否禁用组件",
+      "description_zh": "是否禁用组件",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "enableTimePicker": {
+      "description": "是否显示时间选择",
+      "description_zh": "是否显示时间选择",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "firstDayOfWeek": {
+      "description": "第一天从星期几开始。可选项：1/2/3/4/5/6/7",
+      "description_zh": "第一天从星期几开始。可选项：1/2/3/4/5/6/7",
+      "default": "-",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "format": {
+      "description": "用于格式化日期，详细文档",
+      "description_zh": "用于格式化日期，详细文档",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "label": {
+      "description": "左侧文本。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "左侧文本。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "mode": {
+      "description": "选择器模式。可选项：year/quarter/month/week/date",
+      "description_zh": "选择器模式。可选项：year/quarter/month/week/date",
+      "default": "date",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "panelPreselection": {
+      "description": "在开始日期选中之前，面板是否显示预选状态，即是否高亮预选日期",
+      "description_zh": "在开始日期选中之前，面板是否显示预选状态，即是否高亮预选日期",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "placeholder": {
+      "description": "占位符，值为数组表示可分别为开始日期和结束日期设置占位符。TS 类型：string | Array<string>",
+      "description_zh": "占位符，值为数组表示可分别为开始日期和结束日期设置占位符。TS 类型：string | Array<string>",
+      "default": "-",
+      "value": "",
+      "type": "String / Array",
+      "required": false,
+      "version": ""
+    },
+    "popupProps": {
+      "description": "透传给 popup 组件的参数。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "description_zh": "透传给 popup 组件的参数。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "prefixIcon": {
+      "description": "组件前置图标。TS 类型：TNode。通用类型定义",
+      "description_zh": "组件前置图标。TS 类型：TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "presets": {
+      "description": "预设快捷日期选择，示例：{ '特定日期范围': ['2021-01-01', '2022-01-01'], '本月': [dayjs().startOf('month'), dayjs().endOf('month')] }。TS 类型：PresetRange interface PresetRange { [range: string]: DateRange | (() => DateRange)} type DateRange = [DateValue, DateValue]。详细类型定义",
+      "description_zh": "预设快捷日期选择，示例：{ '特定日期范围': ['2021-01-01', '2022-01-01'], '本月': [dayjs().startOf('month'), dayjs().endOf('month')] }。TS 类型：PresetRange interface PresetRange { [range: string]: DateRange | (() => DateRange)} type DateRange = [DateValue, DateValue]。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "presetsPlacement": {
+      "description": "预设面板展示区域（包含确定按钮）。可选项：left/top/right/bottom",
+      "description_zh": "预设面板展示区域（包含确定按钮）。可选项：left/top/right/bottom",
+      "default": "bottom",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "rangeInputProps": {
+      "description": "透传给范围输入框 RangeInput 组件的参数。TS 类型：RangeInputProps，RangeInput API Documents。详细类型定义",
+      "description_zh": "透传给范围输入框 RangeInput 组件的参数。TS 类型：RangeInputProps，RangeInput API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "separator": {
+      "description": "日期分隔符，支持全局配置，默认为 '-'",
+      "description_zh": "日期分隔符，支持全局配置，默认为 '-'",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "size": {
+      "description": "输入框尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "description_zh": "输入框尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "default": "medium",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "status": {
+      "description": "输入框状态。可选项：default/success/warning/error",
+      "description_zh": "输入框状态。可选项：default/success/warning/error",
+      "default": "default",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "suffixIcon": {
+      "description": "组件后置图标。TS 类型：TNode。通用类型定义",
+      "description_zh": "组件后置图标。TS 类型：TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "timePickerProps": {
+      "description": "透传 TimePicker 组件属性。TS 类型：TimePickerProps，TimePicker API Documents。详细类型定义",
+      "description_zh": "透传 TimePicker 组件属性。TS 类型：TimePickerProps，TimePicker API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "tips": {
+      "description": "输入框下方提示文本，会根据不同的 status 呈现不同的样式。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "输入框下方提示文本，会根据不同的 status 呈现不同的样式。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "选中值。支持语法糖 v-model。TS 类型：DateRangeValue type DateRangeValue = Array<DateValue>。详细类型定义",
+      "description_zh": "选中值。支持语法糖 v-model。TS 类型：DateRangeValue type DateRangeValue = Array<DateValue>。详细类型定义",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "defaultValue": {
+      "description": "选中值。非受控属性。TS 类型：DateRangeValue type DateRangeValue = Array<DateValue>。详细类型定义",
+      "description_zh": "选中值。非受控属性。TS 类型：DateRangeValue type DateRangeValue = Array<DateValue>。详细类型定义",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "valueType": {
+      "description": "用于格式化日期的值，仅支持部分格式，时间戳、日期等。⚠️ YYYYMMDD 这种格式不支持，请勿使用，如果希望支持可以给 dayjs 提个 PR。注意和 format 的区别，format 仅用于处理日期在页面中呈现的格式。可选项：time-stamp/Date/YYYY/YYYY-MM/YYYY-MM-DD/YYYY-MM-DD HH/YYYY-MM-DD HH:mm/YYYY-MM-DD HH:mm:ss/YYYY-MM-DD HH:mm:ss:SSS",
+      "description_zh": "用于格式化日期的值，仅支持部分格式，时间戳、日期等。⚠️ YYYYMMDD 这种格式不支持，请勿使用，如果希望支持可以给 dayjs 提个 PR。注意和 format 的区别，format 仅用于处理日期在页面中呈现的格式。可选项：time-stamp/Date/YYYY/YYYY-MM/YYYY-MM-DD/YYYY-MM-DD HH/YYYY-MM-DD HH:mm/YYYY-MM-DD HH:mm:ss/YYYY-MM-DD HH:mm:ss:SSS",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "onBlur": {
+      "description": "TS 类型：(context: { value: DateRangeValue; partial: DateRangePickerPartial; e: FocusEvent }) => void当输入框失去焦点时触发",
+      "description_zh": "TS 类型：(context: { value: DateRangeValue; partial: DateRangePickerPartial; e: FocusEvent }) => void当输入框失去焦点时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(value: DateRangeValue, context: { dayjsValue?: Dayjs[], trigger?: DatePickerTriggerSource }) => void选中值发生变化时触发。详细类型定义。import { Dayjs } from 'dayjs'",
+      "description_zh": "TS 类型：(value: DateRangeValue, context: { dayjsValue?: Dayjs[], trigger?: DatePickerTriggerSource }) => void选中值发生变化时触发。详细类型定义。import { Dayjs } from 'dayjs'",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onConfirm": {
+      "description": "TS 类型：(context: { date: Date[], e: MouseEvent, partial: DateRangePickerPartial }) => void如果存在“确定”按钮，则点击“确定”按钮时触发",
+      "description_zh": "TS 类型：(context: { date: Date[], e: MouseEvent, partial: DateRangePickerPartial }) => void如果存在“确定”按钮，则点击“确定”按钮时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onFocus": {
+      "description": "TS 类型：(context: { value: DateRangeValue; partial: DateRangePickerPartial; e: FocusEvent }) => void输入框获得焦点时触发",
+      "description_zh": "TS 类型：(context: { value: DateRangeValue; partial: DateRangePickerPartial; e: FocusEvent }) => void输入框获得焦点时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onInput": {
+      "description": "TS 类型：(context: { input: string; value: DateRangeValue; partial: DateRangePickerPartial; e: InputEvent }) => void输入框数据发生变化时触发，参数 input 表示输入内容，value 表示组件当前有效值",
+      "description_zh": "TS 类型：(context: { input: string; value: DateRangeValue; partial: DateRangePickerPartial; e: InputEvent }) => void输入框数据发生变化时触发，参数 input 表示输入内容，value 表示组件当前有效值",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onPick": {
+      "description": "TS 类型：(value: DateValue, context: PickContext) => void选中日期时触发，可能是开始日期，也可能是结束日期，第二个参数可以区分是开始日期或是结束日期。详细类型定义。interface PickContext { e: MouseEvent; partial: DateRangePickerPartial }",
+      "description_zh": "TS 类型：(value: DateValue, context: PickContext) => void选中日期时触发，可能是开始日期，也可能是结束日期，第二个参数可以区分是开始日期或是结束日期。详细类型定义。interface PickContext { e: MouseEvent; partial: DateRangePickerPartial }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onPresetClick": {
+      "description": "TS 类型：(context: { preset: PresetDate, e: MouseEvent }) => void点击预设按钮后触发",
+      "description_zh": "TS 类型：(context: { preset: PresetDate, e: MouseEvent }) => void点击预设按钮后触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/date-picker",
+  "link_zh": "https://tdesign.tencent.com/vue/components/date-picker",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "blur",
+      "description": "当输入框失去焦点时触发",
+      "params": "(context: { value: DateRangeValue; partial: DateRangePickerPartial; e: FocusEvent })",
+      "description_zh": "当输入框失去焦点时触发"
+    },
+    {
+      "name": "change",
+      "description": "选中值发生变化时触发。详细类型定义。import { Dayjs } from 'dayjs'",
+      "params": "(value: DateRangeValue, context: { dayjsValue?: Dayjs[], trigger?: DatePickerTriggerSource })",
+      "description_zh": "选中值发生变化时触发。详细类型定义。import { Dayjs } from 'dayjs'"
+    },
+    {
+      "name": "confirm",
+      "description": "如果存在“确定”按钮，则点击“确定”按钮时触发",
+      "params": "(context: { date: Date[], e: MouseEvent, partial: DateRangePickerPartial })",
+      "description_zh": "如果存在“确定”按钮，则点击“确定”按钮时触发"
+    },
+    {
+      "name": "focus",
+      "description": "输入框获得焦点时触发",
+      "params": "(context: { value: DateRangeValue; partial: DateRangePickerPartial; e: FocusEvent })",
+      "description_zh": "输入框获得焦点时触发"
+    },
+    {
+      "name": "input",
+      "description": "输入框数据发生变化时触发，参数 input 表示输入内容，value 表示组件当前有效值",
+      "params": "(context: { input: string; value: DateRangeValue; partial: DateRangePickerPartial; e: InputEvent })",
+      "description_zh": "输入框数据发生变化时触发，参数 input 表示输入内容，value 表示组件当前有效值"
+    },
+    {
+      "name": "pick",
+      "description": "选中日期时触发，可能是开始日期，也可能是结束日期，第二个参数可以区分是开始日期或是结束日期。详细类型定义。interface PickContext { e: MouseEvent; partial: DateRangePickerPartial }",
+      "params": "(value: DateValue, context: PickContext)",
+      "description_zh": "选中日期时触发，可能是开始日期，也可能是结束日期，第二个参数可以区分是开始日期或是结束日期。详细类型定义。interface PickContext { e: MouseEvent; partial: DateRangePickerPartial }"
+    },
+    {
+      "name": "preset-click",
+      "description": "点击预设按钮后触发",
+      "params": "(context: { preset: PresetDate, e: MouseEvent })",
+      "description_zh": "点击预设按钮后触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "DateRangePicker"
+}

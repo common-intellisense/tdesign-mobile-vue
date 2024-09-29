@@ -1,0 +1,113 @@
+{
+  "name": "TEnhancedTable",
+  "props": {
+    "beforeDragSort": {
+      "description": "树形结构中，拖拽排序前控制，返回值为 true 则继续排序；返回值为 false 则中止排序还原数据。TS 类型：(context: DragSortContext<T>) => boolean",
+      "description_zh": "树形结构中，拖拽排序前控制，返回值为 true 则继续排序；返回值为 false 则中止排序还原数据。TS 类型：(context: DragSortContext<T>) => boolean",
+      "default": "-",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "expandedTreeNodes": {
+      "description": "展开的树形节点。非必须。在需要自由控制展开的树形节点时使用。其他场景无需设置，表格组件有内置展开逻辑。支持语法糖 .sync。TS 类型：Array<string | number>",
+      "description_zh": "展开的树形节点。非必须。在需要自由控制展开的树形节点时使用。其他场景无需设置，表格组件有内置展开逻辑。支持语法糖 .sync。TS 类型：Array<string | number>",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "defaultExpandedTreeNodes": {
+      "description": "展开的树形节点。非必须。在需要自由控制展开的树形节点时使用。其他场景无需设置，表格组件有内置展开逻辑。非受控属性。TS 类型：Array<string | number>",
+      "description_zh": "展开的树形节点。非必须。在需要自由控制展开的树形节点时使用。其他场景无需设置，表格组件有内置展开逻辑。非受控属性。TS 类型：Array<string | number>",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "tree": {
+      "description": "树形结构相关配置。具体属性文档查看 TableTreeConfig 相关描述。TS 类型：TableTreeConfig",
+      "description_zh": "树形结构相关配置。具体属性文档查看 TableTreeConfig 相关描述。TS 类型：TableTreeConfig",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "treeExpandAndFoldIcon": {
+      "description": "自定义树形结构展开图标，支持全局配置 GlobalConfigProvider。TS 类型：TNode<{ type: 'expand' | 'fold', row: T }>。通用类型定义",
+      "description_zh": "自定义树形结构展开图标，支持全局配置 GlobalConfigProvider。TS 类型：TNode<{ type: 'expand' | 'fold', row: T }>。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "PrimaryTableProps<T>": {
+      "description": "继承 PrimaryTableProps<T> 中的全部属性",
+      "description_zh": "继承 PrimaryTableProps<T> 中的全部属性",
+      "default": "-",
+      "value": "",
+      "type": "-",
+      "required": false,
+      "version": ""
+    },
+    "onAbnormalDragSort": {
+      "description": "TS 类型：(context: TableAbnormalDragSortContext<T>) => void异常拖拽排序时触发，如：树形结构中，非同层级之间的交换。context.code 指交换异常错误码，固定值；context.reason 指交换异常的原因。详细类型定义。interface TableAbnormalDragSortContext<T> { code: number; reason: string }",
+      "description_zh": "TS 类型：(context: TableAbnormalDragSortContext<T>) => void异常拖拽排序时触发，如：树形结构中，非同层级之间的交换。context.code 指交换异常错误码，固定值；context.reason 指交换异常的原因。详细类型定义。interface TableAbnormalDragSortContext<T> { code: number; reason: string }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onExpandedTreeNodesChange": {
+      "description": "TS 类型：(expandedTreeNodes: Array<string | number>, options: TableTreeNodeExpandOptions <T>) => void树形结构，展开的树节点发生变化时触发，泛型 T 指表格数据类型。详细类型定义。interface TableTreeNodeExpandOptions<T> { row: T; rowIndex: number; rowState: TableRowState<T>; type: 'fold' | 'expand'; trigger?: 'expand-fold-icon' | 'row-click' | 'default-expand-all' | 'expand-all' | 'fold-all' }",
+      "description_zh": "TS 类型：(expandedTreeNodes: Array<string | number>, options: TableTreeNodeExpandOptions <T>) => void树形结构，展开的树节点发生变化时触发，泛型 T 指表格数据类型。详细类型定义。interface TableTreeNodeExpandOptions<T> { row: T; rowIndex: number; rowState: TableRowState<T>; type: 'fold' | 'expand'; trigger?: 'expand-fold-icon' | 'row-click' | 'default-expand-all' | 'expand-all' | 'fold-all' }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onTreeExpandChange": {
+      "description": "TS 类型：(context: TableTreeExpandChangeContext<T>) => void已废弃。树形结构，用户操作引起节点展开或收起时触发。请更为使用 onExpandedTreeNodesChange。详细类型定义。interface TableTreeExpandChangeContext<T> { row: T; rowIndex: number; rowState: TableRowState<T>; trigger?: 'expand-fold-icon' | 'row-click' }",
+      "description_zh": "TS 类型：(context: TableTreeExpandChangeContext<T>) => void已废弃。树形结构，用户操作引起节点展开或收起时触发。请更为使用 onExpandedTreeNodesChange。详细类型定义。interface TableTreeExpandChangeContext<T> { row: T; rowIndex: number; rowState: TableRowState<T>; trigger?: 'expand-fold-icon' | 'row-click' }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/table",
+  "link_zh": "https://tdesign.tencent.com/vue/components/table",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "abnormal-drag-sort",
+      "description": "异常拖拽排序时触发，如：树形结构中，非同层级之间的交换。context.code 指交换异常错误码，固定值；context.reason 指交换异常的原因。详细类型定义。interface TableAbnormalDragSortContext<T> { code: number; reason: string }",
+      "params": "(context: TableAbnormalDragSortContext<T>)",
+      "description_zh": "异常拖拽排序时触发，如：树形结构中，非同层级之间的交换。context.code 指交换异常错误码，固定值；context.reason 指交换异常的原因。详细类型定义。interface TableAbnormalDragSortContext<T> { code: number; reason: string }"
+    },
+    {
+      "name": "expanded-tree-nodes-change",
+      "description": "树形结构，展开的树节点发生变化时触发，泛型 T 指表格数据类型。详细类型定义。interface TableTreeNodeExpandOptions<T> { row: T; rowIndex: number; rowState: TableRowState<T>; type: 'fold' | 'expand'; trigger?: 'expand-fold-icon' | 'row-click' | 'default-expand-all' | 'expand-all' | 'fold-all' }",
+      "params": "(expandedTreeNodes: Array<string | number>, options: TableTreeNodeExpandOptions <T>)",
+      "description_zh": "树形结构，展开的树节点发生变化时触发，泛型 T 指表格数据类型。详细类型定义。interface TableTreeNodeExpandOptions<T> { row: T; rowIndex: number; rowState: TableRowState<T>; type: 'fold' | 'expand'; trigger?: 'expand-fold-icon' | 'row-click' | 'default-expand-all' | 'expand-all' | 'fold-all' }"
+    },
+    {
+      "name": "tree-expand-change",
+      "description": "已废弃。树形结构，用户操作引起节点展开或收起时触发。请更为使用 onExpandedTreeNodesChange。详细类型定义。interface TableTreeExpandChangeContext<T> { row: T; rowIndex: number; rowState: TableRowState<T>; trigger?: 'expand-fold-icon' | 'row-click' }",
+      "params": "(context: TableTreeExpandChangeContext<T>)",
+      "description_zh": "已废弃。树形结构，用户操作引起节点展开或收起时触发。请更为使用 onExpandedTreeNodesChange。详细类型定义。interface TableTreeExpandChangeContext<T> { row: T; rowIndex: number; rowState: TableRowState<T>; trigger?: 'expand-fold-icon' | 'row-click' }"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "EnhancedTable"
+}

@@ -1,0 +1,230 @@
+{
+  "name": "TTextarea",
+  "props": {
+    "allowInputOverMax": {
+      "description": "超出maxlength或maxcharacter之后是否还允许输入",
+      "description_zh": "超出maxlength或maxcharacter之后是否还允许输入",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "autofocus": {
+      "description": "自动聚焦，拉起键盘",
+      "description_zh": "自动聚焦，拉起键盘",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "autosize": {
+      "description": "高度自动撑开。 autosize = true 表示组件高度自动撑开，同时，依旧允许手动拖高度。如果设置了 autosize.maxRows 或者 autosize.minRows 则不允许手动调整高度。TS 类型：boolean | { minRows?: number; maxRows?: number }",
+      "description_zh": "高度自动撑开。 autosize = true 表示组件高度自动撑开，同时，依旧允许手动拖高度。如果设置了 autosize.maxRows 或者 autosize.minRows 则不允许手动调整高度。TS 类型：boolean | { minRows?: number; maxRows?: number }",
+      "default": "false",
+      "value": "",
+      "type": "Boolean / Object",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "是否禁用文本框",
+      "description_zh": "是否禁用文本框",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "label": {
+      "description": "左侧文本。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "左侧文本。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "maxcharacter": {
+      "description": "用户最多可以输入的字符个数，一个中文汉字表示两个字符长度",
+      "description_zh": "用户最多可以输入的字符个数，一个中文汉字表示两个字符长度",
+      "default": "-",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "maxlength": {
+      "description": "用户最多可以输入的字符个数",
+      "description_zh": "用户最多可以输入的字符个数",
+      "default": "-",
+      "value": "",
+      "type": "Number / String",
+      "required": false,
+      "version": ""
+    },
+    "name": {
+      "description": "名称，HTML 元素原生属性",
+      "description_zh": "名称，HTML 元素原生属性",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "placeholder": {
+      "description": "占位符",
+      "description_zh": "占位符",
+      "default": "undefined",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "readonly": {
+      "description": "只读状态",
+      "description_zh": "只读状态",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "status": {
+      "description": "文本框状态。可选项：default/success/warning/error",
+      "description_zh": "文本框状态。可选项：default/success/warning/error",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "tips": {
+      "description": "输入框下方提示文本，会根据不同的 status 呈现不同的样式。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "输入框下方提示文本，会根据不同的 status 呈现不同的样式。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "文本框值。支持语法糖 v-model。TS 类型：TextareaValue type TextareaValue = string。详细类型定义",
+      "description_zh": "文本框值。支持语法糖 v-model。TS 类型：TextareaValue type TextareaValue = string。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "defaultValue": {
+      "description": "文本框值。非受控属性。TS 类型：TextareaValue type TextareaValue = string。详细类型定义",
+      "description_zh": "文本框值。非受控属性。TS 类型：TextareaValue type TextareaValue = string。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "onBlur": {
+      "description": "TS 类型：(value: TextareaValue, context: { e: FocusEvent }) => void失去焦点时触发",
+      "description_zh": "TS 类型：(value: TextareaValue, context: { e: FocusEvent }) => void失去焦点时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(value: TextareaValue, context?: { e?: InputEvent }) => void输入内容变化时触发",
+      "description_zh": "TS 类型：(value: TextareaValue, context?: { e?: InputEvent }) => void输入内容变化时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onFocus": {
+      "description": "TS 类型：(value: TextareaValue, context : { e: FocusEvent }) => void获得焦点时触发",
+      "description_zh": "TS 类型：(value: TextareaValue, context : { e: FocusEvent }) => void获得焦点时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onKeydown": {
+      "description": "TS 类型：(value: TextareaValue, context: { e: KeyboardEvent }) => void键盘按下时触发",
+      "description_zh": "TS 类型：(value: TextareaValue, context: { e: KeyboardEvent }) => void键盘按下时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onKeypress": {
+      "description": "TS 类型：(value: TextareaValue, context: { e: KeyboardEvent }) => void按下字符键时触发（keydown -> keypress -> keyup）",
+      "description_zh": "TS 类型：(value: TextareaValue, context: { e: KeyboardEvent }) => void按下字符键时触发（keydown -> keypress -> keyup）",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onKeyup": {
+      "description": "TS 类型：(value: TextareaValue, context: { e: KeyboardEvent }) => void释放键盘时触发",
+      "description_zh": "TS 类型：(value: TextareaValue, context: { e: KeyboardEvent }) => void释放键盘时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/textarea",
+  "link_zh": "https://tdesign.tencent.com/vue/components/textarea",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "blur",
+      "description": "失去焦点时触发",
+      "params": "(value: TextareaValue, context: { e: FocusEvent })",
+      "description_zh": "失去焦点时触发"
+    },
+    {
+      "name": "change",
+      "description": "输入内容变化时触发",
+      "params": "(value: TextareaValue, context?: { e?: InputEvent })",
+      "description_zh": "输入内容变化时触发"
+    },
+    {
+      "name": "focus",
+      "description": "获得焦点时触发",
+      "params": "(value: TextareaValue, context : { e: FocusEvent })",
+      "description_zh": "获得焦点时触发"
+    },
+    {
+      "name": "keydown",
+      "description": "键盘按下时触发",
+      "params": "(value: TextareaValue, context: { e: KeyboardEvent })",
+      "description_zh": "键盘按下时触发"
+    },
+    {
+      "name": "keypress",
+      "description": "按下字符键时触发（keydown -> keypress -> keyup）",
+      "params": "(value: TextareaValue, context: { e: KeyboardEvent })",
+      "description_zh": "按下字符键时触发（keydown -> keypress -> keyup）"
+    },
+    {
+      "name": "keyup",
+      "description": "释放键盘时触发",
+      "params": "(value: TextareaValue, context: { e: KeyboardEvent })",
+      "description_zh": "释放键盘时触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Textarea"
+}

@@ -1,0 +1,118 @@
+{
+  "name": "TList",
+  "props": {
+    "asyncLoading": {
+      "description": "自定义加载中。值为空不显示加载中，值为 'loading' 显示加载中状态，值为 'load-more' 显示加载更多状态。值类型为函数，则表示自定义加载状态呈现内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "自定义加载中。值为空不显示加载中，值为 'loading' 显示加载中状态，值为 'load-more' 显示加载更多状态。值类型为函数，则表示自定义加载状态呈现内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "footer": {
+      "description": "底部。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "底部。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "header": {
+      "description": "头部。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "头部。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "layout": {
+      "description": "排列方式（待设计稿输出）。可选项：horizontal/vertical",
+      "description_zh": "排列方式（待设计稿输出）。可选项：horizontal/vertical",
+      "default": "horizontal",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "scroll": {
+      "description": "懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 scroll.threshold 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，scroll.threshold 默认为 100。TS 类型：TScroll。通用类型定义",
+      "description_zh": "懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 scroll.threshold 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，scroll.threshold 默认为 100。TS 类型：TScroll。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "size": {
+      "description": "尺寸。可选项：small/medium/large",
+      "description_zh": "尺寸。可选项：small/medium/large",
+      "default": "medium",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "split": {
+      "description": "是否展示分割线",
+      "description_zh": "是否展示分割线",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "stripe": {
+      "description": "是否展示斑马纹",
+      "description_zh": "是否展示斑马纹",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "onLoadMore": {
+      "description": "TS 类型：(options: { e: MouseEvent }) => void点击加载更多时触发",
+      "description_zh": "TS 类型：(options: { e: MouseEvent }) => void点击加载更多时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onScroll": {
+      "description": "TS 类型：(options: { e: Event | WheelEvent; scrollTop: number; scrollBottom: number }) => void列表滚动时触发，scrollTop 表示顶部滚动距离，scrollBottom 表示底部滚动距离",
+      "description_zh": "TS 类型：(options: { e: Event | WheelEvent; scrollTop: number; scrollBottom: number }) => void列表滚动时触发，scrollTop 表示顶部滚动距离，scrollBottom 表示底部滚动距离",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/list",
+  "link_zh": "https://tdesign.tencent.com/vue/components/list",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "load-more",
+      "description": "点击加载更多时触发",
+      "params": "(options: { e: MouseEvent })",
+      "description_zh": "点击加载更多时触发"
+    },
+    {
+      "name": "scroll",
+      "description": "列表滚动时触发，scrollTop 表示顶部滚动距离，scrollBottom 表示底部滚动距离",
+      "params": "(options: { e: Event | WheelEvent; scrollTop: number; scrollBottom: number })",
+      "description_zh": "列表滚动时触发，scrollTop 表示顶部滚动距离，scrollBottom 表示底部滚动距离"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [
+    "t-list-item"
+  ],
+  "filename": "List"
+}

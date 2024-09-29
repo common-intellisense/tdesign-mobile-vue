@@ -1,0 +1,251 @@
+{
+  "name": "TTimeRangePicker",
+  "props": {
+    "allowInput": {
+      "description": "是否允许直接输入时间",
+      "description_zh": "是否允许直接输入时间",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "borderless": {
+      "description": "无边框模式",
+      "description_zh": "无边框模式",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "clearable": {
+      "description": "是否允许清除选中值",
+      "description_zh": "是否允许清除选中值",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "disableTime": {
+      "description": "禁用时间项。TS 类型：(h: number, m: number, s: number, context: { partial: TimeRangePickerPartial }) =>Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number> }> type TimeRangePickerPartial = 'start' | 'end'。详细类型定义",
+      "description_zh": "禁用时间项。TS 类型：(h: number, m: number, s: number, context: { partial: TimeRangePickerPartial }) =>Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number> }> type TimeRangePickerPartial = 'start' | 'end'。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "是否禁用组件，值为数组表示可分别控制开始日期和结束日期是否禁用。TS 类型：boolean | Array<boolean>",
+      "description_zh": "是否禁用组件，值为数组表示可分别控制开始日期和结束日期是否禁用。TS 类型：boolean | Array<boolean>",
+      "default": "undefined",
+      "value": "",
+      "type": "Boolean / Array",
+      "required": false,
+      "version": ""
+    },
+    "format": {
+      "description": "用于格式化时间，详细文档",
+      "description_zh": "用于格式化时间，详细文档",
+      "default": "HH:mm:ss",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "hideDisabledTime": {
+      "description": "是否隐藏禁用状态的时间项",
+      "description_zh": "是否隐藏禁用状态的时间项",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "label": {
+      "description": "左侧文本。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "左侧文本。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "placeholder": {
+      "description": "占位符，值为数组表示可分别为开始日期和结束日期设置占位符。TS 类型：string | Array<string>",
+      "description_zh": "占位符，值为数组表示可分别为开始日期和结束日期设置占位符。TS 类型：string | Array<string>",
+      "default": "undefined",
+      "value": "",
+      "type": "String / Array",
+      "required": false,
+      "version": ""
+    },
+    "popupProps": {
+      "description": "透传给 popup 组件的参数。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "description_zh": "透传给 popup 组件的参数。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "presets": {
+      "description": "预设快捷时间范围选择，示例：{ '下午': ['13:00:00', '18:00:00'] }。TS 类型：PresetTimeRange interface PresetTimeRange { [presetRageName: string]: TimeRangeValue | (() => TimeRangeValue)}。详细类型定义",
+      "description_zh": "预设快捷时间范围选择，示例：{ '下午': ['13:00:00', '18:00:00'] }。TS 类型：PresetTimeRange interface PresetTimeRange { [presetRageName: string]: TimeRangeValue | (() => TimeRangeValue)}。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "rangeInputProps": {
+      "description": "透传给范围输入框 RangeInput 组件的参数。TS 类型：RangeInputProps，RangeInput API Documents。详细类型定义",
+      "description_zh": "透传给范围输入框 RangeInput 组件的参数。TS 类型：RangeInputProps，RangeInput API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "size": {
+      "description": "尺寸。可选项：small/medium/large",
+      "description_zh": "尺寸。可选项：small/medium/large",
+      "default": "medium",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "status": {
+      "description": "输入框状态。可选项：default/success/warning/error",
+      "description_zh": "输入框状态。可选项：default/success/warning/error",
+      "default": "default",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "steps": {
+      "description": "时间间隔步数，数组排列 [小时, 分钟, 秒]，示例：[2, 1, 1] 或者 ['2', '1', '1']。TS 类型：Array<string | number>",
+      "description_zh": "时间间隔步数，数组排列 [小时, 分钟, 秒]，示例：[2, 1, 1] 或者 ['2', '1', '1']。TS 类型：Array<string | number>",
+      "default": "[1, 1, 1]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "tips": {
+      "description": "输入框下方提示文本，会根据不同的 status 呈现不同的样式。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "输入框下方提示文本，会根据不同的 status 呈现不同的样式。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "选中值。支持语法糖 v-model。TS 类型：TimeRangeValue type TimeRangeValue = Array<string>。详细类型定义",
+      "description_zh": "选中值。支持语法糖 v-model。TS 类型：TimeRangeValue type TimeRangeValue = Array<string>。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "defaultValue": {
+      "description": "选中值。非受控属性。TS 类型：TimeRangeValue type TimeRangeValue = Array<string>。详细类型定义",
+      "description_zh": "选中值。非受控属性。TS 类型：TimeRangeValue type TimeRangeValue = Array<string>。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "onBlur": {
+      "description": "TS 类型：(context: { value: TimeRangeValue; e?: FocusEvent; position?: TimeRangePickerPartial }) => void当输入框失去焦点时触发。详细类型定义。type TimeRangePickerPartial = 'start' | 'end'",
+      "description_zh": "TS 类型：(context: { value: TimeRangeValue; e?: FocusEvent; position?: TimeRangePickerPartial }) => void当输入框失去焦点时触发。详细类型定义。type TimeRangePickerPartial = 'start' | 'end'",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(value: TimeRangeValue) => void选中值发生变化时触发",
+      "description_zh": "TS 类型：(value: TimeRangeValue) => void选中值发生变化时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onFocus": {
+      "description": "TS 类型：(context?: { value: TimeRangeValue; e?: FocusEvent; position?: TimeRangePickerPartial }) => void范围输入框获得焦点时触发。详细类型定义。type TimeRangePickerPartial = 'start' | 'end'",
+      "description_zh": "TS 类型：(context?: { value: TimeRangeValue; e?: FocusEvent; position?: TimeRangePickerPartial }) => void范围输入框获得焦点时触发。详细类型定义。type TimeRangePickerPartial = 'start' | 'end'",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onInput": {
+      "description": "TS 类型：(context: { value: TimeRangeValue; e?: InputEvent; position?: TimeRangePickerPartial }) => void当输入框内容发生变化时触发，参数 input 表示输入内容，value 表示组件当前有效值。详细类型定义。type TimeRangePickerPartial = 'start' | 'end'",
+      "description_zh": "TS 类型：(context: { value: TimeRangeValue; e?: InputEvent; position?: TimeRangePickerPartial }) => void当输入框内容发生变化时触发，参数 input 表示输入内容，value 表示组件当前有效值。详细类型定义。type TimeRangePickerPartial = 'start' | 'end'",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onPick": {
+      "description": "TS 类型：(value: TimeRangeValue, context: { e: MouseEvent, position?: TimeRangePickerPartial }) => void面板选中值后触发",
+      "description_zh": "TS 类型：(value: TimeRangeValue, context: { e: MouseEvent, position?: TimeRangePickerPartial }) => void面板选中值后触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/time-picker",
+  "link_zh": "https://tdesign.tencent.com/vue/components/time-picker",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "blur",
+      "description": "当输入框失去焦点时触发。详细类型定义。type TimeRangePickerPartial = 'start' | 'end'",
+      "params": "(context: { value: TimeRangeValue; e?: FocusEvent; position?: TimeRangePickerPartial }) ",
+      "description_zh": "当输入框失去焦点时触发。详细类型定义。type TimeRangePickerPartial = 'start' | 'end'"
+    },
+    {
+      "name": "change",
+      "description": "选中值发生变化时触发",
+      "params": "(value: TimeRangeValue)",
+      "description_zh": "选中值发生变化时触发"
+    },
+    {
+      "name": "focus",
+      "description": "范围输入框获得焦点时触发。详细类型定义。type TimeRangePickerPartial = 'start' | 'end'",
+      "params": "(context?: { value: TimeRangeValue; e?: FocusEvent; position?: TimeRangePickerPartial }) ",
+      "description_zh": "范围输入框获得焦点时触发。详细类型定义。type TimeRangePickerPartial = 'start' | 'end'"
+    },
+    {
+      "name": "input",
+      "description": "当输入框内容发生变化时触发，参数 input 表示输入内容，value 表示组件当前有效值。详细类型定义。type TimeRangePickerPartial = 'start' | 'end'",
+      "params": "(context: { value: TimeRangeValue; e?: InputEvent; position?: TimeRangePickerPartial }) ",
+      "description_zh": "当输入框内容发生变化时触发，参数 input 表示输入内容，value 表示组件当前有效值。详细类型定义。type TimeRangePickerPartial = 'start' | 'end'"
+    },
+    {
+      "name": "pick",
+      "description": "面板选中值后触发",
+      "params": "(value: TimeRangeValue, context: { e: MouseEvent, position?: TimeRangePickerPartial })",
+      "description_zh": "面板选中值后触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "TimeRangePicker"
+}

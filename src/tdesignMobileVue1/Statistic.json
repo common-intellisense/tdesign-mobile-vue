@@ -1,0 +1,148 @@
+{
+  "name": "TStatistic",
+  "props": {
+    "animation": {
+      "description": "动画效果控制，duration 指动画的过渡时间单位：毫秒，valueFrom 指动画的起始数值。{ duration, valueFrom }。TS 类型：animation interface animation { duration: number; valueFrom: number; }。详细类型定义",
+      "description_zh": "动画效果控制，duration 指动画的过渡时间单位：毫秒，valueFrom 指动画的起始数值。{ duration, valueFrom }。TS 类型：animation interface animation { duration: number; valueFrom: number; }。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "animationStart": {
+      "description": "是否开始动画",
+      "description_zh": "是否开始动画",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "color": {
+      "description": "颜色风格，依次为 TDesign 风格的黑色、蓝色、红色、橙色、绿色。也可以为任何 CSS color 支持的 RGB 等值。可选项：black/blue/red/orange/green",
+      "description_zh": "颜色风格，依次为 TDesign 风格的黑色、蓝色、红色、橙色、绿色。也可以为任何 CSS color 支持的 RGB 等值。可选项：black/blue/red/orange/green",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "decimalPlaces": {
+      "description": "小数保留位数",
+      "description_zh": "小数保留位数",
+      "default": "-",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "extra": {
+      "description": "额外的显示内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "额外的显示内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "format": {
+      "description": "格式化数值显示值。TS 类型：(value: number) => number",
+      "description_zh": "格式化数值显示值。TS 类型：(value: number) => number",
+      "default": "-",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "loading": {
+      "description": "是否加载中",
+      "description_zh": "是否加载中",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "prefix": {
+      "description": "前缀内容，展示优先级高于 trend。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "前缀内容，展示优先级高于 trend。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "separator": {
+      "description": "默认展示进位分隔符，可以自定义为其他内容，separator = '' 设置为空字符串/null/undefined 时隐藏分隔符",
+      "description_zh": "默认展示进位分隔符，可以自定义为其他内容，separator = '' 设置为空字符串/null/undefined 时隐藏分隔符",
+      "default": ",",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "suffix": {
+      "description": "后缀内容，展示优先级高于 trend。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "后缀内容，展示优先级高于 trend。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "title": {
+      "description": "数值显示的标题。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "数值显示的标题。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "trend": {
+      "description": "趋势。可选项：increase/decrease",
+      "description_zh": "趋势。可选项：increase/decrease",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "trendPlacement": {
+      "description": "趋势展示位置。可选项：left/right",
+      "description_zh": "趋势展示位置。可选项：left/right",
+      "default": "left",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "unit": {
+      "description": "单位内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "单位内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "数值显示的值",
+      "description_zh": "数值显示的值",
+      "default": "-",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/statistic",
+  "link_zh": "https://tdesign.tencent.com/vue/components/statistic",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Statistic"
+}

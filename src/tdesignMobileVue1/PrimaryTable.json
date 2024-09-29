@@ -1,0 +1,545 @@
+{
+  "name": "TPrimaryTable",
+  "props": {
+    "asyncLoading": {
+      "description": "异步加载状态。值为 loading 显示默认文字 “正在加载中，请稍后”，值为 loading-more 显示“点击加载更多”，值为其他，表示完全自定义异步加载区域内容。TS 类型：'loading' | 'load-more' | TNode。通用类型定义",
+      "description_zh": "异步加载状态。值为 loading 显示默认文字 “正在加载中，请稍后”，值为 loading-more 显示“点击加载更多”，值为其他，表示完全自定义异步加载区域内容。TS 类型：'loading' | 'load-more' | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "columnController": {
+      "description": "自定义显示列控制器，值为空不会显示。具体属性请看下方 TableColumnController 文档。TS 类型：TableColumnController",
+      "description_zh": "自定义显示列控制器，值为空不会显示。具体属性请看下方 TableColumnController 文档。TS 类型：TableColumnController",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "columnControllerVisible": {
+      "description": "是否显示列配置弹框控制器，只要该属性值不为 undefined，弹框的显示/隐藏完全由该属性控制。支持语法糖 .sync",
+      "description_zh": "是否显示列配置弹框控制器，只要该属性值不为 undefined，弹框的显示/隐藏完全由该属性控制。支持语法糖 .sync",
+      "default": "undefined",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "columns": {
+      "description": "列配置，泛型 T 指表格数据类型。TS 类型：Array<PrimaryTableCol<T>>",
+      "description_zh": "列配置，泛型 T 指表格数据类型。TS 类型：Array<PrimaryTableCol<T>>",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "displayColumns": {
+      "description": "列配置功能中，当前显示的列。支持语法糖 .sync。TS 类型：CheckboxGroupValue",
+      "description_zh": "列配置功能中，当前显示的列。支持语法糖 .sync。TS 类型：CheckboxGroupValue",
+      "default": "-",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "defaultDisplayColumns": {
+      "description": "列配置功能中，当前显示的列。非受控属性。TS 类型：CheckboxGroupValue",
+      "description_zh": "列配置功能中，当前显示的列。非受控属性。TS 类型：CheckboxGroupValue",
+      "default": "-",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "dragSort": {
+      "description": "拖拽排序方式，值为 row 表示行拖拽排序，这种方式无法进行文本复制，慎用。值为row-handler 表示通过拖拽手柄进行行拖拽排序。值为 col 表示列顺序拖拽。值为 row-handler-col 表示同时支持行拖拽和列拖拽。⚠️drag-col 已废弃，请勿使用。。可选项：row/row-handler/col/row-handler-col/drag-col",
+      "description_zh": "拖拽排序方式，值为 row 表示行拖拽排序，这种方式无法进行文本复制，慎用。值为row-handler 表示通过拖拽手柄进行行拖拽排序。值为 col 表示列顺序拖拽。值为 row-handler-col 表示同时支持行拖拽和列拖拽。⚠️drag-col 已废弃，请勿使用。。可选项：row/row-handler/col/row-handler-col/drag-col",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "dragSortOptions": {
+      "description": "拖拽排序扩展参数，具体参数见 Sortable。TS 类型：SortableOptions",
+      "description_zh": "拖拽排序扩展参数，具体参数见 Sortable。TS 类型：SortableOptions",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "editableCellState": {
+      "description": "单元格是否允许编辑。返回值为 true 则表示可编辑；返回值为 false 则表示不可编辑，只读状态。TS 类型：EditableCellType<T> type EditableCellType<T> = (params: PrimaryTableCellParams<T>) => boolean。详细类型定义",
+      "description_zh": "单元格是否允许编辑。返回值为 true 则表示可编辑；返回值为 false 则表示不可编辑，只读状态。TS 类型：EditableCellType<T> type EditableCellType<T> = (params: PrimaryTableCellParams<T>) => boolean。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "editableRowKeys": {
+      "description": "处于编辑状态的行。TS 类型：Array<string | number>",
+      "description_zh": "处于编辑状态的行。TS 类型：Array<string | number>",
+      "default": "-",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "expandIcon": {
+      "description": "用于控制是否显示「展开图标列」，值为 false 则不会显示。可以精确到某一行是否显示，还可以自定义展开图标内容。expandedRow 存在时，该参数有效。支持全局配置 GlobalConfigProvider。TS 类型：boolean | TNode<ExpandArrowRenderParams<T>> interface ExpandArrowRenderParams<T> { row: T; index: number }。通用类型定义。详细类型定义",
+      "description_zh": "用于控制是否显示「展开图标列」，值为 false 则不会显示。可以精确到某一行是否显示，还可以自定义展开图标内容。expandedRow 存在时，该参数有效。支持全局配置 GlobalConfigProvider。TS 类型：boolean | TNode<ExpandArrowRenderParams<T>> interface ExpandArrowRenderParams<T> { row: T; index: number }。通用类型定义。详细类型定义",
+      "default": "true",
+      "value": "",
+      "type": "Boolean / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "expandOnRowClick": {
+      "description": "是否允许点击行展开",
+      "description_zh": "是否允许点击行展开",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "expandedRow": {
+      "description": "展开行内容，泛型 T 指表格数据类型。TS 类型：TNode<TableExpandedRowParams<T>> interface TableExpandedRowParams<T> { row: T; index: number; columns: PrimaryTableCol<T>[] | BaseTableCol<T>[] }。通用类型定义。详细类型定义",
+      "description_zh": "展开行内容，泛型 T 指表格数据类型。TS 类型：TNode<TableExpandedRowParams<T>> interface TableExpandedRowParams<T> { row: T; index: number; columns: PrimaryTableCol<T>[] | BaseTableCol<T>[] }。通用类型定义。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "expandedRowKeys": {
+      "description": "展开行。支持语法糖 .sync。TS 类型：Array<string | number>",
+      "description_zh": "展开行。支持语法糖 .sync。TS 类型：Array<string | number>",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "defaultExpandedRowKeys": {
+      "description": "展开行。非受控属性。TS 类型：Array<string | number>",
+      "description_zh": "展开行。非受控属性。TS 类型：Array<string | number>",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "filterIcon": {
+      "description": "自定义过滤图标，支持全局配置 GlobalConfigProvider。TS 类型：TNode<{ col: PrimaryTableCol<T>; colIndex: number }>。通用类型定义",
+      "description_zh": "自定义过滤图标，支持全局配置 GlobalConfigProvider。TS 类型：TNode<{ col: PrimaryTableCol<T>; colIndex: number }>。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "filterRow": {
+      "description": "自定义过滤状态行及清空筛选等。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "自定义过滤状态行及清空筛选等。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "filterValue": {
+      "description": "过滤数据的值。支持语法糖 .sync。TS 类型：FilterValue type FilterValue = { [key: string]: any }。详细类型定义",
+      "description_zh": "过滤数据的值。支持语法糖 .sync。TS 类型：FilterValue type FilterValue = { [key: string]: any }。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "defaultFilterValue": {
+      "description": "过滤数据的值。非受控属性。TS 类型：FilterValue type FilterValue = { [key: string]: any }。详细类型定义",
+      "description_zh": "过滤数据的值。非受控属性。TS 类型：FilterValue type FilterValue = { [key: string]: any }。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "hideSortTips": {
+      "description": "隐藏排序文本提示，支持全局配置 GlobalConfigProvider，默认全局配置值为 false",
+      "description_zh": "隐藏排序文本提示，支持全局配置 GlobalConfigProvider，默认全局配置值为 false",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "indeterminateSelectedRowKeys": {
+      "description": "半选状态行。选中行请更为使用 selectedRowKeys 控制。TS 类型：Array<string | number>",
+      "description_zh": "半选状态行。选中行请更为使用 selectedRowKeys 控制。TS 类型：Array<string | number>",
+      "default": "-",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "multipleSort": {
+      "description": "是否支持多列排序",
+      "description_zh": "是否支持多列排序",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "reserveSelectedRowOnPaginate": {
+      "description": "行选中功能，是否在分页时保留上一页选中结果不清空，本地数据分页场景下，会全选所有页数据。值为 false 则表示全部选中操作停留在当前页，不跨分页；本地数据分页场景下，全选仅选中当前页",
+      "description_zh": "行选中功能，是否在分页时保留上一页选中结果不清空，本地数据分页场景下，会全选所有页数据。值为 false 则表示全部选中操作停留在当前页，不跨分页；本地数据分页场景下，全选仅选中当前页",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "rowSelectionAllowUncheck": {
+      "description": "行选中单选场景，是否允许取消选中",
+      "description_zh": "行选中单选场景，是否允许取消选中",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "rowSelectionType": {
+      "description": "行选中类型，单选或多选。效果和 columns 中配置的 { colKey: 'row-select', type: 'single' } 一样。可选项：single/multiple",
+      "description_zh": "行选中类型，单选或多选。效果和 columns 中配置的 { colKey: 'row-select', type: 'single' } 一样。可选项：single/multiple",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "selectOnRowClick": {
+      "description": "是否在点击整行时选中",
+      "description_zh": "是否在点击整行时选中",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "selectedRowKeys": {
+      "description": "选中行。半选状态行请更为使用 indeterminateSelectedRowKeys 控制。支持语法糖 .sync。TS 类型：Array<string | number>",
+      "description_zh": "选中行。半选状态行请更为使用 indeterminateSelectedRowKeys 控制。支持语法糖 .sync。TS 类型：Array<string | number>",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "defaultSelectedRowKeys": {
+      "description": "选中行。半选状态行请更为使用 indeterminateSelectedRowKeys 控制。非受控属性。TS 类型：Array<string | number>",
+      "description_zh": "选中行。半选状态行请更为使用 indeterminateSelectedRowKeys 控制。非受控属性。TS 类型：Array<string | number>",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "showSortColumnBgColor": {
+      "description": "当前排序列是否显示背景色",
+      "description_zh": "当前排序列是否显示背景色",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "sort": {
+      "description": "排序控制。sortBy 排序字段；descending 是否进行降序排列。值为数组时，表示正进行多字段排序。支持语法糖 .sync。TS 类型：TableSort type TableSort = SortInfo | Array<SortInfo> interface SortInfo { sortBy: string; descending: boolean }。详细类型定义",
+      "description_zh": "排序控制。sortBy 排序字段；descending 是否进行降序排列。值为数组时，表示正进行多字段排序。支持语法糖 .sync。TS 类型：TableSort type TableSort = SortInfo | Array<SortInfo> interface SortInfo { sortBy: string; descending: boolean }。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object / Array",
+      "required": false,
+      "version": ""
+    },
+    "defaultSort": {
+      "description": "排序控制。sortBy 排序字段；descending 是否进行降序排列。值为数组时，表示正进行多字段排序。非受控属性。TS 类型：TableSort type TableSort = SortInfo | Array<SortInfo> interface SortInfo { sortBy: string; descending: boolean }。详细类型定义",
+      "description_zh": "排序控制。sortBy 排序字段；descending 是否进行降序排列。值为数组时，表示正进行多字段排序。非受控属性。TS 类型：TableSort type TableSort = SortInfo | Array<SortInfo> interface SortInfo { sortBy: string; descending: boolean }。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object / Array",
+      "required": false,
+      "version": ""
+    },
+    "sortIcon": {
+      "description": "自定义排序图标，支持全局配置 GlobalConfigProvider。TS 类型：TNode。通用类型定义",
+      "description_zh": "自定义排序图标，支持全局配置 GlobalConfigProvider。TS 类型：TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "sortOnRowDraggable": {
+      "description": "已废弃。允许表格行拖拽时排序。请更为使用 dragSort=\\\"row\\\"",
+      "description_zh": "已废弃。允许表格行拖拽时排序。请更为使用 dragSort=\\\"row\\\"",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "Omit<BaseTableProps<T>,": {
+      "description": "继承 Omit<BaseTableProps<T>, 'columns' | 'onCellClick'> 中的全部属性",
+      "description_zh": "继承 Omit<BaseTableProps<T>, 'columns' | 'onCellClick'> 中的全部属性",
+      "default": "-",
+      "value": "",
+      "type": "-",
+      "required": false,
+      "version": "'columns' | 'onCellClick'>"
+    },
+    "onAsyncLoadingClick": {
+      "description": "TS 类型：(context: { status: 'loading' | 'load-more' }) => void异步加载区域被点击时触发",
+      "description_zh": "TS 类型：(context: { status: 'loading' | 'load-more' }) => void异步加载区域被点击时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onCellClick": {
+      "description": "TS 类型：(context: PrimaryTableCellEventContext<T>) => void单元格点击时触发。详细类型定义。interface PrimaryTableCellEventContext<T> { row: T; col: PrimaryTableCol; rowIndex: number; colIndex: number; e: MouseEvent }",
+      "description_zh": "TS 类型：(context: PrimaryTableCellEventContext<T>) => void单元格点击时触发。详细类型定义。interface PrimaryTableCellEventContext<T> { row: T; col: PrimaryTableCol; rowIndex: number; colIndex: number; e: MouseEvent }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(data: TableChangeData, context: TableChangeContext<T>) => void分页、排序、过滤等内容变化时触发，泛型 T 指表格数据类型，currentData 表示变化后的数据。详细类型定义。interface TableChangeData { sorter?: TableSort; filter?: FilterValue; pagination?: PaginationProps }interface TableChangeContext<T> { trigger: TableChangeTrigger; currentData?: T[] }type TableChangeTrigger = 'filter' | 'sorter' | 'pagination'",
+      "description_zh": "TS 类型：(data: TableChangeData, context: TableChangeContext<T>) => void分页、排序、过滤等内容变化时触发，泛型 T 指表格数据类型，currentData 表示变化后的数据。详细类型定义。interface TableChangeData { sorter?: TableSort; filter?: FilterValue; pagination?: PaginationProps }interface TableChangeContext<T> { trigger: TableChangeTrigger; currentData?: T[] }type TableChangeTrigger = 'filter' | 'sorter' | 'pagination'",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onColumnChange": {
+      "description": "TS 类型：(context: PrimaryTableColumnChange<T>) => void确认操作之前列配置发生变化时触发。context.columns 表示已选中的列；context.currentColumn 表示本次变化操作的列，值不存在表示全选操作；context.type 表示当前操作属于选中列或是取消列。详细类型定义。interface PrimaryTableColumnChange<T> { columns?: CheckboxGroupValue; currentColumn?: PrimaryTableCol<T>; type?: 'check' | 'uncheck'; e?: Event }",
+      "description_zh": "TS 类型：(context: PrimaryTableColumnChange<T>) => void确认操作之前列配置发生变化时触发。context.columns 表示已选中的列；context.currentColumn 表示本次变化操作的列，值不存在表示全选操作；context.type 表示当前操作属于选中列或是取消列。详细类型定义。interface PrimaryTableColumnChange<T> { columns?: CheckboxGroupValue; currentColumn?: PrimaryTableCol<T>; type?: 'check' | 'uncheck'; e?: Event }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onColumnControllerVisibleChange": {
+      "description": "TS 类型：(visible: boolean, context: { trigger: 'cancel' | 'confirm' }) => void列配置弹窗显示或隐藏变化时触发",
+      "description_zh": "TS 类型：(visible: boolean, context: { trigger: 'cancel' | 'confirm' }) => void列配置弹窗显示或隐藏变化时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onDataChange": {
+      "description": "TS 类型：(data: Array<T>, context: TableDataChangeContext) => void本地数据排序导致 data 变化时触发，第一个参数指变化后的数据，第二个参数 context.trigger 表示触发本次变化的来源。详细类型定义。interface TableDataChangeContext { trigger: 'sort' }",
+      "description_zh": "TS 类型：(data: Array<T>, context: TableDataChangeContext) => void本地数据排序导致 data 变化时触发，第一个参数指变化后的数据，第二个参数 context.trigger 表示触发本次变化的来源。详细类型定义。interface TableDataChangeContext { trigger: 'sort' }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onDisplayColumnsChange": {
+      "description": "TS 类型：(value: CheckboxGroupValue) => void确认列配置时触发。详细类型定义。import { CheckboxGroupValue } from '@Checkbox'",
+      "description_zh": "TS 类型：(value: CheckboxGroupValue) => void确认列配置时触发。详细类型定义。import { CheckboxGroupValue } from '@Checkbox'",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onDragSort": {
+      "description": "TS 类型：(context: DragSortContext<T>) => void拖拽排序时触发，data 表示排序前的数据，newData 表示拖拽排序结束后的新数据，sort=row 表示行拖拽事件触发，sort=col 表示列拖拽事件触发。详细类型定义。interface DragSortContext<T> { currentIndex: number; current: T; targetIndex: number; target: T; data: T[]; newData: T[]; currentData?: T[]; e: SortableEvent; sort: 'row' | 'col' }import { SortableEvent, SortableOptions } from 'sortablejs'",
+      "description_zh": "TS 类型：(context: DragSortContext<T>) => void拖拽排序时触发，data 表示排序前的数据，newData 表示拖拽排序结束后的新数据，sort=row 表示行拖拽事件触发，sort=col 表示列拖拽事件触发。详细类型定义。interface DragSortContext<T> { currentIndex: number; current: T; targetIndex: number; target: T; data: T[]; newData: T[]; currentData?: T[]; e: SortableEvent; sort: 'row' | 'col' }import { SortableEvent, SortableOptions } from 'sortablejs'",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onExpandChange": {
+      "description": "TS 类型：(expandedRowKeys: Array<string | number>, options: ExpandOptions<T>) => void展开行发生变化时触发，泛型 T 指表格数据类型。详细类型定义。interface ExpandOptions<T> { expandedRowData: Array<T>; currentRowData: T }",
+      "description_zh": "TS 类型：(expandedRowKeys: Array<string | number>, options: ExpandOptions<T>) => void展开行发生变化时触发，泛型 T 指表格数据类型。详细类型定义。interface ExpandOptions<T> { expandedRowData: Array<T>; currentRowData: T }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onFilterChange": {
+      "description": "TS 类型：(filterValue: FilterValue, context: TableFilterChangeContext<T>) => void过滤参数发生变化时触发，泛型 T 指表格数据类型。详细类型定义。interface TableFilterChangeContext<T> { col?: PrimaryTableCol<T>; trigger: 'filter-change' | 'confirm' | 'reset' | 'clear' }",
+      "description_zh": "TS 类型：(filterValue: FilterValue, context: TableFilterChangeContext<T>) => void过滤参数发生变化时触发，泛型 T 指表格数据类型。详细类型定义。interface TableFilterChangeContext<T> { col?: PrimaryTableCol<T>; trigger: 'filter-change' | 'confirm' | 'reset' | 'clear' }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onRowEdit": {
+      "description": "TS 类型：(context: PrimaryTableRowEditContext<T>) => void行编辑时触发。详细类型定义。type PrimaryTableRowEditContext<T> = PrimaryTableCellParams<T> & { value: any; editedRow: T }",
+      "description_zh": "TS 类型：(context: PrimaryTableRowEditContext<T>) => void行编辑时触发。详细类型定义。type PrimaryTableRowEditContext<T> = PrimaryTableCellParams<T> & { value: any; editedRow: T }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onRowValidate": {
+      "description": "TS 类型：(context: PrimaryTableRowValidateContext<T>) => void行编辑校验完成后触发，即组件实例方法 validateRowData 执行结束后触发。result 表示校验结果，trigger=self 表示编辑组件内部触发的校验，trigger='parent' 表示表格父组件触发的校验。详细类型定义。type PrimaryTableRowValidateContext<T> = { result: TableRowValidateResult<T>[]; trigger: TableValidateTrigger }type TableValidateTrigger = 'self' | 'parent'export type TableRowValidateResult<T> = PrimaryTableCellParams<T> & { errorList: AllValidateResult[]; value: any }",
+      "description_zh": "TS 类型：(context: PrimaryTableRowValidateContext<T>) => void行编辑校验完成后触发，即组件实例方法 validateRowData 执行结束后触发。result 表示校验结果，trigger=self 表示编辑组件内部触发的校验，trigger='parent' 表示表格父组件触发的校验。详细类型定义。type PrimaryTableRowValidateContext<T> = { result: TableRowValidateResult<T>[]; trigger: TableValidateTrigger }type TableValidateTrigger = 'self' | 'parent'export type TableRowValidateResult<T> = PrimaryTableCellParams<T> & { errorList: AllValidateResult[]; value: any }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onSelectChange": {
+      "description": "TS 类型：(selectedRowKeys: Array<string | number>, options: SelectOptions<T>) => void选中行发生变化时触发，泛型 T 指表格数据类型。两个参数，第一个参数为选中行 keys，第二个参数为更多参数，具体如下：type = uncheck 表示当前行操作为「取消行选中」；type = check 表示当前行操作为「行选中」； currentRowKey 表示当前操作行的 rowKey 值； currentRowData 表示当前操作行的行数据。详细类型定义。interface SelectOptions<T> { selectedRowData: Array<T>; type: 'uncheck' | 'check'; currentRowKey?: string; currentRowData?: T }",
+      "description_zh": "TS 类型：(selectedRowKeys: Array<string | number>, options: SelectOptions<T>) => void选中行发生变化时触发，泛型 T 指表格数据类型。两个参数，第一个参数为选中行 keys，第二个参数为更多参数，具体如下：type = uncheck 表示当前行操作为「取消行选中」；type = check 表示当前行操作为「行选中」； currentRowKey 表示当前操作行的 rowKey 值； currentRowData 表示当前操作行的行数据。详细类型定义。interface SelectOptions<T> { selectedRowData: Array<T>; type: 'uncheck' | 'check'; currentRowKey?: string; currentRowData?: T }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onSortChange": {
+      "description": "TS 类型：(sort: TableSort, options: SortOptions<T>) => void排序发生变化时触发。其中 sortBy 表示当前排序的字段，sortType 表示排序的方式，currentDataSource 表示 sorter 排序后的结果，col 表示列配置。sort 值类型为数组时表示多字段排序。详细类型定义。interface SortOptions<T> { currentDataSource?: Array<T>; col: PrimaryTableCol }",
+      "description_zh": "TS 类型：(sort: TableSort, options: SortOptions<T>) => void排序发生变化时触发。其中 sortBy 表示当前排序的字段，sortType 表示排序的方式，currentDataSource 表示 sorter 排序后的结果，col 表示列配置。sort 值类型为数组时表示多字段排序。详细类型定义。interface SortOptions<T> { currentDataSource?: Array<T>; col: PrimaryTableCol }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onValidate": {
+      "description": "TS 类型：(context: PrimaryTableValidateContext) => void可编辑行表格，全部数据校验完成后触发。即组件实例方法 validateTableData 执行结束后触发。详细类型定义。interface PrimaryTableValidateContext { result: TableErrorListMap }type TableErrorListMap = { [key: string]: AllValidateResult[] }",
+      "description_zh": "TS 类型：(context: PrimaryTableValidateContext) => void可编辑行表格，全部数据校验完成后触发。即组件实例方法 validateTableData 执行结束后触发。详细类型定义。interface PrimaryTableValidateContext { result: TableErrorListMap }type TableErrorListMap = { [key: string]: AllValidateResult[] }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/table",
+  "link_zh": "https://tdesign.tencent.com/vue/components/table",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "async-loading-click",
+      "description": "异步加载区域被点击时触发",
+      "params": "(context: { status: 'loading' | 'load-more' })",
+      "description_zh": "异步加载区域被点击时触发"
+    },
+    {
+      "name": "cell-click",
+      "description": "单元格点击时触发。详细类型定义。interface PrimaryTableCellEventContext<T> { row: T; col: PrimaryTableCol; rowIndex: number; colIndex: number; e: MouseEvent }",
+      "params": "(context: PrimaryTableCellEventContext<T>)",
+      "description_zh": "单元格点击时触发。详细类型定义。interface PrimaryTableCellEventContext<T> { row: T; col: PrimaryTableCol; rowIndex: number; colIndex: number; e: MouseEvent }"
+    },
+    {
+      "name": "change",
+      "description": "分页、排序、过滤等内容变化时触发，泛型 T 指表格数据类型，currentData 表示变化后的数据。详细类型定义。interface TableChangeData { sorter?: TableSort; filter?: FilterValue; pagination?: PaginationProps }interface TableChangeContext<T> { trigger: TableChangeTrigger; currentData?: T[] }type TableChangeTrigger = 'filter' | 'sorter' | 'pagination'",
+      "params": "(data: TableChangeData, context: TableChangeContext<T>)",
+      "description_zh": "分页、排序、过滤等内容变化时触发，泛型 T 指表格数据类型，currentData 表示变化后的数据。详细类型定义。interface TableChangeData { sorter?: TableSort; filter?: FilterValue; pagination?: PaginationProps }interface TableChangeContext<T> { trigger: TableChangeTrigger; currentData?: T[] }type TableChangeTrigger = 'filter' | 'sorter' | 'pagination'"
+    },
+    {
+      "name": "column-change",
+      "description": "确认操作之前列配置发生变化时触发。context.columns 表示已选中的列；context.currentColumn 表示本次变化操作的列，值不存在表示全选操作；context.type 表示当前操作属于选中列或是取消列。详细类型定义。interface PrimaryTableColumnChange<T> { columns?: CheckboxGroupValue; currentColumn?: PrimaryTableCol<T>; type?: 'check' | 'uncheck'; e?: Event }",
+      "params": "(context: PrimaryTableColumnChange<T>)",
+      "description_zh": "确认操作之前列配置发生变化时触发。context.columns 表示已选中的列；context.currentColumn 表示本次变化操作的列，值不存在表示全选操作；context.type 表示当前操作属于选中列或是取消列。详细类型定义。interface PrimaryTableColumnChange<T> { columns?: CheckboxGroupValue; currentColumn?: PrimaryTableCol<T>; type?: 'check' | 'uncheck'; e?: Event }"
+    },
+    {
+      "name": "column-controller-visible-change",
+      "description": "列配置弹窗显示或隐藏变化时触发",
+      "params": "(visible: boolean, context: { trigger: 'cancel' | 'confirm' })",
+      "description_zh": "列配置弹窗显示或隐藏变化时触发"
+    },
+    {
+      "name": "data-change",
+      "description": "本地数据排序导致 data 变化时触发，第一个参数指变化后的数据，第二个参数 context.trigger 表示触发本次变化的来源。详细类型定义。interface TableDataChangeContext { trigger: 'sort' }",
+      "params": "(data: Array<T>, context: TableDataChangeContext)",
+      "description_zh": "本地数据排序导致 data 变化时触发，第一个参数指变化后的数据，第二个参数 context.trigger 表示触发本次变化的来源。详细类型定义。interface TableDataChangeContext { trigger: 'sort' }"
+    },
+    {
+      "name": "display-columns-change",
+      "description": "确认列配置时触发。详细类型定义。import { CheckboxGroupValue } from '@Checkbox'",
+      "params": "(value: CheckboxGroupValue)",
+      "description_zh": "确认列配置时触发。详细类型定义。import { CheckboxGroupValue } from '@Checkbox'"
+    },
+    {
+      "name": "drag-sort",
+      "description": "拖拽排序时触发，data 表示排序前的数据，newData 表示拖拽排序结束后的新数据，sort=row 表示行拖拽事件触发，sort=col 表示列拖拽事件触发。详细类型定义。interface DragSortContext<T> { currentIndex: number; current: T; targetIndex: number; target: T; data: T[]; newData: T[]; currentData?: T[]; e: SortableEvent; sort: 'row' | 'col' }import { SortableEvent, SortableOptions } from 'sortablejs'",
+      "params": "(context: DragSortContext<T>)",
+      "description_zh": "拖拽排序时触发，data 表示排序前的数据，newData 表示拖拽排序结束后的新数据，sort=row 表示行拖拽事件触发，sort=col 表示列拖拽事件触发。详细类型定义。interface DragSortContext<T> { currentIndex: number; current: T; targetIndex: number; target: T; data: T[]; newData: T[]; currentData?: T[]; e: SortableEvent; sort: 'row' | 'col' }import { SortableEvent, SortableOptions } from 'sortablejs'"
+    },
+    {
+      "name": "expand-change",
+      "description": "展开行发生变化时触发，泛型 T 指表格数据类型。详细类型定义。interface ExpandOptions<T> { expandedRowData: Array<T>; currentRowData: T }",
+      "params": "(expandedRowKeys: Array<string | number>, options: ExpandOptions<T>)",
+      "description_zh": "展开行发生变化时触发，泛型 T 指表格数据类型。详细类型定义。interface ExpandOptions<T> { expandedRowData: Array<T>; currentRowData: T }"
+    },
+    {
+      "name": "filter-change",
+      "description": "过滤参数发生变化时触发，泛型 T 指表格数据类型。详细类型定义。interface TableFilterChangeContext<T> { col?: PrimaryTableCol<T>; trigger: 'filter-change' | 'confirm' | 'reset' | 'clear' }",
+      "params": "(filterValue: FilterValue, context: TableFilterChangeContext<T>)",
+      "description_zh": "过滤参数发生变化时触发，泛型 T 指表格数据类型。详细类型定义。interface TableFilterChangeContext<T> { col?: PrimaryTableCol<T>; trigger: 'filter-change' | 'confirm' | 'reset' | 'clear' }"
+    },
+    {
+      "name": "row-edit",
+      "description": "行编辑时触发。详细类型定义。type PrimaryTableRowEditContext<T> = PrimaryTableCellParams<T> & { value: any; editedRow: T }",
+      "params": "(context: PrimaryTableRowEditContext<T>)",
+      "description_zh": "行编辑时触发。详细类型定义。type PrimaryTableRowEditContext<T> = PrimaryTableCellParams<T> & { value: any; editedRow: T }"
+    },
+    {
+      "name": "row-validate",
+      "description": "行编辑校验完成后触发，即组件实例方法 validateRowData 执行结束后触发。result 表示校验结果，trigger=self 表示编辑组件内部触发的校验，trigger='parent' 表示表格父组件触发的校验。详细类型定义。type PrimaryTableRowValidateContext<T> = { result: TableRowValidateResult<T>[]; trigger: TableValidateTrigger }type TableValidateTrigger = 'self' | 'parent'export type TableRowValidateResult<T> = PrimaryTableCellParams<T> & { errorList: AllValidateResult[]; value: any }",
+      "params": "(context: PrimaryTableRowValidateContext<T>)",
+      "description_zh": "行编辑校验完成后触发，即组件实例方法 validateRowData 执行结束后触发。result 表示校验结果，trigger=self 表示编辑组件内部触发的校验，trigger='parent' 表示表格父组件触发的校验。详细类型定义。type PrimaryTableRowValidateContext<T> = { result: TableRowValidateResult<T>[]; trigger: TableValidateTrigger }type TableValidateTrigger = 'self' | 'parent'export type TableRowValidateResult<T> = PrimaryTableCellParams<T> & { errorList: AllValidateResult[]; value: any }"
+    },
+    {
+      "name": "select-change",
+      "description": "选中行发生变化时触发，泛型 T 指表格数据类型。两个参数，第一个参数为选中行 keys，第二个参数为更多参数，具体如下：type = uncheck 表示当前行操作为「取消行选中」；type = check 表示当前行操作为「行选中」； currentRowKey 表示当前操作行的 rowKey 值； currentRowData 表示当前操作行的行数据。详细类型定义。interface SelectOptions<T> { selectedRowData: Array<T>; type: 'uncheck' | 'check'; currentRowKey?: string; currentRowData?: T }",
+      "params": "(selectedRowKeys: Array<string | number>, options: SelectOptions<T>)",
+      "description_zh": "选中行发生变化时触发，泛型 T 指表格数据类型。两个参数，第一个参数为选中行 keys，第二个参数为更多参数，具体如下：type = uncheck 表示当前行操作为「取消行选中」；type = check 表示当前行操作为「行选中」； currentRowKey 表示当前操作行的 rowKey 值； currentRowData 表示当前操作行的行数据。详细类型定义。interface SelectOptions<T> { selectedRowData: Array<T>; type: 'uncheck' | 'check'; currentRowKey?: string; currentRowData?: T }"
+    },
+    {
+      "name": "sort-change",
+      "description": "排序发生变化时触发。其中 sortBy 表示当前排序的字段，sortType 表示排序的方式，currentDataSource 表示 sorter 排序后的结果，col 表示列配置。sort 值类型为数组时表示多字段排序。详细类型定义。interface SortOptions<T> { currentDataSource?: Array<T>; col: PrimaryTableCol }",
+      "params": "(sort: TableSort, options: SortOptions<T>)",
+      "description_zh": "排序发生变化时触发。其中 sortBy 表示当前排序的字段，sortType 表示排序的方式，currentDataSource 表示 sorter 排序后的结果，col 表示列配置。sort 值类型为数组时表示多字段排序。详细类型定义。interface SortOptions<T> { currentDataSource?: Array<T>; col: PrimaryTableCol }"
+    },
+    {
+      "name": "validate",
+      "description": "可编辑行表格，全部数据校验完成后触发。即组件实例方法 validateTableData 执行结束后触发。详细类型定义。interface PrimaryTableValidateContext { result: TableErrorListMap }type TableErrorListMap = { [key: string]: AllValidateResult[] }",
+      "params": "(context: PrimaryTableValidateContext)",
+      "description_zh": "可编辑行表格，全部数据校验完成后触发。即组件实例方法 validateTableData 执行结束后触发。详细类型定义。interface PrimaryTableValidateContext { result: TableErrorListMap }type TableErrorListMap = { [key: string]: AllValidateResult[] }"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "PrimaryTable"
+}

@@ -1,0 +1,92 @@
+{
+  "name": "TDropdownItem",
+  "props": {
+    "active": {
+      "description": "是否高亮当前操作项",
+      "description_zh": "是否高亮当前操作项",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "content": {
+      "description": "下拉操作项内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "下拉操作项内容。TS 类型：string | TNode。通用类型定义",
+      "default": "''",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "是否禁用操作项",
+      "description_zh": "是否禁用操作项",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "divider": {
+      "description": "是否显示操作项之间的分隔线（分隔线默认在下方）",
+      "description_zh": "是否显示操作项之间的分隔线（分隔线默认在下方）",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "prefixIcon": {
+      "description": "组件前置图标。TS 类型：TNode。通用类型定义",
+      "description_zh": "组件前置图标。TS 类型：TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "theme": {
+      "description": "下拉菜单选项主题。可选项：default/success/warning/error。TS 类型：DropdownItemTheme type DropdownItemTheme = 'default' | 'success' | 'warning' | 'error'。详细类型定义",
+      "description_zh": "下拉菜单选项主题。可选项：default/success/warning/error。TS 类型：DropdownItemTheme type DropdownItemTheme = 'default' | 'success' | 'warning' | 'error'。详细类型定义",
+      "default": "default",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "下拉操作项唯一标识。TS 类型：string | number | { [key: string]: any }",
+      "description_zh": "下拉操作项唯一标识。TS 类型：string | number | { [key: string]: any }",
+      "default": "-",
+      "value": "",
+      "type": "String / Number / Object",
+      "required": false,
+      "version": ""
+    },
+    "onClick": {
+      "description": "TS 类型：(dropdownItem: DropdownOption, context: { e: MouseEvent }) => void点击时触发",
+      "description_zh": "TS 类型：(dropdownItem: DropdownOption, context: { e: MouseEvent }) => void点击时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/dropdown",
+  "link_zh": "https://tdesign.tencent.com/vue/components/dropdown",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "click",
+      "description": "点击时触发",
+      "params": "(dropdownItem: DropdownOption, context: { e: MouseEvent })",
+      "description_zh": "点击时触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "DropdownItem"
+}

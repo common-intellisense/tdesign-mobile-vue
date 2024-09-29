@@ -1,0 +1,83 @@
+{
+  "name": "TPaginationMini",
+  "props": {
+    "disabled": {
+      "description": "按钮禁用配置。TS 类型：boolean | JumperDisabledConfig type JumperDisabledConfig = { prev?: boolean; current?: boolean; next?: boolean; }。详细类型定义",
+      "description_zh": "按钮禁用配置。TS 类型：boolean | JumperDisabledConfig type JumperDisabledConfig = { prev?: boolean; current?: boolean; next?: boolean; }。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Boolean / Object",
+      "required": false,
+      "version": ""
+    },
+    "layout": {
+      "description": "按钮方向。可选项：horizontal/vertical",
+      "description_zh": "按钮方向。可选项：horizontal/vertical",
+      "default": "horizontal",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "showCurrent": {
+      "description": "是否展示当前按钮。TS 类型：boolean",
+      "description_zh": "是否展示当前按钮。TS 类型：boolean",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "size": {
+      "description": "按钮尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "description_zh": "按钮尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "default": "medium",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "tips": {
+      "description": "提示文案配置，值为 true 显示默认文案；值为 false 不显示提示文案；值类型为对象则单独配置文案内容。TS 类型：boolean | JumperTipsConfig type JumperTipsConfig = { prev?: string; current?: string; next?: string; }。详细类型定义",
+      "description_zh": "提示文案配置，值为 true 显示默认文案；值为 false 不显示提示文案；值类型为对象则单独配置文案内容。TS 类型：boolean | JumperTipsConfig type JumperTipsConfig = { prev?: string; current?: string; next?: string; }。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "variant": {
+      "description": "按钮形式。可选项：text/outline",
+      "description_zh": "按钮形式。可选项：text/outline",
+      "default": "text",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(context: {e: MouseEvent, trigger: JumperTrigger}) => void按钮点击事件回调。详细类型定义。type JumperTrigger = 'prev' | 'current' | 'next'",
+      "description_zh": "TS 类型：(context: {e: MouseEvent, trigger: JumperTrigger}) => void按钮点击事件回调。详细类型定义。type JumperTrigger = 'prev' | 'current' | 'next'",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/pagination",
+  "link_zh": "https://tdesign.tencent.com/vue/components/pagination",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "change",
+      "description": "按钮点击事件回调。详细类型定义。type JumperTrigger = 'prev' | 'current' | 'next'",
+      "params": "(context: {e: MouseEvent, trigger: JumperTrigger})",
+      "description_zh": "按钮点击事件回调。详细类型定义。type JumperTrigger = 'prev' | 'current' | 'next'"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "PaginationMini"
+}

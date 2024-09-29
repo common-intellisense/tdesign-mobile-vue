@@ -1,0 +1,116 @@
+{
+  "name": "TAlert",
+  "props": {
+    "close": {
+      "description": "关闭按钮。值为 true 则显示默认关闭按钮；值为 false 则不显示按钮；值类型为 string 则直接显示；值类型为 Function 则可以自定关闭按钮。TS 类型：string | boolean | TNode。通用类型定义",
+      "description_zh": "关闭按钮。值为 true 则显示默认关闭按钮；值为 false 则不显示按钮；值类型为 string 则直接显示；值类型为 Function 则可以自定关闭按钮。TS 类型：string | boolean | TNode。通用类型定义",
+      "default": "false",
+      "value": "",
+      "type": "String / Boolean / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "default": {
+      "description": "内容，同 message。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "内容，同 message。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "icon": {
+      "description": "图标。TS 类型：TNode。通用类型定义",
+      "description_zh": "图标。TS 类型：TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "maxLine": {
+      "description": "内容显示最大行数，超出的内容会折叠收起，用户点击后再展开。值为 0 表示不折叠",
+      "description_zh": "内容显示最大行数，超出的内容会折叠收起，用户点击后再展开。值为 0 表示不折叠",
+      "default": "0",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "message": {
+      "description": "内容（子元素）。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "内容（子元素）。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "operation": {
+      "description": "跟在告警内容后面的操作区。TS 类型：TNode。通用类型定义",
+      "description_zh": "跟在告警内容后面的操作区。TS 类型：TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "theme": {
+      "description": "组件风格。可选项：success/info/warning/error",
+      "description_zh": "组件风格。可选项：success/info/warning/error",
+      "default": "info",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "title": {
+      "description": "标题。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "标题。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "onClose": {
+      "description": "TS 类型：(context: { e: MouseEvent }) => void关闭按钮点击时触发",
+      "description_zh": "TS 类型：(context: { e: MouseEvent }) => void关闭按钮点击时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onClosed": {
+      "description": "TS 类型：(context: { e: TransitionEvent }) => void告警提示框关闭动画结束后触发",
+      "description_zh": "TS 类型：(context: { e: TransitionEvent }) => void告警提示框关闭动画结束后触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/alert",
+  "link_zh": "https://tdesign.tencent.com/vue/components/alert",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "close",
+      "description": "关闭按钮点击时触发",
+      "params": "(context: { e: MouseEvent })",
+      "description_zh": "关闭按钮点击时触发"
+    },
+    {
+      "name": "closed",
+      "description": "告警提示框关闭动画结束后触发",
+      "params": "(context: { e: TransitionEvent })",
+      "description_zh": "告警提示框关闭动画结束后触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Alert"
+}

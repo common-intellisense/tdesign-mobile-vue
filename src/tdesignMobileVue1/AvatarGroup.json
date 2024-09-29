@@ -1,0 +1,60 @@
+{
+  "name": "TAvatarGroup",
+  "props": {
+    "cascading": {
+      "description": "图片之间的层叠关系，可选值：左侧图片在上和右侧图片在上。可选项：left-up/right-up。TS 类型：CascadingValue type CascadingValue = 'left-up' | 'right-up'。详细类型定义",
+      "description_zh": "图片之间的层叠关系，可选值：左侧图片在上和右侧图片在上。可选项：left-up/right-up。TS 类型：CascadingValue type CascadingValue = 'left-up' | 'right-up'。详细类型定义",
+      "default": "'right-up'",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "collapseAvatar": {
+      "description": "头像数量超出时，会出现一个头像折叠元素。该元素内容可自定义。默认为 +N。示例：+5，..., 更多。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "头像数量超出时，会出现一个头像折叠元素。该元素内容可自定义。默认为 +N。示例：+5，..., 更多。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "max": {
+      "description": "能够同时显示的最多头像数量",
+      "description_zh": "能够同时显示的最多头像数量",
+      "default": "-",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "popupProps": {
+      "description": "头像右上角提示信息。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "description_zh": "头像右上角提示信息。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "size": {
+      "description": "尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size",
+      "description_zh": "尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size",
+      "default": "medium",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/avatar",
+  "link_zh": "https://tdesign.tencent.com/vue/components/avatar",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [
+    "t-avatar"
+  ],
+  "filename": "AvatarGroup"
+}

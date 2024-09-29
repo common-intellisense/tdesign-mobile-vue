@@ -1,0 +1,31 @@
+{
+  "name": "TInputAdornment",
+  "props": {
+    "append": {
+      "description": "后缀装饰。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "后缀装饰。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "prepend": {
+      "description": "前缀装饰。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "前缀装饰。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/input-adornment",
+  "link_zh": "https://tdesign.tencent.com/vue/components/input-adornment",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "InputAdornment"
+}

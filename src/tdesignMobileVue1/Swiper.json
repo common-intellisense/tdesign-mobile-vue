@@ -1,0 +1,155 @@
+{
+  "name": "TSwiper",
+  "props": {
+    "animation": {
+      "description": "轮播切换动画效果类型：滑动、淡入淡出等。可选项：slide/fade",
+      "description_zh": "轮播切换动画效果类型：滑动、淡入淡出等。可选项：slide/fade",
+      "default": "slide",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "autoplay": {
+      "description": "是否自动播放",
+      "description_zh": "是否自动播放",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "current": {
+      "description": "当前轮播在哪一项（下标）。支持语法糖 v-model",
+      "description_zh": "当前轮播在哪一项（下标）。支持语法糖 v-model",
+      "default": "0",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "defaultCurrent": {
+      "description": "当前轮播在哪一项（下标）。非受控属性",
+      "description_zh": "当前轮播在哪一项（下标）。非受控属性",
+      "default": "0",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "direction": {
+      "description": "轮播滑动方向，包括横向滑动和纵向滑动两个方向。可选项：horizontal/vertical",
+      "description_zh": "轮播滑动方向，包括横向滑动和纵向滑动两个方向。可选项：horizontal/vertical",
+      "default": "horizontal",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "duration": {
+      "description": "滑动动画时长",
+      "description_zh": "滑动动画时长",
+      "default": "300",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "height": {
+      "description": "当使用垂直方向滚动时的高度",
+      "description_zh": "当使用垂直方向滚动时的高度",
+      "default": "-",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "interval": {
+      "description": "轮播间隔时间",
+      "description_zh": "轮播间隔时间",
+      "default": "5000",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "loop": {
+      "description": "是否循环播放",
+      "description_zh": "是否循环播放",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "navigation": {
+      "description": "导航器全部配置。TS 类型：SwiperNavigation | TNode。通用类型定义",
+      "description_zh": "导航器全部配置。TS 类型：SwiperNavigation | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "stopOnHover": {
+      "description": "是否悬浮时停止轮播",
+      "description_zh": "是否悬浮时停止轮播",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "theme": {
+      "description": "深色模式和浅色模式。可选项：light/dark",
+      "description_zh": "深色模式和浅色模式。可选项：light/dark",
+      "default": "light",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "trigger": {
+      "description": "触发切换的方式：悬浮、点击等。可选项：hover/click",
+      "description_zh": "触发切换的方式：悬浮、点击等。可选项：hover/click",
+      "default": "hover",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "type": {
+      "description": "样式类型：默认样式、卡片样式。可选项：default/card",
+      "description_zh": "样式类型：默认样式、卡片样式。可选项：default/card",
+      "default": "default",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(current: number, context: { source: SwiperChangeSource }) => void轮播切换时触发。详细类型定义。type SwiperChangeSource = 'autoplay' | 'click' | 'hover'",
+      "description_zh": "TS 类型：(current: number, context: { source: SwiperChangeSource }) => void轮播切换时触发。详细类型定义。type SwiperChangeSource = 'autoplay' | 'click' | 'hover'",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/swiper",
+  "link_zh": "https://tdesign.tencent.com/vue/components/swiper",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "change",
+      "description": "轮播切换时触发。详细类型定义。type SwiperChangeSource = 'autoplay' | 'click' | 'hover'",
+      "params": "(current: number, context: { source: SwiperChangeSource })",
+      "description_zh": "轮播切换时触发。详细类型定义。type SwiperChangeSource = 'autoplay' | 'click' | 'hover'"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Swiper"
+}

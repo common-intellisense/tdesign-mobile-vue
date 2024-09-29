@@ -1,0 +1,26 @@
+{
+  "name": "TLayout",
+  "props": {
+    "direction": {
+      "description": "【开发中】布局方向。可选项：vertical/horizontal",
+      "description_zh": "【开发中】布局方向。可选项：vertical/horizontal",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/layout?tab=api",
+  "link_zh": "https://tdesign.tencent.com/vue/components/layout?tab=api",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [
+    "t-header",
+    "t-content",
+    "t-footer"
+  ],
+  "filename": "Layout"
+}

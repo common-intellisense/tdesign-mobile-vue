@@ -1,0 +1,494 @@
+{
+  "name": "TTree",
+  "props": {
+    "activable": {
+      "description": "节点是否可高亮",
+      "description_zh": "节点是否可高亮",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "activeMultiple": {
+      "description": "是否允许多个节点同时高亮",
+      "description_zh": "是否允许多个节点同时高亮",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "actived": {
+      "description": "高亮的节点值。支持语法糖 .sync。TS 类型：Array<TreeNodeValue>",
+      "description_zh": "高亮的节点值。支持语法糖 .sync。TS 类型：Array<TreeNodeValue>",
+      "default": "-",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "allowDrop": {
+      "description": "判断节点是否可以执行 drop 操作，泛型 T 表示树节点 TS 类型。TS 类型：(context: { e: DragEvent; dragNode: TreeNodeModel<T>; dropNode: TreeNodeModel<T>; dropPosition: number; }) => boolean",
+      "description_zh": "判断节点是否可以执行 drop 操作，泛型 T 表示树节点 TS 类型。TS 类型：(context: { e: DragEvent; dragNode: TreeNodeModel<T>; dropNode: TreeNodeModel<T>; dropPosition: number; }) => boolean",
+      "default": "-",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "allowFoldNodeOnFilter": {
+      "description": "是否允许在过滤时节点折叠节点",
+      "description_zh": "是否允许在过滤时节点折叠节点",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "checkProps": {
+      "description": "透传属性到 checkbox 组件。参考 checkbox 组件 API。TS 类型：CheckboxProps，Checkbox API Documents。详细类型定义",
+      "description_zh": "透传属性到 checkbox 组件。参考 checkbox 组件 API。TS 类型：CheckboxProps，Checkbox API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "checkStrictly": {
+      "description": "父子节点选中状态不再关联，可各自选中或取消",
+      "description_zh": "父子节点选中状态不再关联，可各自选中或取消",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "checkable": {
+      "description": "隐藏节点复选框",
+      "description_zh": "隐藏节点复选框",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "data": {
+      "description": "树数据，泛型 T 表示树节点 TS 类型。TS 类型：Array<T>",
+      "description_zh": "树数据，泛型 T 表示树节点 TS 类型。TS 类型：Array<T>",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "disableCheck": {
+      "description": "禁用复选框，可支持禁用不同的行。TS 类型：boolean | ((node: TreeNodeModel<T>) => boolean)",
+      "description_zh": "禁用复选框，可支持禁用不同的行。TS 类型：boolean | ((node: TreeNodeModel<T>) => boolean)",
+      "default": "false",
+      "value": "",
+      "type": "Boolean / Function",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "是否禁用树操作",
+      "description_zh": "是否禁用树操作",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "draggable": {
+      "description": "节点是否可拖拽",
+      "description_zh": "节点是否可拖拽",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "empty": {
+      "description": "数据为空时展示的文本。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "数据为空时展示的文本。TS 类型：string | TNode。通用类型定义",
+      "default": "''",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "expandAll": {
+      "description": "是否展开全部节点",
+      "description_zh": "是否展开全部节点",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "expandLevel": {
+      "description": "默认展开的级别，第一层为 0",
+      "description_zh": "默认展开的级别，第一层为 0",
+      "default": "0",
+      "value": "",
+      "type": "Number",
+      "required": false,
+      "version": ""
+    },
+    "expandMutex": {
+      "description": "同级别展开互斥，手风琴效果",
+      "description_zh": "同级别展开互斥，手风琴效果",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "expandOnClickNode": {
+      "description": "是否支持点击节点也能展开收起",
+      "description_zh": "是否支持点击节点也能展开收起",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "expandParent": {
+      "description": "展开子节点时是否自动展开父节点",
+      "description_zh": "展开子节点时是否自动展开父节点",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "expanded": {
+      "description": "展开的节点值。支持语法糖 .sync。TS 类型：Array<TreeNodeValue>",
+      "description_zh": "展开的节点值。支持语法糖 .sync。TS 类型：Array<TreeNodeValue>",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "filter": {
+      "description": "节点过滤方法，只呈现返回值为 true 的节点，泛型 T 表示树节点 TS 类型。TS 类型：(node: TreeNodeModel<T>) => boolean",
+      "description_zh": "节点过滤方法，只呈现返回值为 true 的节点，泛型 T 表示树节点 TS 类型。TS 类型：(node: TreeNodeModel<T>) => boolean",
+      "default": "-",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "height": {
+      "description": "树的高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定树的高度，建议使用 maxHeight",
+      "description_zh": "树的高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定树的高度，建议使用 maxHeight",
+      "default": "-",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "hover": {
+      "description": "节点是否有悬浮状态",
+      "description_zh": "节点是否有悬浮状态",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "icon": {
+      "description": "节点图标，可自定义。TS 类型：boolean | TNode<TreeNodeModel<T>>。通用类型定义",
+      "description_zh": "节点图标，可自定义。TS 类型：boolean | TNode<TreeNodeModel<T>>。通用类型定义",
+      "default": "true",
+      "value": "",
+      "type": "Boolean / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "keys": {
+      "description": "用来定义 value / label / disabled / children 在 data 数据中对应的字段别名，示例：{ value: 'key', label 'name', children: 'list' }。其中，disabled 待开发。。TS 类型：TreeKeysType。通用类型定义",
+      "description_zh": "用来定义 value / label / disabled / children 在 data 数据中对应的字段别名，示例：{ value: 'key', label 'name', children: 'list' }。其中，disabled 待开发。。TS 类型：TreeKeysType。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "label": {
+      "description": "自定义节点内容，值为 false 不显示，值为 true 显示默认 label，值为字符串直接输出该字符串。泛型 T 表示树节点 TS 类型。如果期望只有点击复选框才选中，而点击节点不选中，可以使用 label 自定义节点，然后加上点击事件 e.preventDefault()，通过调整自定义节点的宽度和高度决定禁止点击选中的范围。TS 类型：string | boolean | TNode<TreeNodeModel<T>>。通用类型定义",
+      "description_zh": "自定义节点内容，值为 false 不显示，值为 true 显示默认 label，值为字符串直接输出该字符串。泛型 T 表示树节点 TS 类型。如果期望只有点击复选框才选中，而点击节点不选中，可以使用 label 自定义节点，然后加上点击事件 e.preventDefault()，通过调整自定义节点的宽度和高度决定禁止点击选中的范围。TS 类型：string | boolean | TNode<TreeNodeModel<T>>。通用类型定义",
+      "default": "true",
+      "value": "",
+      "type": "String / Boolean / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "lazy": {
+      "description": "延迟加载 children 为 true 的节点的子节点数据，即使 expandAll 被设置为 true，也同样延迟加载",
+      "description_zh": "延迟加载 children 为 true 的节点的子节点数据，即使 expandAll 被设置为 true，也同样延迟加载",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "line": {
+      "description": "连接线。值为 false 不显示连接线；值为 true 显示默认连接线；值类型为 Function 表示自定义连接线。TS 类型：boolean | TNode。通用类型定义",
+      "description_zh": "连接线。值为 false 不显示连接线；值为 true 显示默认连接线；值类型为 Function 表示自定义连接线。TS 类型：boolean | TNode。通用类型定义",
+      "default": "false",
+      "value": "",
+      "type": "Boolean / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "load": {
+      "description": "加载子数据的方法，在展开节点时调用（仅当节点 children 为 true 时生效），泛型 T 表示树节点 TS 类型。TS 类型：(node: TreeNodeModel<T>) => Promise<Array<T>>",
+      "description_zh": "加载子数据的方法，在展开节点时调用（仅当节点 children 为 true 时生效），泛型 T 表示树节点 TS 类型。TS 类型：(node: TreeNodeModel<T>) => Promise<Array<T>>",
+      "default": "-",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "maxHeight": {
+      "description": "树的最大高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px",
+      "description_zh": "树的最大高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px",
+      "default": "-",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    },
+    "operations": {
+      "description": "自定义节点操作项，泛型 T 表示树节点 TS 类型。TS 类型：TNode<TreeNodeModel<T>>。通用类型定义",
+      "description_zh": "自定义节点操作项，泛型 T 表示树节点 TS 类型。TS 类型：TNode<TreeNodeModel<T>>。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "scroll": {
+      "description": "懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 scroll.threshold 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，scroll.threshold 默认为 100。TS 类型：TScroll。通用类型定义",
+      "description_zh": "懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 scroll.threshold 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，scroll.threshold 默认为 100。TS 类型：TScroll。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "transition": {
+      "description": "节点展开折叠时是否使用过渡动画",
+      "description_zh": "节点展开折叠时是否使用过渡动画",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "选中值，组件为可选状态时有效。支持语法糖 v-model。TS 类型：Array<TreeNodeValue> type TreeNodeValue = string | number。详细类型定义",
+      "description_zh": "选中值，组件为可选状态时有效。支持语法糖 v-model。TS 类型：Array<TreeNodeValue> type TreeNodeValue = string | number。详细类型定义",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "defaultValue": {
+      "description": "选中值，组件为可选状态时有效。非受控属性。TS 类型：Array<TreeNodeValue> type TreeNodeValue = string | number。详细类型定义",
+      "description_zh": "选中值，组件为可选状态时有效。非受控属性。TS 类型：Array<TreeNodeValue> type TreeNodeValue = string | number。详细类型定义",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "valueMode": {
+      "description": "选中值模式。all 表示父节点和子节点全部会出现在选中值里面；parentFirst 表示当子节点全部选中时，仅父节点在选中值里面；onlyLeaft 表示无论什么情况，选中值仅呈现叶子节点。可选项：onlyLeaf/parentFirst/all",
+      "description_zh": "选中值模式。all 表示父节点和子节点全部会出现在选中值里面；parentFirst 表示当子节点全部选中时，仅父节点在选中值里面；onlyLeaft 表示无论什么情况，选中值仅呈现叶子节点。可选项：onlyLeaf/parentFirst/all",
+      "default": "onlyLeaf",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "onActive": {
+      "description": "TS 类型：(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' | 'setItem' }) => void节点激活时触发，泛型 T 表示树节点 TS 类型",
+      "description_zh": "TS 类型：(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' | 'setItem' }) => void节点激活时触发，泛型 T 表示树节点 TS 类型",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: any; trigger: 'node-click' | 'setItem' }) => void节点选中状态变化时触发，context.node 表示当前变化的选项，泛型 T 表示树节点 TS 类型",
+      "description_zh": "TS 类型：(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: any; trigger: 'node-click' | 'setItem' }) => void节点选中状态变化时触发，context.node 表示当前变化的选项，泛型 T 表示树节点 TS 类型",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onClick": {
+      "description": "TS 类型：(context: { node: TreeNodeModel<T>; e: MouseEvent }) => void节点点击时触发，泛型 T 表示树节点 TS 类型",
+      "description_zh": "TS 类型：(context: { node: TreeNodeModel<T>; e: MouseEvent }) => void节点点击时触发，泛型 T 表示树节点 TS 类型",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onDragEnd": {
+      "description": "TS 类型：(context: { e: DragEvent; node: TreeNodeModel<T> }) => void节点结束拖拽时触发，泛型 T 表示树节点 TS 类型",
+      "description_zh": "TS 类型：(context: { e: DragEvent; node: TreeNodeModel<T> }) => void节点结束拖拽时触发，泛型 T 表示树节点 TS 类型",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onDragLeave": {
+      "description": "TS 类型：(context: { e: DragEvent; node: TreeNodeModel<T> }) => void节点拖拽时离开目标元素时触发，泛型 T 表示树节点 TS 类型",
+      "description_zh": "TS 类型：(context: { e: DragEvent; node: TreeNodeModel<T> }) => void节点拖拽时离开目标元素时触发，泛型 T 表示树节点 TS 类型",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onDragOver": {
+      "description": "TS 类型：(context: { e: DragEvent; node: TreeNodeModel<T> }) => void节点拖拽到目标元素时触发，泛型 T 表示树节点 TS 类型",
+      "description_zh": "TS 类型：(context: { e: DragEvent; node: TreeNodeModel<T> }) => void节点拖拽到目标元素时触发，泛型 T 表示树节点 TS 类型",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onDragStart": {
+      "description": "TS 类型：(context: { e: DragEvent; node: TreeNodeModel<T> }) => void节点开始拖拽时触发，泛型 T 表示树节点 TS 类型",
+      "description_zh": "TS 类型：(context: { e: DragEvent; node: TreeNodeModel<T> }) => void节点开始拖拽时触发，泛型 T 表示树节点 TS 类型",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onDrop": {
+      "description": "TS 类型：(context: { e: DragEvent; dragNode: TreeNodeModel<T>; dropNode: TreeNodeModel<T>; dropPosition: number; }) => void节点在目标元素上释放时触发，泛型 T 表示树节点 TS 类型",
+      "description_zh": "TS 类型：(context: { e: DragEvent; dragNode: TreeNodeModel<T>; dropNode: TreeNodeModel<T>; dropPosition: number; }) => void节点在目标元素上释放时触发，泛型 T 表示树节点 TS 类型",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onExpand": {
+      "description": "TS 类型：(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' | 'icon-click' | 'setItem' }) => void节点展开或收起时触发，泛型 T 表示树节点 TS 类型",
+      "description_zh": "TS 类型：(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' | 'icon-click' | 'setItem' }) => void节点展开或收起时触发，泛型 T 表示树节点 TS 类型",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onLoad": {
+      "description": "TS 类型：(context: { node: TreeNodeModel<T> }) => void异步加载后触发，泛型 T 表示树节点 TS 类型",
+      "description_zh": "TS 类型：(context: { node: TreeNodeModel<T> }) => void异步加载后触发，泛型 T 表示树节点 TS 类型",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onScroll": {
+      "description": "TS 类型：(params: { e: WheelEvent }) => void滚动事件",
+      "description_zh": "TS 类型：(params: { e: WheelEvent }) => void滚动事件",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/tree",
+  "link_zh": "https://tdesign.tencent.com/vue/components/tree",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "active",
+      "description": "节点激活时触发，泛型 T 表示树节点 TS 类型",
+      "params": "(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' | 'setItem' })",
+      "description_zh": "节点激活时触发，泛型 T 表示树节点 TS 类型"
+    },
+    {
+      "name": "change",
+      "description": "节点选中状态变化时触发，context.node 表示当前变化的选项，泛型 T 表示树节点 TS 类型",
+      "params": "(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: any; trigger: 'node-click' | 'setItem' })",
+      "description_zh": "节点选中状态变化时触发，context.node 表示当前变化的选项，泛型 T 表示树节点 TS 类型"
+    },
+    {
+      "name": "click",
+      "description": "节点点击时触发，泛型 T 表示树节点 TS 类型",
+      "params": "(context: { node: TreeNodeModel<T>; e: MouseEvent })",
+      "description_zh": "节点点击时触发，泛型 T 表示树节点 TS 类型"
+    },
+    {
+      "name": "drag-end",
+      "description": "节点结束拖拽时触发，泛型 T 表示树节点 TS 类型",
+      "params": "(context: { e: DragEvent; node: TreeNodeModel<T> })",
+      "description_zh": "节点结束拖拽时触发，泛型 T 表示树节点 TS 类型"
+    },
+    {
+      "name": "drag-leave",
+      "description": "节点拖拽时离开目标元素时触发，泛型 T 表示树节点 TS 类型",
+      "params": "(context: { e: DragEvent; node: TreeNodeModel<T> })",
+      "description_zh": "节点拖拽时离开目标元素时触发，泛型 T 表示树节点 TS 类型"
+    },
+    {
+      "name": "drag-over",
+      "description": "节点拖拽到目标元素时触发，泛型 T 表示树节点 TS 类型",
+      "params": "(context: { e: DragEvent; node: TreeNodeModel<T> })",
+      "description_zh": "节点拖拽到目标元素时触发，泛型 T 表示树节点 TS 类型"
+    },
+    {
+      "name": "drag-start",
+      "description": "节点开始拖拽时触发，泛型 T 表示树节点 TS 类型",
+      "params": "(context: { e: DragEvent; node: TreeNodeModel<T> })",
+      "description_zh": "节点开始拖拽时触发，泛型 T 表示树节点 TS 类型"
+    },
+    {
+      "name": "drop",
+      "description": "节点在目标元素上释放时触发，泛型 T 表示树节点 TS 类型",
+      "params": "(context: { e: DragEvent; dragNode: TreeNodeModel<T>; dropNode: TreeNodeModel<T>; dropPosition: number; })",
+      "description_zh": "节点在目标元素上释放时触发，泛型 T 表示树节点 TS 类型"
+    },
+    {
+      "name": "expand",
+      "description": "节点展开或收起时触发，泛型 T 表示树节点 TS 类型",
+      "params": "(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' | 'icon-click' | 'setItem' })",
+      "description_zh": "节点展开或收起时触发，泛型 T 表示树节点 TS 类型"
+    },
+    {
+      "name": "load",
+      "description": "异步加载后触发，泛型 T 表示树节点 TS 类型",
+      "params": "(context: { node: TreeNodeModel<T> })",
+      "description_zh": "异步加载后触发，泛型 T 表示树节点 TS 类型"
+    },
+    {
+      "name": "scroll",
+      "description": "滚动事件",
+      "params": "(params: { e: WheelEvent })",
+      "description_zh": "滚动事件"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Tree"
+}

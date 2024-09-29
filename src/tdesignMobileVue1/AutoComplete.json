@@ -1,0 +1,332 @@
+{
+  "name": "TAutoComplete",
+  "props": {
+    "autofocus": {
+      "description": "自动获取焦点",
+      "description_zh": "自动获取焦点",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "borderless": {
+      "description": "无边框模式",
+      "description_zh": "无边框模式",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "clearable": {
+      "description": "是否允许清空",
+      "description_zh": "是否允许清空",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "default": {
+      "description": "触发显示联想词下拉框的元素，同 triggerElement。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "触发显示联想词下拉框的元素，同 triggerElement。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "是否禁用",
+      "description_zh": "是否禁用",
+      "default": "undefined",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "filter": {
+      "description": "自定义过滤规则，用于对现有数据进行搜索过滤，判断是否过滤某一项数据。参数 filterWords 表示搜索词，option表示单个选项内容，返回值为 true 保留该选项，返回值为 false 则隐藏该选项。使用该方法时无需设置 filterable。TS 类型：(filterWords: string, option: T) => boolean | Promise<boolean>",
+      "description_zh": "自定义过滤规则，用于对现有数据进行搜索过滤，判断是否过滤某一项数据。参数 filterWords 表示搜索词，option表示单个选项内容，返回值为 true 保留该选项，返回值为 false 则隐藏该选项。使用该方法时无需设置 filterable。TS 类型：(filterWords: string, option: T) => boolean | Promise<boolean>",
+      "default": "-",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "filterable": {
+      "description": "是否根据输入内容过滤联想词。默认过滤规则不区分大小写，全文本任意位置匹配。如果默认搜索规则不符合业务需求，可以更为使用 filter 自定义过滤规则。部分场景下输入关键词和下拉联想词完全不同，此时可以设置为 false",
+      "description_zh": "是否根据输入内容过滤联想词。默认过滤规则不区分大小写，全文本任意位置匹配。如果默认搜索规则不符合业务需求，可以更为使用 filter 自定义过滤规则。部分场景下输入关键词和下拉联想词完全不同，此时可以设置为 false",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "highlightKeyword": {
+      "description": "是否高亮联想词中和输入值的相同部分",
+      "description_zh": "是否高亮联想词中和输入值的相同部分",
+      "default": "true",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "inputProps": {
+      "description": "透传 Input 组件全部特性。TS 类型：InputProps，Input API Documents。详细类型定义",
+      "description_zh": "透传 Input 组件全部特性。TS 类型：InputProps，Input API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "options": {
+      "description": "下拉联想词列表。示例一：['联想词一', '联想词二']。示例二：{ label: () => <div>联想词元素</div>, text: '用于搜索的纯联想词' }。TS 类型：Array<T>",
+      "description_zh": "下拉联想词列表。示例一：['联想词一', '联想词二']。示例二：{ label: () => <div>联想词元素</div>, text: '用于搜索的纯联想词' }。TS 类型：Array<T>",
+      "default": "-",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "panelBottomContent": {
+      "description": "面板内的底部内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "面板内的底部内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "panelTopContent": {
+      "description": "面板内的顶部内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "面板内的顶部内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "placeholder": {
+      "description": "输入框为空时的占位提示。组件本身默认值为 undefined，但全局配置存在默认值，不同语言全局默认值不同",
+      "description_zh": "输入框为空时的占位提示。组件本身默认值为 undefined，但全局配置存在默认值，不同语言全局默认值不同",
+      "default": "undefined",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "popupProps": {
+      "description": "透传 Popup 组件全部特性。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "description_zh": "透传 Popup 组件全部特性。TS 类型：PopupProps，Popup API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "readonly": {
+      "description": "是否只读",
+      "description_zh": "是否只读",
+      "default": "-",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "size": {
+      "description": "组件尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "description_zh": "组件尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
+      "default": "medium",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "status": {
+      "description": "输入框状态。可选项：default/success/warning/error",
+      "description_zh": "输入框状态。可选项：default/success/warning/error",
+      "default": "default",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "textareaProps": {
+      "description": "透传 Textarea 组件全部特性。TS 类型：TextareaProps，Textarea API Documents。详细类型定义",
+      "description_zh": "透传 Textarea 组件全部特性。TS 类型：TextareaProps，Textarea API Documents。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "tips": {
+      "description": "输入框下方提示文本，会根据不同的 status 呈现不同的样式。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "输入框下方提示文本，会根据不同的 status 呈现不同的样式。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "triggerElement": {
+      "description": "触发显示联想词下拉框的元素，默认为 Input 组件，可以使用 trigger 自定义为 Textarea 组件或其他组件。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "触发显示联想词下拉框的元素，默认为 Input 组件，可以使用 trigger 自定义为 Textarea 组件或其他组件。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "输入框的值，即当前指定的联想词。支持语法糖 v-model",
+      "description_zh": "输入框的值，即当前指定的联想词。支持语法糖 v-model",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "defaultValue": {
+      "description": "输入框的值，即当前指定的联想词。非受控属性",
+      "description_zh": "输入框的值，即当前指定的联想词。非受控属性",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "onBlur": {
+      "description": "TS 类型：(context: { e: FocusEvent; value: string }) => void失去焦点时触发",
+      "description_zh": "TS 类型：(context: { e: FocusEvent; value: string }) => void失去焦点时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(value: string, context?: { e?: InputEvent | MouseEvent | CompositionEvent | KeyboardEvent }) => void输入框值发生变化时触发",
+      "description_zh": "TS 类型：(value: string, context?: { e?: InputEvent | MouseEvent | CompositionEvent | KeyboardEvent }) => void输入框值发生变化时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onClear": {
+      "description": "TS 类型：(context: { e: MouseEvent }) => void清空按钮点击时触发",
+      "description_zh": "TS 类型：(context: { e: MouseEvent }) => void清空按钮点击时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onCompositionend": {
+      "description": "TS 类型：(context: { e: CompositionEvent; value: string }) => void中文输入结束时触发",
+      "description_zh": "TS 类型：(context: { e: CompositionEvent; value: string }) => void中文输入结束时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onCompositionstart": {
+      "description": "TS 类型：(context: { e: CompositionEvent; value: string }) => void中文输入开始时触发",
+      "description_zh": "TS 类型：(context: { e: CompositionEvent; value: string }) => void中文输入开始时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onEnter": {
+      "description": "TS 类型：(context: { e: KeyboardEvent; value: string }) => void回车键按下时触发",
+      "description_zh": "TS 类型：(context: { e: KeyboardEvent; value: string }) => void回车键按下时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onFocus": {
+      "description": "TS 类型：(context: { e: FocusEvent; value: string }) => void获得焦点时触发",
+      "description_zh": "TS 类型：(context: { e: FocusEvent; value: string }) => void获得焦点时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    },
+    "onSelect": {
+      "description": "TS 类型：(value: string, context: { e: MouseEvent | KeyboardEvent }) => void选中联想词时触发",
+      "description_zh": "TS 类型：(value: string, context: { e: MouseEvent | KeyboardEvent }) => void选中联想词时触发",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/auto-complete",
+  "link_zh": "https://tdesign.tencent.com/vue/components/auto-complete",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "blur",
+      "description": "失去焦点时触发",
+      "params": "(context: { e: FocusEvent; value: string })",
+      "description_zh": "失去焦点时触发"
+    },
+    {
+      "name": "change",
+      "description": "输入框值发生变化时触发",
+      "params": "(value: string, context?: { e?: InputEvent | MouseEvent | CompositionEvent | KeyboardEvent })",
+      "description_zh": "输入框值发生变化时触发"
+    },
+    {
+      "name": "clear",
+      "description": "清空按钮点击时触发",
+      "params": "(context: { e: MouseEvent })",
+      "description_zh": "清空按钮点击时触发"
+    },
+    {
+      "name": "compositionend",
+      "description": "中文输入结束时触发",
+      "params": "(context: { e: CompositionEvent; value: string })",
+      "description_zh": "中文输入结束时触发"
+    },
+    {
+      "name": "compositionstart",
+      "description": "中文输入开始时触发",
+      "params": "(context: { e: CompositionEvent; value: string })",
+      "description_zh": "中文输入开始时触发"
+    },
+    {
+      "name": "enter",
+      "description": "回车键按下时触发",
+      "params": "(context: { e: KeyboardEvent; value: string })",
+      "description_zh": "回车键按下时触发"
+    },
+    {
+      "name": "focus",
+      "description": "获得焦点时触发",
+      "params": "(context: { e: FocusEvent; value: string })",
+      "description_zh": "获得焦点时触发"
+    },
+    {
+      "name": "select",
+      "description": "选中联想词时触发",
+      "params": "(value: string, context: { e: MouseEvent | KeyboardEvent })",
+      "description_zh": "选中联想词时触发"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "AutoComplete"
+}

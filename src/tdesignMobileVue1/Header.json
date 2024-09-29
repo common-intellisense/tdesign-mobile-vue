@@ -1,0 +1,22 @@
+{
+  "name": "THeader",
+  "props": {
+    "height": {
+      "description": "顶栏高度。样式表（class）中定义的默认高度为：64px",
+      "description_zh": "顶栏高度。样式表（class）中定义的默认高度为：64px",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/layout?tab=api",
+  "link_zh": "https://tdesign.tencent.com/vue/components/layout?tab=api",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Header"
+}

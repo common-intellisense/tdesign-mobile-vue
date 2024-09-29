@@ -1,0 +1,67 @@
+{
+  "name": "TDivider",
+  "props": {
+    "align": {
+      "description": "文本位置（仅在水平分割线有效）。可选项：left/right/center",
+      "description_zh": "文本位置（仅在水平分割线有效）。可选项：left/right/center",
+      "default": "center",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "content": {
+      "description": "子元素。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "子元素。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "dashed": {
+      "description": "是否虚线（仅在水平分割线有效）",
+      "description_zh": "是否虚线（仅在水平分割线有效）",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "default": {
+      "description": "子元素，同 content。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "子元素，同 content。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "layout": {
+      "description": "分隔线类型有两种：水平和垂直。可选项：horizontal/vertical",
+      "description_zh": "分隔线类型有两种：水平和垂直。可选项：horizontal/vertical",
+      "default": "horizontal",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "theme": {
+      "description": "已废弃。请更为使用 layout。分隔线类型有两种：水平和垂直。可选项：horizontal/vertical",
+      "description_zh": "已废弃。请更为使用 layout。分隔线类型有两种：水平和垂直。可选项：horizontal/vertical",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/divider",
+  "link_zh": "https://tdesign.tencent.com/vue/components/divider",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Divider"
+}

@@ -1,0 +1,76 @@
+{
+  "name": "TOption",
+  "props": {
+    "checkAll": {
+      "description": "当前选项是否为全选，全选可以在顶部，也可以在底部。点击当前选项会选中禁用态除外的全部选项，即使是分组选择器也会选中全部选项",
+      "description_zh": "当前选项是否为全选，全选可以在顶部，也可以在底部。点击当前选项会选中禁用态除外的全部选项，即使是分组选择器也会选中全部选项",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "content": {
+      "description": "用于定义复杂的选项内容。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "用于定义复杂的选项内容。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "default": {
+      "description": "用于定义复杂的选项内容。同 content。TS 类型：string | TNode。通用类型定义",
+      "description_zh": "用于定义复杂的选项内容。同 content。TS 类型：string | TNode。通用类型定义",
+      "default": "-",
+      "value": "",
+      "type": "String / Slot / Function",
+      "required": false,
+      "version": ""
+    },
+    "disabled": {
+      "description": "是否禁用该选项",
+      "description_zh": "是否禁用该选项",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "label": {
+      "description": "选项名称",
+      "description_zh": "选项名称",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "title": {
+      "description": "选项标题，在选项过长时hover选项展示",
+      "description_zh": "选项标题，在选项过长时hover选项展示",
+      "default": "-",
+      "value": "",
+      "type": "String",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "选项值",
+      "description_zh": "选项值",
+      "default": "-",
+      "value": "",
+      "type": "String / Number",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/select",
+  "link_zh": "https://tdesign.tencent.com/vue/components/select",
+  "typeDetail": {},
+  "events": [],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "Option"
+}

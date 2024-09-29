@@ -1,0 +1,83 @@
+{
+  "name": "TCheckTagGroup",
+  "props": {
+    "checkedProps": {
+      "description": "透传标签选中态属性。TS 类型：TdTagProps",
+      "description_zh": "透传标签选中态属性。TS 类型：TdTagProps",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "multiple": {
+      "description": "是否支持选中多个标签",
+      "description_zh": "是否支持选中多个标签",
+      "default": "false",
+      "value": "",
+      "type": "Boolean",
+      "required": false,
+      "version": ""
+    },
+    "options": {
+      "description": "标签选项列表。TS 类型：CheckTagGroupOption[] interface CheckTagGroupOption extends TdCheckTagProps { label: string | TNode; value: string | number }。通用类型定义。详细类型定义",
+      "description_zh": "标签选项列表。TS 类型：CheckTagGroupOption[] interface CheckTagGroupOption extends TdCheckTagProps { label: string | TNode; value: string | number }。通用类型定义。详细类型定义",
+      "default": "-",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "uncheckedProps": {
+      "description": "透传标签未选态属性。TS 类型：TdTagProps",
+      "description_zh": "透传标签未选态属性。TS 类型：TdTagProps",
+      "default": "-",
+      "value": "",
+      "type": "Object",
+      "required": false,
+      "version": ""
+    },
+    "value": {
+      "description": "选中标签值。支持语法糖 v-model。TS 类型：CheckTagGroupValue type CheckTagGroupValue = Array<string | number>。详细类型定义",
+      "description_zh": "选中标签值。支持语法糖 v-model。TS 类型：CheckTagGroupValue type CheckTagGroupValue = Array<string | number>。详细类型定义",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "defaultValue": {
+      "description": "选中标签值。非受控属性。TS 类型：CheckTagGroupValue type CheckTagGroupValue = Array<string | number>。详细类型定义",
+      "description_zh": "选中标签值。非受控属性。TS 类型：CheckTagGroupValue type CheckTagGroupValue = Array<string | number>。详细类型定义",
+      "default": "[]",
+      "value": "",
+      "type": "Array",
+      "required": false,
+      "version": ""
+    },
+    "onChange": {
+      "description": "TS 类型：(value: CheckTagGroupValue, context: CheckTagGroupChangeContext) => void详细类型定义。interface CheckTagGroupChangeContext { type: 'check' | 'uncheck'; e: MouseEvent | KeyboardEvent; value: string | number }",
+      "description_zh": "TS 类型：(value: CheckTagGroupValue, context: CheckTagGroupChangeContext) => void详细类型定义。interface CheckTagGroupChangeContext { type: 'check' | 'uncheck'; e: MouseEvent | KeyboardEvent; value: string | number }",
+      "default": "",
+      "value": "",
+      "type": "Function",
+      "required": false,
+      "version": ""
+    }
+  },
+  "link": "https://tdesign.tencent.com/vue/components/tag",
+  "link_zh": "https://tdesign.tencent.com/vue/components/tag",
+  "typeDetail": {},
+  "events": [
+    {
+      "name": "change",
+      "description": "详细类型定义。interface CheckTagGroupChangeContext { type: 'check' | 'uncheck'; e: MouseEvent | KeyboardEvent; value: string | number }",
+      "params": "(value: CheckTagGroupValue, context: CheckTagGroupChangeContext)",
+      "description_zh": "详细类型定义。interface CheckTagGroupChangeContext { type: 'check' | 'uncheck'; e: MouseEvent | KeyboardEvent; value: string | number }"
+    }
+  ],
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "filename": "CheckTagGroup"
+}
