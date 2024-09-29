@@ -42,7 +42,7 @@
       "description_zh": "空状态的尺寸，默认为 medium。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
       "default": "medium",
       "value": "",
-      "type": "String",
+      "type": "small/medium/large",
       "required": false,
       "version": ""
     },
@@ -60,7 +60,7 @@
       "description_zh": "组件类型，如：空数据/成功/失败/网络错误/建设中。可选项：empty/success/fail/network-error/maintenance",
       "default": "empty",
       "value": "",
-      "type": "String",
+      "type": "empty/success/fail/network-error/maintenance",
       "required": false,
       "version": ""
     }

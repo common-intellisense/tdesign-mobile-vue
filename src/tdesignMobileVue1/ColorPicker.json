@@ -69,7 +69,7 @@
       "description_zh": "格式化色值。enableAlpha 为真时，RGBA/HSLA/HSVA 等值有效。可选项：RGB/RGBA/HSL/HSLA/HSB/HSV/HSVA/HEX/CMYK/CSS",
       "default": "RGB",
       "value": "",
-      "type": "String",
+      "type": "RGB/RGBA/HSL/HSLA/HSB/HSV/HSVA/HEX/CMYK/CSS",
       "required": false,
       "version": ""
     },
@@ -141,7 +141,7 @@
       "description_zh": "组件尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
       "default": "medium",
       "value": "",
-      "type": "String",
+      "type": "small/medium/large",
       "required": false,
       "version": ""
     },

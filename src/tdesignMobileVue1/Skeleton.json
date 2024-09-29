@@ -6,7 +6,7 @@
       "description_zh": "动画效果，有「渐变加载动画」和「闪烁加载动画」两种。值为 'none' 则表示没有动画。可选项：gradient/flashed/none",
       "default": "none",
       "value": "",
-      "type": "String",
+      "type": "gradient/flashed/none",
       "required": false,
       "version": ""
     },
@@ -42,7 +42,7 @@
       "description_zh": "快捷定义骨架图风格，有基础、头像组合等，具体参看代码示例。可选项：text/avatar/paragraph/avatar-text/tab/article",
       "default": "text",
       "value": "",
-      "type": "String",
+      "type": "text/avatar/paragraph/avatar-text/tab/article",
       "required": false,
       "version": ""
     }

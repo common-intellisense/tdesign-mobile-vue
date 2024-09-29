@@ -132,7 +132,7 @@
       "description_zh": "尺寸。可选项：medium/small",
       "default": "medium",
       "value": "",
-      "type": "String",
+      "type": "medium/small",
       "required": false,
       "version": ""
     },
@@ -159,7 +159,7 @@
       "description_zh": "卡片风格：普通风格、海报风格1（操作区域在顶部）、海报风格2（操作区域在底部）。可选项：normal/poster1/poster2",
       "default": "normal",
       "value": "",
-      "type": "String",
+      "type": "normal/poster1/poster2",
       "required": false,
       "version": ""
     },

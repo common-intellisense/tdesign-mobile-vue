@@ -42,7 +42,7 @@
       "description_zh": "触发浮层显示的方式。可选项：hover/click",
       "default": "hover",
       "value": "",
-      "type": "String",
+      "type": "hover/click",
       "required": false,
       "version": ""
     }

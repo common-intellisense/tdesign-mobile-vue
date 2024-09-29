@@ -33,7 +33,7 @@
       "description_zh": "滑块布局方向。可选项：vertical/horizontal",
       "default": "horizontal",
       "value": "",
-      "type": "String",
+      "type": "vertical/horizontal",
       "required": false,
       "version": ""
     },

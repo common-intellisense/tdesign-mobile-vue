@@ -375,7 +375,7 @@
       "description_zh": "表格尺寸，支持全局配置 GlobalConfigProvider，默认全局配置值为 medium。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
       "default": "-",
       "value": "",
-      "type": "String",
+      "type": "small/medium/large",
       "required": false,
       "version": ""
     },
@@ -402,7 +402,7 @@
       "description_zh": "表格布局方式，<table> 元素原生属性。MDN。注意，在列宽调整下场景只能使用 fixed 模式。可选项：auto/fixed",
       "default": "fixed",
       "value": "",
-      "type": "String",
+      "type": "auto/fixed",
       "required": false,
       "version": ""
     },
@@ -420,7 +420,7 @@
       "description_zh": "行内容上下方向对齐。可选项：top/middle/bottom",
       "default": "middle",
       "value": "",
-      "type": "String",
+      "type": "top/middle/bottom",
       "required": false,
       "version": ""
     },

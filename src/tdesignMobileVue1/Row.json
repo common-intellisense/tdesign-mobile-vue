@@ -24,7 +24,7 @@
       "description_zh": "flex 布局下的水平排列方式。可选项：start/end/center/space-around/space-between",
       "default": "start",
       "value": "",
-      "type": "String",
+      "type": "start/end/center/space-around/space-between",
       "required": false,
       "version": ""
     },

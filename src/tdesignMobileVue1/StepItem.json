@@ -42,7 +42,7 @@
       "description_zh": "当前步骤的状态：默认状态（未开始）、进行中状态、完成状态、错误状态。可选项：default/process/finish/error。TS 类型：StepStatus type StepStatus = 'default' | 'process' | 'finish' | 'error'。详细类型定义",
       "default": "default",
       "value": "",
-      "type": "String",
+      "type": "default/process/finish/error",
       "required": false,
       "version": ""
     },

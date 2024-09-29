@@ -60,7 +60,7 @@
       "description_zh": "浮层出现位置。可选项：top/left/right/bottom/top-left/top-right/bottom-left/bottom-right/left-top/left-bottom/right-top/right-bottom",
       "default": "top",
       "value": "",
-      "type": "String",
+      "type": "top/left/right/bottom/top-left/top-right/bottom-left/bottom-right/left-top/left-bottom/right-top/right-bottom",
       "required": false,
       "version": ""
     },
@@ -87,7 +87,7 @@
       "description_zh": "文字提示风格。可选项：default/warning/danger",
       "default": "default",
       "value": "",
-      "type": "String",
+      "type": "default/warning/danger",
       "required": false,
       "version": ""
     },

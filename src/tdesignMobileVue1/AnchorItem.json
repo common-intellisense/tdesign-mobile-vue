@@ -15,7 +15,7 @@
       "description_zh": "锚点文本。可选项：_self/_blank/_parent/_top",
       "default": "_self",
       "value": "",
-      "type": "String",
+      "type": "_self/_blank/_parent/_top",
       "required": false,
       "version": ""
     },

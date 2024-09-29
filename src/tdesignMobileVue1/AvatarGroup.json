@@ -6,7 +6,7 @@
       "description_zh": "图片之间的层叠关系，可选值：左侧图片在上和右侧图片在上。可选项：left-up/right-up。TS 类型：CascadingValue type CascadingValue = 'left-up' | 'right-up'。详细类型定义",
       "default": "'right-up'",
       "value": "",
-      "type": "String",
+      "type": "left-up/right-up",
       "required": false,
       "version": ""
     },

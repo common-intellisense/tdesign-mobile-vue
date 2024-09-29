@@ -24,7 +24,7 @@
       "description_zh": "步骤条方向，有两种：横向和纵向。可选项：horizontal/vertical",
       "default": "horizontal",
       "value": "",
-      "type": "String",
+      "type": "horizontal/vertical",
       "required": false,
       "version": ""
     },
@@ -51,7 +51,7 @@
       "description_zh": "步骤条分割符。可选项：line/dashed/arrow",
       "default": "line",
       "value": "",
-      "type": "String",
+      "type": "line/dashed/arrow",
       "required": false,
       "version": ""
     },
@@ -60,7 +60,7 @@
       "description_zh": "步骤条顺序。可选项：positive/reverse",
       "default": "positive",
       "value": "",
-      "type": "String",
+      "type": "positive/reverse",
       "required": false,
       "version": ""
     },
@@ -69,7 +69,7 @@
       "description_zh": "步骤条风格。可选项：default/dot",
       "default": "default",
       "value": "",
-      "type": "String",
+      "type": "default/dot",
       "required": false,
       "version": ""
     },

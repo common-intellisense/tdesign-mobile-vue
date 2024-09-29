@@ -24,7 +24,7 @@
       "description_zh": "固定位置。可选项：right-top/right-center/right-bottom/left-top/left-center/left-bottom",
       "default": "right-bottom",
       "value": "",
-      "type": "String",
+      "type": "right-top/right-center/right-bottom/left-top/left-center/left-bottom",
       "required": false,
       "version": ""
     },

@@ -51,7 +51,7 @@
       "description_zh": "下拉菜单选项主题。可选项：default/success/warning/error。TS 类型：DropdownItemTheme type DropdownItemTheme = 'default' | 'success' | 'warning' | 'error'。详细类型定义",
       "default": "default",
       "value": "",
-      "type": "String",
+      "type": "default/success/warning/error",
       "required": false,
       "version": ""
     },

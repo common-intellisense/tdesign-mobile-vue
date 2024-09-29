@@ -42,7 +42,7 @@
       "description_zh": "进度条状态。可选项：success/error/warning/active。TS 类型：StatusEnum type StatusEnum = 'success' | 'error' | 'warning' | 'active'。详细类型定义",
       "default": "-",
       "value": "",
-      "type": "String",
+      "type": "success/error/warning/active",
       "required": false,
       "version": ""
     },
@@ -60,7 +60,7 @@
       "description_zh": "进度条风格。值为 line，标签（label）显示在进度条右侧；值为 plump，标签（label）显示在进度条里面；值为 circle，标签（label）显示在进度条正中间。可选项：line/plump/circle。TS 类型：ThemeEnum type ThemeEnum = 'line' | 'plump' | 'circle'。详细类型定义",
       "default": "line",
       "value": "",
-      "type": "String",
+      "type": "line/plump/circle",
       "required": false,
       "version": ""
     },

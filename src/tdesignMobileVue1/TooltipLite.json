@@ -15,7 +15,7 @@
       "description_zh": "提示浮层出现的位置。可选项：top/bottom",
       "default": "top",
       "value": "",
-      "type": "String",
+      "type": "top/bottom",
       "required": false,
       "version": ""
     },
@@ -42,7 +42,7 @@
       "description_zh": "组件风格，有亮色模式和暗色模式两种。可选项：light/default",
       "default": "default",
       "value": "",
-      "type": "String",
+      "type": "light/default",
       "required": false,
       "version": ""
     },

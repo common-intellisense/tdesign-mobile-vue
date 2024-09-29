@@ -69,7 +69,7 @@
       "description_zh": "形状。可选项：circle/round",
       "default": "circle",
       "value": "",
-      "type": "String",
+      "type": "circle/round",
       "required": false,
       "version": ""
     },
@@ -87,7 +87,7 @@
       "description_zh": "尺寸。可选项：small/medium",
       "default": "medium",
       "value": "",
-      "type": "String",
+      "type": "small/medium",
       "required": false,
       "version": ""
     }

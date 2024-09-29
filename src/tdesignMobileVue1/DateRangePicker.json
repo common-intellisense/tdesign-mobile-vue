@@ -69,7 +69,7 @@
       "description_zh": "第一天从星期几开始。可选项：1/2/3/4/5/6/7",
       "default": "-",
       "value": "",
-      "type": "Number",
+      "type": "1/2/3/4/5/6/7",
       "required": false,
       "version": ""
     },
@@ -96,7 +96,7 @@
       "description_zh": "选择器模式。可选项：year/quarter/month/week/date",
       "default": "date",
       "value": "",
-      "type": "String",
+      "type": "year/quarter/month/week/date",
       "required": false,
       "version": ""
     },
@@ -150,7 +150,7 @@
       "description_zh": "预设面板展示区域（包含确定按钮）。可选项：left/top/right/bottom",
       "default": "bottom",
       "value": "",
-      "type": "String",
+      "type": "left/top/right/bottom",
       "required": false,
       "version": ""
     },
@@ -177,7 +177,7 @@
       "description_zh": "输入框尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
       "default": "medium",
       "value": "",
-      "type": "String",
+      "type": "small/medium/large",
       "required": false,
       "version": ""
     },
@@ -186,7 +186,7 @@
       "description_zh": "输入框状态。可选项：default/success/warning/error",
       "default": "default",
       "value": "",
-      "type": "String",
+      "type": "default/success/warning/error",
       "required": false,
       "version": ""
     },
@@ -240,7 +240,7 @@
       "description_zh": "用于格式化日期的值，仅支持部分格式，时间戳、日期等。⚠️ YYYYMMDD 这种格式不支持，请勿使用，如果希望支持可以给 dayjs 提个 PR。注意和 format 的区别，format 仅用于处理日期在页面中呈现的格式。可选项：time-stamp/Date/YYYY/YYYY-MM/YYYY-MM-DD/YYYY-MM-DD HH/YYYY-MM-DD HH:mm/YYYY-MM-DD HH:mm:ss/YYYY-MM-DD HH:mm:ss:SSS",
       "default": "-",
       "value": "",
-      "type": "String",
+      "type": "time-stamp/Date/YYYY/YYYY-MM/YYYY-MM-DD/YYYY-MM-DD HH/YYYY-MM-DD HH:mm/YYYY-MM-DD HH:mm:ss/YYYY-MM-DD HH:mm:ss:SSS",
       "required": false,
       "version": ""
     },

@@ -6,7 +6,7 @@
       "description_zh": "多层级操作时，子层级展开方向。可选项：left/right",
       "default": "right",
       "value": "",
-      "type": "String",
+      "type": "left/right",
       "required": false,
       "version": ""
     },
@@ -69,7 +69,7 @@
       "description_zh": "弹窗定位方式，可选值同 Popup 组件。可选项：top/left/right/bottom/top-left/top-right/bottom-left/bottom-right/left-top/left-bottom/right-top/right-bottom",
       "default": "bottom-left",
       "value": "",
-      "type": "String",
+      "type": "top/left/right/bottom/top-left/top-right/bottom-left/bottom-right/left-top/left-bottom/right-top/right-bottom",
       "required": false,
       "version": ""
     },
@@ -87,7 +87,7 @@
       "description_zh": "触发下拉显示的方式。可选项：hover/click/focus/context-menu",
       "default": "hover",
       "value": "",
-      "type": "String",
+      "type": "hover/click/focus/context-menu",
       "required": false,
       "version": ""
     },

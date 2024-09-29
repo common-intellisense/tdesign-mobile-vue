@@ -42,7 +42,7 @@
       "description_zh": "标签信息相对于时间轴的位置，在 mode='alternate' 时生效，优先级高于 Timeline.labelAlign。可选项：left/right/top/bottom",
       "default": "-",
       "value": "",
-      "type": "String",
+      "type": "left/right/top/bottom",
       "required": false,
       "version": ""
     },

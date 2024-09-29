@@ -78,7 +78,7 @@
       "description_zh": "引导框的类型。可选项：popup/dialog",
       "default": "popup",
       "value": "",
-      "type": "String",
+      "type": "popup/dialog",
       "required": false,
       "version": ""
     },

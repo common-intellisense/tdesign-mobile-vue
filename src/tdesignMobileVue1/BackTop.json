@@ -51,7 +51,7 @@
       "description_zh": "回到顶部的形状。可选项：circle/square。TS 类型：BackTopShapeEnum  type BackTopShapeEnum = 'circle' | 'square'。详细类型定义",
       "default": "square",
       "value": "",
-      "type": "String",
+      "type": "circle/square",
       "required": false,
       "version": ""
     },
@@ -60,7 +60,7 @@
       "description_zh": "组件尺寸。可选项：medium/small",
       "default": "medium",
       "value": "",
-      "type": "String",
+      "type": "medium/small",
       "required": false,
       "version": ""
     },
@@ -78,7 +78,7 @@
       "description_zh": "组件主题风格，浅色、主色、深色。可选项：light/primary/dark",
       "default": "light",
       "value": "",
-      "type": "String",
+      "type": "light/primary/dark",
       "required": false,
       "version": ""
     },

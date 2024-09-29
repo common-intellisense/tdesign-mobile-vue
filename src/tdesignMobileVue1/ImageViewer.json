@@ -78,7 +78,7 @@
       "description_zh": "模态预览（modal）和非模态预览（modeless)。可选项：modal/modeless",
       "default": "modal",
       "value": "",
-      "type": "String",
+      "type": "modal/modeless",
       "required": false,
       "version": ""
     },

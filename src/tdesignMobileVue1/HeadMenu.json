@@ -6,7 +6,7 @@
       "description_zh": "二级菜单展开方式，平铺展开和浮层展开。可选项：normal/popup",
       "default": "normal",
       "value": "",
-      "type": "String",
+      "type": "normal/popup",
       "required": false,
       "version": ""
     },
@@ -51,7 +51,7 @@
       "description_zh": "可选项：light/dark",
       "default": "light",
       "value": "",
-      "type": "String",
+      "type": "light/dark",
       "required": false,
       "version": ""
     },

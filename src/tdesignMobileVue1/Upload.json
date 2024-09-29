@@ -231,7 +231,7 @@
       "description_zh": "HTTP 请求类型。可选项：POST/GET/PUT/OPTIONS/PATCH/post/get/put/options/patch",
       "default": "POST",
       "value": "",
-      "type": "String",
+      "type": "POST/GET/PUT/OPTIONS/PATCH/post/get/put/options/patch",
       "required": false,
       "version": ""
     },
@@ -321,7 +321,7 @@
       "description_zh": "文件上传提示文本状态。可选项：default/success/warning/error",
       "default": "-",
       "value": "",
-      "type": "String",
+      "type": "default/success/warning/error",
       "required": false,
       "version": ""
     },
@@ -330,7 +330,7 @@
       "description_zh": "组件风格。custom 表示完全自定义风格；file 表示默认文件上传风格；file-input 表示输入框形式的文件上传；file-flow 表示文件批量上传；image 表示默认图片上传风格；image-flow 表示图片批量上传。可选项：custom/file/file-input/file-flow/image/image-flow",
       "default": "file",
       "value": "",
-      "type": "String",
+      "type": "custom/file/file-input/file-flow/image/image-flow",
       "required": false,
       "version": ""
     },

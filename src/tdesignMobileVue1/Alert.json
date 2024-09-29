@@ -60,7 +60,7 @@
       "description_zh": "组件风格。可选项：success/info/warning/error",
       "default": "info",
       "value": "",
-      "type": "String",
+      "type": "success/info/warning/error",
       "required": false,
       "version": ""
     },

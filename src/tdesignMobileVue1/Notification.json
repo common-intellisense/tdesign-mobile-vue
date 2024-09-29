@@ -60,7 +60,7 @@
       "description_zh": "消息类型。可选项：info/success/warning/error。TS 类型：NotificationThemeList type NotificationThemeList = 'info' | 'success' | 'warning' | 'error'。详细类型定义",
       "default": "info",
       "value": "",
-      "type": "String",
+      "type": "info/success/warning/error",
       "required": false,
       "version": ""
     },

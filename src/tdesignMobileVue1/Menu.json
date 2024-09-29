@@ -24,7 +24,7 @@
       "description_zh": "二级菜单展开方式，平铺展开和浮层展开。可选项：normal/popup",
       "default": "normal",
       "value": "",
-      "type": "String",
+      "type": "normal/popup",
       "required": false,
       "version": ""
     },
@@ -69,7 +69,7 @@
       "description_zh": "菜单风格，有亮色模式和暗色模式两种。当 theme = global 时，模式随整个组件库；当 theme = system 时，模式跟随系统。⚠️ global/system 正在开发中，暂勿使用。可选项：light/dark/global/system",
       "default": "light",
       "value": "",
-      "type": "String",
+      "type": "light/dark/global/system",
       "required": false,
       "version": ""
     },

@@ -42,7 +42,7 @@
       "description_zh": "第一天从星期几开始，仅在日历展示维度为月份时（mode = month）有效。默认为 1。可选项：1/2/3/4/5/6/7",
       "default": "1",
       "value": "",
-      "type": "Number",
+      "type": "1/2/3/4/5/6/7",
       "required": false,
       "version": ""
     },
@@ -78,7 +78,7 @@
       "description_zh": "日历展示维度。可选项：month/year",
       "default": "month",
       "value": "",
-      "type": "String",
+      "type": "month/year",
       "required": false,
       "version": ""
     },
@@ -123,7 +123,7 @@
       "description_zh": "日历风格。可选项：full/card",
       "default": "full",
       "value": "",
-      "type": "String",
+      "type": "full/card",
       "required": false,
       "version": ""
     },

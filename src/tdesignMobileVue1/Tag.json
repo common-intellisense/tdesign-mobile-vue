@@ -69,7 +69,7 @@
       "description_zh": "标签类型，有三种：方形、圆角方形、标记型。可选项：square/round/mark",
       "default": "square",
       "value": "",
-      "type": "String",
+      "type": "square/round/mark",
       "required": false,
       "version": ""
     },
@@ -78,7 +78,7 @@
       "description_zh": "标签尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
       "default": "medium",
       "value": "",
-      "type": "String",
+      "type": "small/medium/large",
       "required": false,
       "version": ""
     },
@@ -87,7 +87,7 @@
       "description_zh": "组件风格，用于描述组件不同的应用场景。可选项：default/primary/warning/danger/success",
       "default": "default",
       "value": "",
-      "type": "String",
+      "type": "default/primary/warning/danger/success",
       "required": false,
       "version": ""
     },
@@ -105,7 +105,7 @@
       "description_zh": "标签风格变体。可选项：dark/light/outline/light-outline",
       "default": "dark",
       "value": "",
-      "type": "String",
+      "type": "dark/light/outline/light-outline",
       "required": false,
       "version": ""
     },

@@ -42,7 +42,7 @@
       "description_zh": "展开图标的位置，左侧或右侧。可选项：left/right",
       "default": "left",
       "value": "",
-      "type": "String",
+      "type": "left/right",
       "required": false,
       "version": ""
     },

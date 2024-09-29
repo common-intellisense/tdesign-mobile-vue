@@ -42,7 +42,7 @@
       "description_zh": "分隔线类型有两种：水平和垂直。可选项：horizontal/vertical",
       "default": "horizontal",
       "value": "",
-      "type": "String",
+      "type": "horizontal/vertical",
       "required": false,
       "version": ""
     },
@@ -51,7 +51,7 @@
       "description_zh": "已废弃。请更为使用 layout。分隔线类型有两种：水平和垂直。可选项：horizontal/vertical",
       "default": "-",
       "value": "",
-      "type": "String",
+      "type": "horizontal/vertical",
       "required": false,
       "version": ""
     }

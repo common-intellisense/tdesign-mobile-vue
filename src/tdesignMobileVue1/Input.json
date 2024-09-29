@@ -6,7 +6,7 @@
       "description_zh": "文本内容位置，居左/居中/居右。可选项：left/center/right",
       "default": "left",
       "value": "",
-      "type": "String",
+      "type": "left/center/right",
       "required": false,
       "version": ""
     },
@@ -177,7 +177,7 @@
       "description_zh": "输入框尺寸。可选项：small/medium/large。TS 类型：SizeEnum。通用类型定义",
       "default": "medium",
       "value": "",
-      "type": "String",
+      "type": "small/medium/large",
       "required": false,
       "version": ""
     },
@@ -195,7 +195,7 @@
       "description_zh": "输入框状态。可选项：default/success/warning/error",
       "default": "default",
       "value": "",
-      "type": "String",
+      "type": "default / success / warning / error",
       "required": false,
       "version": ""
     },
@@ -231,7 +231,7 @@
       "description_zh": "输入框类型。type=number 仅支持最基础的数字输入功能，更多功能建议使用 InputNumber 组件。可选项：text/number/url/tel/password/search/submit/hidden",
       "default": "text",
       "value": "",
-      "type": "String",
+      "type": "text/number/url/tel/password/search/submit/hidden",
       "required": false,
       "version": ""
     },

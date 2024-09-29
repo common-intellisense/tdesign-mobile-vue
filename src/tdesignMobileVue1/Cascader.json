@@ -267,7 +267,7 @@
       "description_zh": "组件尺寸。可选项：large/medium/small。TS 类型：SizeEnum。通用类型定义",
       "default": "medium",
       "value": "",
-      "type": "String",
+      "type": "large/medium/small",
       "required": false,
       "version": ""
     },
@@ -276,7 +276,7 @@
       "description_zh": "输入框状态。可选项：default/success/warning/error",
       "default": "default",
       "value": "",
-      "type": "String",
+      "type": "default/success/warning/error",
       "required": false,
       "version": ""
     },
@@ -366,7 +366,7 @@
       "description_zh": "选中值模式。all 表示父节点和子节点全部会出现在选中值里面；parentFirst 表示当子节点全部选中时，仅父节点在选中值里面；onlyLeaf 表示无论什么情况，选中值仅呈现叶子节点。可选项：onlyLeaf/parentFirst/all",
       "default": "onlyLeaf",
       "value": "",
-      "type": "String",
+      "type": "onlyLeaf/parentFirst/all",
       "required": false,
       "version": ""
     },
@@ -375,7 +375,7 @@
       "description_zh": "用于控制选中值的类型。single 表示输入输出值为 叶子结点值， full 表示输入输出值为全路径。可选项：single/full",
       "default": "single",
       "value": "",
-      "type": "String",
+      "type": "single/full",
       "required": false,
       "version": ""
     },

@@ -33,7 +33,7 @@
       "description_zh": "图片填充模式。可选项：contain/cover/fill/none/scale-down",
       "default": "fill",
       "value": "",
-      "type": "String",
+      "type": "contain/cover/fill/none/scale-down",
       "required": false,
       "version": ""
     },
@@ -78,7 +78,7 @@
       "description_zh": "浮层 overlayContent 出现的时机。可选项：always/hover",
       "default": "always",
       "value": "",
-      "type": "String",
+      "type": "always/hover",
       "required": false,
       "version": ""
     },
@@ -105,7 +105,7 @@
       "description_zh": "<img> 标签的原生属性，MDN 定义。可选项：no-referrer/no-referrer-when-downgrade/origin/origin-when-cross-origin/same-origin/strict-origin/strict-origin-when-cross-origin/unsafe-url",
       "default": "-",
       "value": "",
-      "type": "String",
+      "type": "no-referrer/no-referrer-when-downgrade/origin/origin-when-cross-origin/same-origin/strict-origin/strict-origin-when-cross-origin/unsafe-url",
       "required": false,
       "version": ""
     },
@@ -114,7 +114,7 @@
       "description_zh": "图片圆角类型。可选项：circle/round/square",
       "default": "square",
       "value": "",
-      "type": "String",
+      "type": "circle/round/square",
       "required": false,
       "version": ""
     },

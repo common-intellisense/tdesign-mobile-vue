@@ -42,7 +42,7 @@
       "description_zh": "消息组件风格。可选项：info/success/warning/error/question/loading。TS 类型：MessageThemeList type MessageThemeList = 'info' | 'success' | 'warning' | 'error' | 'question' | 'loading'。详细类型定义",
       "default": "info",
       "value": "",
-      "type": "String",
+      "type": "info/success/warning/error/question/loading",
       "required": false,
       "version": ""
     },

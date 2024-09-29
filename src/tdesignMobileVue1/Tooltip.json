@@ -51,7 +51,7 @@
       "description_zh": "文字提示风格。可选项：default/primary/success/danger/warning/light",
       "default": "default",
       "value": "",
-      "type": "String",
+      "type": "default/primary/success/danger/warning/light",
       "required": false,
       "version": ""
     },

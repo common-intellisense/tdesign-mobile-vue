@@ -78,7 +78,7 @@
       "description_zh": "链接或路由跳转方式。可选项：_blank/_self/_parent/_top",
       "default": "_self",
       "value": "",
-      "type": "String",
+      "type": "_blank/_self/_parent/_top",
       "required": false,
       "version": ""
     },

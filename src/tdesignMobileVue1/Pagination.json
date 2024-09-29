@@ -51,7 +51,7 @@
       "description_zh": "页码数量超出时，前后省略模式, mid表示中间省略, both-ends 表示两端省略。可选项：mid/both-ends",
       "default": "mid",
       "value": "",
-      "type": "String",
+      "type": "mid/both-ends",
       "required": false,
       "version": ""
     },
@@ -141,7 +141,7 @@
       "description_zh": "分页组件尺寸。可选项：small/medium",
       "default": "medium",
       "value": "",
-      "type": "String",
+      "type": "small/medium",
       "required": false,
       "version": ""
     },
@@ -150,7 +150,7 @@
       "description_zh": "分页组件风格。可选项：default/simple",
       "default": "default",
       "value": "",
-      "type": "String",
+      "type": "default/simple",
       "required": false,
       "version": ""
     },

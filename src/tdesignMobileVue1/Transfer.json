@@ -42,7 +42,7 @@
       "description_zh": "穿梭框可操作方向。可选项：left/right/both",
       "default": "both",
       "value": "",
-      "type": "String",
+      "type": "left/right/both",
       "required": false,
       "version": ""
     },
@@ -132,7 +132,7 @@
       "description_zh": "目标数据列表排列顺序。可选项：original/push/unshift",
       "default": "original",
       "value": "",
-      "type": "String",
+      "type": "original/push/unshift",
       "required": false,
       "version": ""
     },

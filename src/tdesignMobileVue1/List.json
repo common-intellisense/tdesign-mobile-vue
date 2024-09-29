@@ -33,7 +33,7 @@
       "description_zh": "排列方式（待设计稿输出）。可选项：horizontal/vertical",
       "default": "horizontal",
       "value": "",
-      "type": "String",
+      "type": "horizontal/vertical",
       "required": false,
       "version": ""
     },
@@ -51,7 +51,7 @@
       "description_zh": "尺寸。可选项：small/medium/large",
       "default": "medium",
       "value": "",
-      "type": "String",
+      "type": "small/medium/large",
       "required": false,
       "version": ""
     },

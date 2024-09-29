@@ -96,7 +96,7 @@
       "description_zh": "文本框状态。可选项：default/success/warning/error",
       "default": "-",
       "value": "",
-      "type": "String",
+      "type": "default/success/warning/error",
       "required": false,
       "version": ""
     },
