@@ -7,12 +7,12 @@
   "author": "Simon He",
   "license": "MIT",
   "funding": "https://github.com/sponsors/Simon-He95",
-  "homepage": "https://github.com/common-intellisense/tdesign-mobile-vue1#readme",
+  "homepage": "https://github.com/common-intellisense/tdesign-mobile-vue#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/common-intellisense/tdesign-mobile-vue1.git"
+    "url": "git+https://github.com/common-intellisense/tdesign-mobile-vue.git"
   },
-  "bugs": "https://github.com/common-intellisense/tdesign-mobile-vue1/issues",
+  "bugs": "https://github.com/common-intellisense/tdesign-mobile-vue/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
